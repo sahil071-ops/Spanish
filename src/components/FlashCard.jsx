@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { updateSRSItem } from '../utils/storage.js'
 import { Check, X, RotateCcw } from 'lucide-react'
 
-export default function FlashCard({ card, onNext }) {
+export default function FlashCard({ card, onNext, srsData }) {
   const [flipped, setFlipped] = useState(false)
   const [result, setResult] = useState(null) // 'known' | 'review'
 
@@ -35,9 +35,13 @@ export default function FlashCard({ card, onNext }) {
     culture: 'bg-orange-50 text-orange-600',
   }
 
+  // Mastery: 3 correct reviews = mastered
+  const reps = srsData?.repetitions ?? 0
+  const masteryDots = Math.min(reps, 3)
+
   return (
     <div className="flex flex-col gap-4">
-      {/* Theme badge */}
+      {/* Theme badge + mastery dots */}
       <div className="flex items-center gap-2">
         <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${themeColors[card.theme] || 'bg-gray-50 text-gray-500'}`}>
           {card.theme}
@@ -45,6 +49,17 @@ export default function FlashCard({ card, onNext }) {
         <span className="text-xs text-gray-400">
           {'★'.repeat(card.difficulty || 1)}{'☆'.repeat(3 - (card.difficulty || 1))}
         </span>
+        <div className="ml-auto flex items-center gap-1" title={`${masteryDots}/3 correct reviews`}>
+          {[0, 1, 2].map(i => (
+            <span
+              key={i}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i < masteryDots ? 'bg-[#C60B1E]' : 'bg-gray-200'
+              }`}
+            />
+          ))}
+          <span className="text-xs text-gray-400 ml-1">{masteryDots}/3</span>
+        </div>
       </div>
 
       {/* Card */}
@@ -99,7 +114,9 @@ export default function FlashCard({ card, onNext }) {
         <div className={`text-center py-3 rounded-2xl font-medium animate-fade-in ${
           result === 'known' ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'
         }`}>
-          {result === 'known' ? '✓ Marked as known' : '↻ Added to review queue'}
+          {result === 'known'
+            ? masteryDots + 1 >= 3 ? '🎉 Mastered!' : `✓ Got it (${masteryDots + 1}/3)`
+            : '↻ Added to review queue'}
         </div>
       )}
 

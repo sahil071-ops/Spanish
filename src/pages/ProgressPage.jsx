@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
-import { getActivityData, getSRSData } from '../utils/storage.js'
+import { getActivityData, getSRSData, getWeakTopics } from '../utils/storage.js'
 import { getAllContent } from '../utils/db.js'
-import { BookOpen, Brain, FileText, Headphones, Flame, Calendar } from 'lucide-react'
+import { BookOpen, Brain, FileText, Headphones, Flame, Calendar, AlertTriangle, ChevronRight } from 'lucide-react'
 
 function ActivityHeatmap() {
   const activity = getActivityData()
@@ -48,8 +49,10 @@ function ActivityHeatmap() {
 }
 
 export default function ProgressPage() {
+  const navigate = useNavigate()
   const { streak, contentCounts } = useApp()
   const [masteryData, setMasteryData] = useState({})
+  const [weakTopics, setWeakTopics] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -78,6 +81,7 @@ export default function ProgressPage() {
         reading: calcMastery(reading),
         listening: calcMastery(listening),
       })
+      setWeakTopics(getWeakTopics(2).slice(0, 5))
       setLoading(false)
     }
     load()
@@ -159,6 +163,39 @@ export default function ProgressPage() {
             </div>
           )}
         </div>
+
+        {/* Weak grammar topics */}
+        {weakTopics.length > 0 && (
+          <div className="bg-white rounded-2xl border border-gray-100 p-5">
+            <div className="flex items-center gap-2 mb-4">
+              <AlertTriangle size={18} className="text-amber-500" />
+              <h2 className="font-semibold text-gray-800">Needs Practice</h2>
+            </div>
+            <div className="space-y-2">
+              {weakTopics.map(({ topic, accuracy, correct, total }) => (
+                <button
+                  key={topic}
+                  onClick={() => navigate(`/practice/grammar?topic=${encodeURIComponent(topic)}`)}
+                  className="w-full flex items-center gap-3 bg-gray-50 rounded-xl px-3 py-3 text-left active:scale-99 transition-transform"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-gray-800 truncate">{topic}</p>
+                    <p className="text-xs text-gray-400">{correct}/{total} correct ({accuracy}%)</p>
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                      accuracy < 40 ? 'bg-red-100 text-red-600' :
+                      accuracy < 70 ? 'bg-amber-100 text-amber-700' :
+                      'bg-green-100 text-green-700'
+                    }`}>{accuracy}%</span>
+                    <ChevronRight size={14} className="text-gray-300" />
+                  </div>
+                </button>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 mt-3">Tap a topic to practise it now</p>
+          </div>
+        )}
 
         {/* Content library */}
         <div className="bg-white rounded-2xl border border-gray-100 p-5">

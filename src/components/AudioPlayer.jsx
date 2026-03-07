@@ -17,7 +17,7 @@ export default function AudioPlayer({ contentId, text, transcript, showTranscrip
   const intervalRef = useRef(null)
   const words = transcript ? transcript.split(/\s+/) : []
 
-  // Load audio on mount
+  // Load audio on mount; also wait for voices to be ready for Web Speech API
   useEffect(() => {
     async function loadAudio() {
       const url = await getOrGenerateAudio(contentId, text)
@@ -26,6 +26,10 @@ export default function AudioPlayer({ contentId, text, transcript, showTranscrip
         setUsingOfflineVoice(false)
       } else {
         setUsingOfflineVoice(true)
+        // Ensure voices are loaded for Web Speech API
+        if ('speechSynthesis' in window && !window.speechSynthesis.getVoices().length) {
+          window.speechSynthesis.onvoiceschanged = () => {}
+        }
       }
     }
     loadAudio()
@@ -58,7 +62,7 @@ export default function AudioPlayer({ contentId, text, transcript, showTranscrip
       // Web Speech API fallback
       setIsPlaying(true)
       speakWithWebSpeech(text, {
-        rate: speed === 0.75 ? 0.75 : 1,
+        rate: speed === 0.75 ? 0.65 : 0.85,
         onStart: () => setIsPlaying(true),
         onEnd: () => {
           setIsPlaying(false)
@@ -104,6 +108,11 @@ export default function AudioPlayer({ contentId, text, transcript, showTranscrip
     setSpeed(newSpeed)
     if (audioUrl && audioRef.current) {
       audioRef.current.playbackRate = newSpeed
+    }
+    // If currently speaking with Web Speech, restart at new rate
+    if (!audioUrl && isPlaying) {
+      stopSpeech()
+      setIsPlaying(false)
     }
   }
 

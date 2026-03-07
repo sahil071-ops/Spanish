@@ -199,6 +199,47 @@ export function getActivityData() {
   }
 }
 
+// ─── Topic Performance (adaptive grammar) ────────────────────────────────────
+
+const TOPIC_KEY = 'spanish-b1-topic-perf'
+
+export function getTopicPerformance() {
+  try {
+    const stored = localStorage.getItem(TOPIC_KEY)
+    return stored ? JSON.parse(stored) : {}
+  } catch {
+    return {}
+  }
+}
+
+export function recordTopicResult(grammarPoint, isCorrect) {
+  const data = getTopicPerformance()
+  if (!data[grammarPoint]) {
+    data[grammarPoint] = { correct: 0, total: 0, lastSeen: null }
+  }
+  data[grammarPoint].total += 1
+  if (isCorrect) data[grammarPoint].correct += 1
+  data[grammarPoint].lastSeen = Date.now()
+  localStorage.setItem(TOPIC_KEY, JSON.stringify(data))
+}
+
+/**
+ * Returns topics sorted by accuracy (worst first).
+ * Only includes topics with at least minAttempts attempts.
+ */
+export function getWeakTopics(minAttempts = 2) {
+  const data = getTopicPerformance()
+  return Object.entries(data)
+    .filter(([, v]) => v.total >= minAttempts)
+    .map(([topic, v]) => ({
+      topic,
+      accuracy: Math.round((v.correct / v.total) * 100),
+      correct: v.correct,
+      total: v.total,
+    }))
+    .sort((a, b) => a.accuracy - b.accuracy)
+}
+
 // ─── Export / Import ──────────────────────────────────────────────────────────
 
 export function exportAllData() {
@@ -225,4 +266,5 @@ export function resetAllProgress() {
   localStorage.removeItem(STREAK_KEY)
   localStorage.removeItem(SRS_KEY)
   localStorage.removeItem(ACTIVITY_KEY)
+  localStorage.removeItem(TOPIC_KEY)
 }

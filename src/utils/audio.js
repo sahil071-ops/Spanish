@@ -65,7 +65,36 @@ export async function getOrGenerateAudio(contentId, text) {
 
 let currentUtterance = null
 
-export function speakWithWebSpeech(text, { rate = 1, onStart, onEnd, onBoundary } = {}) {
+/**
+ * Pick the best available Spanish voice, preferring high-quality remote voices.
+ * Voices load asynchronously on some browsers, so we call this at speak-time.
+ */
+function getBestSpanishVoice() {
+  const voices = window.speechSynthesis.getVoices()
+  if (!voices.length) return null
+
+  // Ordered preference list — first match wins
+  const matchers = [
+    v => v.name === 'Google Español',
+    v => v.name === 'Google español',
+    v => /Mónica|Monica/i.test(v.name) && v.lang.startsWith('es'),
+    v => /Paulina/i.test(v.name),
+    v => /Jorge/i.test(v.name),
+    v => v.lang === 'es-ES' && !v.localService, // remote → usually higher quality
+    v => v.lang === 'es-ES',
+    v => v.lang === 'es-MX',
+    v => v.lang.startsWith('es-'),
+    v => v.lang.startsWith('es'),
+  ]
+
+  for (const match of matchers) {
+    const found = voices.find(match)
+    if (found) return found
+  }
+  return null
+}
+
+export function speakWithWebSpeech(text, { rate = 0.85, onStart, onEnd, onBoundary } = {}) {
   if (!('speechSynthesis' in window)) return null
 
   // Cancel any current speech
@@ -76,10 +105,8 @@ export function speakWithWebSpeech(text, { rate = 1, onStart, onEnd, onBoundary 
   utterance.rate = rate
   utterance.pitch = 1.0
 
-  // Try to find a Spanish voice
-  const voices = window.speechSynthesis.getVoices()
-  const spanishVoice = voices.find(v => v.lang.startsWith('es-ES') || v.lang.startsWith('es'))
-  if (spanishVoice) utterance.voice = spanishVoice
+  const voice = getBestSpanishVoice()
+  if (voice) utterance.voice = voice
 
   if (onStart) utterance.onstart = onStart
   if (onEnd) utterance.onend = onEnd

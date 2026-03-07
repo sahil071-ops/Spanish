@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { BookOpen, Brain, FileText, Headphones, ClipboardList, ChevronRight } from 'lucide-react'
+import { BookOpen, Brain, FileText, Headphones, ClipboardList, ChevronRight, List } from 'lucide-react'
 import TopBar from '../components/TopBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
 
@@ -12,6 +12,15 @@ const modes = [
     color: 'bg-blue-50',
     iconColor: 'text-blue-600',
     path: '/practice/flashcards',
+  },
+  {
+    id: 'vocabulary',
+    icon: List,
+    label: 'Vocabulary List',
+    description: 'All words + mastery tracking',
+    color: 'bg-cyan-50',
+    iconColor: 'text-cyan-600',
+    path: '/vocabulary',
   },
   {
     id: 'grammar',

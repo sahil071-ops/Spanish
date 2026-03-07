@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import FlashCard from '../components/FlashCard.jsx'
 import { getAllContent } from '../utils/db.js'
-import { getDueItems, logActivity, updateStreak } from '../utils/storage.js'
+import { getDueItems, getSRSData, logActivity, updateStreak } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
 
 export default function FlashcardsPage() {
@@ -13,6 +13,7 @@ export default function FlashcardsPage() {
   const isReviewMode = searchParams.get('mode') === 'review'
 
   const [cards, setCards] = useState([])
+  const [srsMap, setSrsMap] = useState({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [sessionStats, setSessionStats] = useState({ known: 0, review: 0 })
   const [finished, setFinished] = useState(false)
@@ -21,14 +22,25 @@ export default function FlashcardsPage() {
   useEffect(() => {
     async function loadCards() {
       const allCards = await getAllContent('flashcard')
-      let toShow = allCards
+      const srs = getSRSData()
+      setSrsMap(srs)
+
+      let toShow
 
       if (isReviewMode) {
+        // Review mode: cards due for SRS review
         const dueIds = getDueItems(allCards.map(c => c.id))
         toShow = allCards.filter(c => dueIds.includes(c.id))
+      } else {
+        // Practice mode: cards not yet mastered (< 3 correct reviews)
+        toShow = allCards.filter(c => {
+          const item = srs[c.id]
+          return !item || item.repetitions < 3
+        })
+        // If everything is mastered, show all cards anyway
+        if (toShow.length === 0) toShow = allCards
       }
 
-      // Shuffle
       const shuffled = [...toShow].sort(() => Math.random() - 0.5)
       setCards(shuffled.slice(0, 20))
       setLoading(false)
@@ -37,10 +49,9 @@ export default function FlashcardsPage() {
   }, [isReviewMode])
 
   const handleNext = (result) => {
-    setSessionStats(prev => ({
-      ...prev,
-      [result]: prev[result] + 1,
-    }))
+    // Refresh SRS map so the next card gets updated dots
+    setSrsMap(getSRSData())
+    setSessionStats(prev => ({ ...prev, [result]: prev[result] + 1 }))
 
     if (currentIndex + 1 >= cards.length) {
       setFinished(true)
@@ -64,6 +75,7 @@ export default function FlashcardsPage() {
   }
 
   if (finished || cards.length === 0) {
+    const total = sessionStats.known + sessionStats.review
     return (
       <div className="flex flex-col pb-24">
         <TopBar title="Flashcards" onBack={() => navigate('/practice')} />
@@ -72,9 +84,9 @@ export default function FlashcardsPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             {cards.length === 0 ? 'No cards available' : 'Session complete!'}
           </h2>
-          {cards.length > 0 && (
+          {total > 0 && (
             <>
-              <p className="text-gray-500 mb-8">You reviewed {cards.length} cards</p>
+              <p className="text-gray-500 mb-8">You reviewed {total} cards</p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-green-50 rounded-2xl p-4">
                   <p className="text-3xl font-bold text-green-600">{sessionStats.known}</p>
@@ -116,7 +128,7 @@ export default function FlashcardsPage() {
           <span className="text-xs text-gray-400 shrink-0">{currentIndex + 1}/{cards.length}</span>
         </div>
 
-        <FlashCard key={card.id} card={card} onNext={handleNext} />
+        <FlashCard key={card.id} card={card} onNext={handleNext} srsData={srsMap[card.id]} />
       </div>
     </div>
   )

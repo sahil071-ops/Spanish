@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import { getAllContent } from '../utils/db.js'
-import { updateSRSItem, logActivity, updateStreak } from '../utils/storage.js'
+import { updateSRSItem, logActivity, updateStreak, recordTopicResult, getWeakTopics } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react'
 
 export default function GrammarPage() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
   const { refreshProgress } = useApp()
+  const focusTopic = searchParams.get('topic') // optional: focus on a specific grammarPoint
+
   const [exercises, setExercises] = useState([])
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState(null)
@@ -20,12 +23,29 @@ export default function GrammarPage() {
   useEffect(() => {
     async function load() {
       const all = await getAllContent('grammar')
-      const shuffled = [...all].sort(() => Math.random() - 0.5)
-      setExercises(shuffled.slice(0, 15))
+
+      let toShow
+      if (focusTopic) {
+        // Focused practice on a specific weak topic
+        const focused = all.filter(e => e.grammarPoint === focusTopic)
+        const others = all.filter(e => e.grammarPoint !== focusTopic)
+        const shuffledOthers = [...others].sort(() => Math.random() - 0.5)
+        toShow = [...focused.sort(() => Math.random() - 0.5), ...shuffledOthers.slice(0, 5)]
+      } else {
+        // Adaptive: double-weight exercises from weak topics
+        const weakTopics = getWeakTopics(2).slice(0, 4).map(t => t.topic)
+        const weak = all.filter(e => weakTopics.includes(e.grammarPoint))
+        const rest = all.filter(e => !weakTopics.includes(e.grammarPoint))
+        // Weak exercises appear twice in the pool, giving them ~double probability
+        const pool = [...weak, ...weak, ...rest].sort(() => Math.random() - 0.5)
+        toShow = pool.slice(0, 15)
+      }
+
+      setExercises(toShow)
       setLoading(false)
     }
     load()
-  }, [])
+  }, [focusTopic])
 
   const exercise = exercises[current]
 
@@ -36,6 +56,7 @@ export default function GrammarPage() {
 
     const isCorrect = option === exercise.answer
     updateSRSItem(exercise.id, isCorrect ? 4 : 1)
+    recordTopicResult(exercise.grammarPoint, isCorrect)
     setStats(prev => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
       wrong: prev.wrong + (isCorrect ? 0 : 1),
@@ -111,7 +132,7 @@ export default function GrammarPage() {
         </div>
 
         {/* Grammar tag */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <span className="bg-purple-50 text-purple-600 text-xs px-2.5 py-1 rounded-full font-medium">{exercise.grammarPoint}</span>
           <span className="bg-gray-50 text-gray-500 text-xs px-2.5 py-1 rounded-full">{exercise.theme}</span>
         </div>
