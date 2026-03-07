@@ -1,0 +1,270 @@
+[
+  {
+    "id": "ls-001",
+    "type": "listening",
+    "theme": "travel",
+    "title": "Airport Check-In Conversation",
+    "format": "dialogue",
+    "script": "Empleada: Buenos días, bienvenido al aeropuerto internacional. ¿Me puede dar su pasaporte y su tarjeta de embarque, por favor?\nPasajero: Claro, aquí los tiene. Tengo una reserva para el vuelo a Madrid.\nEmpleada: Perfecto. ¿Cuántas maletas va a facturar?\nPasajero: Solo una maleta grande y llevo esta mochila como equipaje de mano.\nEmpleada: Muy bien. ¿Me puede poner la maleta en la báscula? Tiene que pesar menos de veintitrés kilos.\nPasajero: Por supuesto. ¿Pesa demasiado?\nEmpleada: No, está bien, pesa veintidós kilos exactamente. ¿Tiene alguna preferencia de asiento?\nPasajero: Sí, si es posible, me gustaría un asiento de ventanilla. Tengo un vuelo largo por delante.\nEmpleada: Vamos a ver... sí, tengo disponible el asiento 14A, que es de ventanilla y está cerca de la parte delantera del avión.\nPasajero: Perfecto, muchas gracias.\nEmpleada: De nada. La puerta de embarque es la número siete. El embarque comienza a las diez y media. Por favor, esté en la puerta con veinte minutos de antelación. ¡Buen viaje!\nPasajero: Gracias, hasta luego.",
+    "transcript": "Empleada: Buenos días, bienvenido al aeropuerto internacional. ¿Me puede dar su pasaporte y su tarjeta de embarque, por favor?\nPasajero: Claro, aquí los tiene. Tengo una reserva para el vuelo a Madrid.\nEmpleada: Perfecto. ¿Cuántas maletas va a facturar?\nPasajero: Solo una maleta grande y llevo esta mochila como equipaje de mano.\nEmpleada: Muy bien. ¿Me puede poner la maleta en la báscula? Tiene que pesar menos de veintitrés kilos.\nPasajero: Por supuesto. ¿Pesa demasiado?\nEmpleada: No, está bien, pesa veintidós kilos exactamente. ¿Tiene alguna preferencia de asiento?\nPasajero: Sí, si es posible, me gustaría un asiento de ventanilla. Tengo un vuelo largo por delante.\nEmpleada: Vamos a ver... sí, tengo disponible el asiento 14A, que es de ventanilla y está cerca de la parte delantera del avión.\nPasajero: Perfecto, muchas gracias.\nEmpleada: De nada. La puerta de embarque es la número siete. El embarque comienza a las diez y media. Por favor, esté en la puerta con veinte minutos de antelación. ¡Buen viaje!\nPasajero: Gracias, hasta luego.",
+    "duration": 95,
+    "questions": [
+      {
+        "id": "ls-001-q1",
+        "question": "Where is the passenger flying to?",
+        "options": ["Barcelona", "Madrid", "Seville", "Valencia"],
+        "answer": "Madrid"
+      },
+      {
+        "id": "ls-001-q2",
+        "question": "How much does the passenger's checked luggage weigh?",
+        "options": ["20 kilos", "21 kilos", "22 kilos", "23 kilos"],
+        "answer": "22 kilos"
+      },
+      {
+        "id": "ls-001-q3",
+        "question": "What type of seat does the passenger request?",
+        "options": ["Aisle seat", "Middle seat", "Window seat", "Emergency exit seat"],
+        "answer": "Window seat"
+      },
+      {
+        "id": "ls-001-q4",
+        "question": "What gate number should the passenger go to?",
+        "options": ["Gate 4", "Gate 7", "Gate 10", "Gate 14"],
+        "answer": "Gate 7"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-002",
+    "type": "listening",
+    "theme": "work",
+    "title": "Job Interview at a Marketing Company",
+    "format": "dialogue",
+    "script": "Entrevistadora: Buenas tardes, señor Ramírez. Gracias por venir. Siéntese, por favor.\nCandidato: Buenas tardes. Muchas gracias por recibirme.\nEntrevistadora: He leído su currículum y me parece muy interesante. ¿Puede contarme un poco sobre su experiencia laboral?\nCandidato: Por supuesto. Llevo tres años trabajando en una agencia de publicidad donde me encargo de gestionar las redes sociales de varios clientes y crear contenido digital.\nEntrevistadora: ¿Tiene experiencia con campañas de correo electrónico?\nCandidato: Sí, he diseñado y ejecutado varias campañas con resultados muy positivos. En mi último proyecto, conseguimos aumentar las ventas en un veinte por ciento en solo dos meses.\nEntrevistadora: Impresionante. ¿Por qué quiere dejar su trabajo actual?\nCandidato: Busco nuevas oportunidades de crecimiento profesional. Me interesa especialmente el sector tecnológico, y su empresa tiene una reputación excelente en ese campo.\nEntrevistadora: ¿Cuáles son sus puntos fuertes?\nCandidato: Soy muy organizado, trabajo bien en equipo y tengo mucha capacidad para adaptarme a situaciones nuevas. También hablo inglés con fluidez, lo cual creo que puede ser útil para trabajar con clientes internacionales.\nEntrevistadora: Perfecto. Le contactaremos la semana que viene para informarle sobre nuestra decisión.\nCandidato: Muchas gracias. Ha sido un placer.",
+    "transcript": "Entrevistadora: Buenas tardes, señor Ramírez. Gracias por venir. Siéntese, por favor.\nCandidato: Buenas tardes. Muchas gracias por recibirme.\nEntrevistadora: He leído su currículum y me parece muy interesante. ¿Puede contarme un poco sobre su experiencia laboral?\nCandidato: Por supuesto. Llevo tres años trabajando en una agencia de publicidad donde me encargo de gestionar las redes sociales de varios clientes y crear contenido digital.\nEntrevistadora: ¿Tiene experiencia con campañas de correo electrónico?\nCandidato: Sí, he diseñado y ejecutado varias campañas con resultados muy positivos. En mi último proyecto, conseguimos aumentar las ventas en un veinte por ciento en solo dos meses.\nEntrevistadora: Impresionante. ¿Por qué quiere dejar su trabajo actual?\nCandidato: Busco nuevas oportunidades de crecimiento profesional. Me interesa especialmente el sector tecnológico, y su empresa tiene una reputación excelente en ese campo.\nEntrevistadora: ¿Cuáles son sus puntos fuertes?\nCandidato: Soy muy organizado, trabajo bien en equipo y tengo mucha capacidad para adaptarme a situaciones nuevas. También hablo inglés con fluidez, lo cual creo que puede ser útil para trabajar con clientes internacionales.\nEntrevistadora: Perfecto. Le contactaremos la semana que viene para informarle sobre nuestra decisión.\nCandidato: Muchas gracias. Ha sido un placer.",
+    "duration": 100,
+    "questions": [
+      {
+        "id": "ls-002-q1",
+        "question": "How many years of work experience does the candidate have?",
+        "options": ["One year", "Two years", "Three years", "Five years"],
+        "answer": "Three years"
+      },
+      {
+        "id": "ls-002-q2",
+        "question": "By how much did the candidate increase sales in a recent project?",
+        "options": ["10%", "15%", "20%", "25%"],
+        "answer": "20%"
+      },
+      {
+        "id": "ls-002-q3",
+        "question": "Why does the candidate want to leave their current job?",
+        "options": [
+          "The salary is too low",
+          "They want professional growth opportunities",
+          "They have a conflict with their boss",
+          "The company is closing"
+        ],
+        "answer": "They want professional growth opportunities"
+      },
+      {
+        "id": "ls-002-q4",
+        "question": "When will the interviewer contact the candidate with their decision?",
+        "options": ["That same day", "The next day", "The following week", "In two weeks"],
+        "answer": "The following week"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-003",
+    "type": "listening",
+    "theme": "everyday",
+    "title": "My Daily Routine",
+    "format": "monologue",
+    "script": "Hola, me llamo Laura y voy a contaros cómo es un día normal en mi vida. Me despierto a las siete de la mañana, pero no me levanto hasta las siete y cuarto porque necesito un poco de tiempo para despertarme completamente. Después de ducharme y vestirme, bajo a la cocina para desayunar. Normalmente tomo un café con leche y unas tostadas con tomate. Es un desayuno típico aquí en España.\n\nSalgo de casa a las ocho menos cuarto para coger el metro. El trayecto hasta mi oficina dura unos veinte minutos. Durante el viaje suelo escuchar música o leer noticias en el móvil. Trabajo en una empresa de informática y mi jornada laboral empieza a las ocho y media en punto.\n\nA mediodía, tengo una hora para comer. A veces como en la cafetería de la empresa, pero cuando hace buen tiempo prefiero salir con mis compañeros a un restaurante cercano. Por las tardes tengo reuniones con clientes o trabajo en mis proyectos hasta las cinco y media.\n\nCuando llego a casa, hago un poco de ejercicio, normalmente salgo a correr durante media hora por el parque. Luego ceno algo ligero, veo un poco de televisión o leo, y me acuesto sobre las once de la noche. Intento dormir al menos ocho horas para estar descansada al día siguiente.",
+    "transcript": "Hola, me llamo Laura y voy a contaros cómo es un día normal en mi vida. Me despierto a las siete de la mañana, pero no me levanto hasta las siete y cuarto porque necesito un poco de tiempo para despertarme completamente. Después de ducharme y vestirme, bajo a la cocina para desayunar. Normalmente tomo un café con leche y unas tostadas con tomate. Es un desayuno típico aquí en España.\n\nSalgo de casa a las ocho menos cuarto para coger el metro. El trayecto hasta mi oficina dura unos veinte minutos. Durante el viaje suelo escuchar música o leer noticias en el móvil. Trabajo en una empresa de informática y mi jornada laboral empieza a las ocho y media en punto.\n\nA mediodía, tengo una hora para comer. A veces como en la cafetería de la empresa, pero cuando hace buen tiempo prefiero salir con mis compañeros a un restaurante cercano. Por las tardes tengo reuniones con clientes o trabajo en mis proyectos hasta las cinco y media.\n\nCuando llego a casa, hago un poco de ejercicio, normalmente salgo a correr durante media hora por el parque. Luego ceno algo ligero, veo un poco de televisión o leo, y me acuesto sobre las once de la noche. Intento dormir al menos ocho horas para estar descansada al día siguiente.",
+    "duration": 110,
+    "questions": [
+      {
+        "id": "ls-003-q1",
+        "question": "What time does Laura actually get out of bed?",
+        "options": ["7:00 AM", "7:15 AM", "7:30 AM", "7:45 AM"],
+        "answer": "7:15 AM"
+      },
+      {
+        "id": "ls-003-q2",
+        "question": "How does Laura usually get to work?",
+        "options": ["By bus", "By car", "By metro", "On foot"],
+        "answer": "By metro"
+      },
+      {
+        "id": "ls-003-q3",
+        "question": "What does Laura prefer to do at lunchtime when the weather is nice?",
+        "options": [
+          "Eat at her desk",
+          "Cook at home",
+          "Go to a nearby restaurant with colleagues",
+          "Eat at the company cafeteria"
+        ],
+        "answer": "Go to a nearby restaurant with colleagues"
+      },
+      {
+        "id": "ls-003-q4",
+        "question": "How long does Laura exercise in the evening?",
+        "options": ["15 minutes", "30 minutes", "45 minutes", "1 hour"],
+        "answer": "30 minutes"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-004",
+    "type": "listening",
+    "theme": "culture",
+    "title": "News Report: Festival de Cine de San Sebastián",
+    "format": "monologue",
+    "script": "Buenos días. Les informamos desde el Festival Internacional de Cine de San Sebastián, uno de los festivales cinematográficos más prestigiosos del mundo y el más antiguo de España. Este año, el festival celebra su septuagésima edición con una programación especialmente variada y ambiciosa.\n\nDurante diez días, la ciudad vasca se convierte en la capital del cine iberoamericano y europeo. Este año participan más de doscientas películas procedentes de cuarenta y dos países diferentes. La sección oficial compite por la Concha de Oro, el premio más importante del festival, considerado por muchos críticos como uno de los galardones más codiciados del mundo del cine.\n\nEntre las novedades de esta edición destaca la incorporación de una sección dedicada exclusivamente al cine documental, que ha ganado enorme popularidad en los últimos años gracias a las plataformas de streaming. Además, el festival rendirá homenaje a la directora española Isabel Coixet, quien recibirá el Premio Donostia en reconocimiento a toda su carrera.\n\nLas entradas para las proyecciones públicas se agotaron en pocas horas, lo que demuestra el gran interés del público por el séptimo arte. San Sebastián espera recibir a más de ciento cincuenta mil visitantes durante la celebración del festival. Les seguiremos informando a lo largo de la jornada.",
+    "transcript": "Buenos días. Les informamos desde el Festival Internacional de Cine de San Sebastián, uno de los festivales cinematográficos más prestigiosos del mundo y el más antiguo de España. Este año, el festival celebra su septuagésima edición con una programación especialmente variada y ambiciosa.\n\nDurante diez días, la ciudad vasca se convierte en la capital del cine iberoamericano y europeo. Este año participan más de doscientas películas procedentes de cuarenta y dos países diferentes. La sección oficial compite por la Concha de Oro, el premio más importante del festival, considerado por muchos críticos como uno de los galardones más codiciados del mundo del cine.\n\nEntre las novedades de esta edición destaca la incorporación de una sección dedicada exclusivamente al cine documental, que ha ganado enorme popularidad en los últimos años gracias a las plataformas de streaming. Además, el festival rendirá homenaje a la directora española Isabel Coixet, quien recibirá el Premio Donostia en reconocimiento a toda su carrera.\n\nLas entradas para las proyecciones públicas se agotaron en pocas horas, lo que demuestra el gran interés del público por el séptimo arte. San Sebastián espera recibir a más de ciento cincuenta mil visitantes durante la celebración del festival. Les seguiremos informando a lo largo de la jornada.",
+    "duration": 105,
+    "questions": [
+      {
+        "id": "ls-004-q1",
+        "question": "Which edition of the San Sebastián Film Festival is being reported on?",
+        "options": ["The 60th", "The 65th", "The 70th", "The 75th"],
+        "answer": "The 70th"
+      },
+      {
+        "id": "ls-004-q2",
+        "question": "How many films are participating in this year's festival?",
+        "options": ["More than 100", "More than 150", "More than 200", "More than 250"],
+        "answer": "More than 200"
+      },
+      {
+        "id": "ls-004-q3",
+        "question": "What is the main new feature of this year's festival?",
+        "options": [
+          "A section for short films",
+          "A section dedicated exclusively to documentary film",
+          "A new international jury",
+          "An online streaming option"
+        ],
+        "answer": "A section dedicated exclusively to documentary film"
+      },
+      {
+        "id": "ls-004-q4",
+        "question": "How many visitors does San Sebastián expect to receive during the festival?",
+        "options": [
+          "More than 50,000",
+          "More than 100,000",
+          "More than 150,000",
+          "More than 200,000"
+        ],
+        "answer": "More than 150,000"
+      }
+    ],
+    "difficulty": 3,
+    "source": "seed"
+  },
+  {
+    "id": "ls-005",
+    "type": "listening",
+    "theme": "travel",
+    "title": "Hotel Check-In: Problem with Reservation",
+    "format": "dialogue",
+    "script": "Recepcionista: Buenas noches, bienvenido al Hotel Mediterráneo. ¿En qué le puedo ayudar?\nHuésped: Buenas noches. Tengo una reserva a nombre de García, Daniel García.\nRecepcionista: Un momento, por favor... Lo siento, señor García, pero no encuentro su reserva en el sistema.\nHuésped: ¿Cómo? Hice la reserva hace dos semanas por internet. Tengo el número de confirmación aquí en el correo electrónico.\nRecepcionista: ¿Me puede dar el número de confirmación?\nHuésped: Sí, es el BGH-45-2287.\nRecepcionista: Voy a buscar con ese número... Ah, aquí está. El problema es que la reserva fue hecha para el hotel Mediterráneo de Alicante, no el de Valencia.\nHuésped: ¡Dios mío! Pues he venido hasta Valencia en tren. ¿Qué puedo hacer ahora?\nRecepcionista: No se preocupe, señor García. Vamos a intentar solucionar esto. Déjeme comprobar si tenemos habitaciones disponibles para esta noche.\nHuésped: Le agradecería mucho. Es que llegué hace una hora y estoy muy cansado.\nRecepcionista: Tiene suerte, señor García. Tenemos una habitación doble disponible esta noche. Le haremos el mismo precio que tenía en su reserva original.\nHuésped: Eso sería estupendo. Muchísimas gracias por su ayuda.\nRecepcionista: Es nuestro placer. Aquí tiene su tarjeta de habitación. Es la habitación 308, en el tercer piso. ¿Necesita ayuda con su equipaje?\nHuésped: No, gracias, solo tengo una maleta pequeña.",
+    "transcript": "Recepcionista: Buenas noches, bienvenido al Hotel Mediterráneo. ¿En qué le puedo ayudar?\nHuésped: Buenas noches. Tengo una reserva a nombre de García, Daniel García.\nRecepcionista: Un momento, por favor... Lo siento, señor García, pero no encuentro su reserva en el sistema.\nHuésped: ¿Cómo? Hice la reserva hace dos semanas por internet. Tengo el número de confirmación aquí en el correo electrónico.\nRecepcionista: ¿Me puede dar el número de confirmación?\nHuésped: Sí, es el BGH-45-2287.\nRecepcionista: Voy a buscar con ese número... Ah, aquí está. El problema es que la reserva fue hecha para el hotel Mediterráneo de Alicante, no el de Valencia.\nHuésped: ¡Dios mío! Pues he venido hasta Valencia en tren. ¿Qué puedo hacer ahora?\nRecepcionista: No se preocupe, señor García. Vamos a intentar solucionar esto. Déjeme comprobar si tenemos habitaciones disponibles para esta noche.\nHuésped: Le agradecería mucho. Es que llegué hace una hora y estoy muy cansado.\nRecepcionista: Tiene suerte, señor García. Tenemos una habitación doble disponible esta noche. Le haremos el mismo precio que tenía en su reserva original.\nHuésped: Eso sería estupendo. Muchísimas gracias por su ayuda.\nRecepcionista: Es nuestro placer. Aquí tiene su tarjeta de habitación. Es la habitación 308, en el tercer piso. ¿Necesita ayuda con su equipaje?\nHuésped: No, gracias, solo tengo una maleta pequeña.",
+    "duration": 105,
+    "questions": [
+      {
+        "id": "ls-005-q1",
+        "question": "Why can't the receptionist find the guest's reservation?",
+        "options": [
+          "The guest gave the wrong name",
+          "The reservation was cancelled",
+          "The reservation was made for a hotel in a different city",
+          "The reservation system is broken"
+        ],
+        "answer": "The reservation was made for a hotel in a different city"
+      },
+      {
+        "id": "ls-005-q2",
+        "question": "How did the guest travel to Valencia?",
+        "options": ["By plane", "By car", "By bus", "By train"],
+        "answer": "By train"
+      },
+      {
+        "id": "ls-005-q3",
+        "question": "What room is the guest given?",
+        "options": ["Room 208", "Room 280", "Room 308", "Room 380"],
+        "answer": "Room 308"
+      },
+      {
+        "id": "ls-005-q4",
+        "question": "What price will the guest pay for the room?",
+        "options": [
+          "The standard hotel rate",
+          "A discounted emergency rate",
+          "The same price as the original reservation",
+          "Double the original price"
+        ],
+        "answer": "The same price as the original reservation"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-006",
+    "type": "listening",
+    "theme": "work",
+    "title": "Team Meeting About a New Project",
+    "format": "dialogue",
+    "script": "Directora: Buenos días a todos. Vamos a empezar la reunión. Como ya saben, hemos conseguido el contrato con la empresa Tecnova para desarrollar su nueva aplicación móvil. Es un proyecto muy importante para nosotros.\nCarlos: ¿Cuál es el plazo de entrega?\nDirectora: Tenemos cuatro meses para entregar la primera versión. El plazo es bastante ajustado, así que necesitamos organizarnos bien desde el principio.\nSofía: ¿Ya sabemos qué funcionalidades debe tener la aplicación?\nDirectora: Sí, he preparado un documento con todos los requisitos que nos han enviado. Lo compartiré con vosotros después de la reunión. Lo más importante es que la aplicación debe funcionar tanto en Android como en iOS.\nCarlos: ¿Quién va a liderar el equipo de desarrollo?\nDirectora: He pensado que Carlos puede encargarse de la parte técnica, y Sofía, me gustaría que tú coordinaras el diseño y la experiencia de usuario.\nSofía: De acuerdo, pero voy a necesitar al menos una persona más en mi equipo.\nDirectora: Claro. Vamos a contratar a un diseñador gráfico externo. Además, contaremos con el apoyo del equipo de marketing para la estrategia de lanzamiento.\nCarlos: ¿Hay presupuesto para herramientas adicionales de desarrollo?\nDirectora: Sí, hemos reservado una parte del presupuesto para eso. La próxima reunión será el jueves para revisar el plan detallado. ¿Alguna pregunta más?\nSofía: No, creo que está todo claro por ahora. Muchas gracias.",
+    "transcript": "Directora: Buenos días a todos. Vamos a empezar la reunión. Como ya saben, hemos conseguido el contrato con la empresa Tecnova para desarrollar su nueva aplicación móvil. Es un proyecto muy importante para nosotros.\nCarlos: ¿Cuál es el plazo de entrega?\nDirectora: Tenemos cuatro meses para entregar la primera versión. El plazo es bastante ajustado, así que necesitamos organizarnos bien desde el principio.\nSofía: ¿Ya sabemos qué funcionalidades debe tener la aplicación?\nDirectora: Sí, he preparado un documento con todos los requisitos que nos han enviado. Lo compartiré con vosotros después de la reunión. Lo más importante es que la aplicación debe funcionar tanto en Android como en iOS.\nCarlos: ¿Quién va a liderar el equipo de desarrollo?\nDirectora: He pensado que Carlos puede encargarse de la parte técnica, y Sofía, me gustaría que tú coordinaras el diseño y la experiencia de usuario.\nSofía: De acuerdo, pero voy a necesitar al menos una persona más en mi equipo.\nDirectora: Claro. Vamos a contratar a un diseñador gráfico externo. Además, contaremos con el apoyo del equipo de marketing para la estrategia de lanzamiento.\nCarlos: ¿Hay presupuesto para herramientas adicionales de desarrollo?\nDirectora: Sí, hemos reservado una parte del presupuesto para eso. La próxima reunión será el jueves para revisar el plan detallado. ¿Alguna pregunta más?\nSofía: No, creo que está todo claro por ahora. Muchas gracias.",
+    "duration": 110,
+    "questions": [
+      {
+        "id": "ls-006-q1",
+        "question": "What type of project has the team won a contract for?",
+        "options": [
+          "A new website",
+          "A mobile application",
+          "A desktop software program",
+          "A marketing campaign"
+        ],
+        "answer": "A mobile application"
+      },
+      {
+        "id": "ls-006-q2",
+        "question": "How long does the team have to deliver the first version?",
+        "options": ["Two months", "Three months", "Four months", "Six months"],
+        "answer": "Four months"
+      },
+      {
+        "id": "ls-006-q3",
+        "question": "What is Sofia's role in the project?",
+        "options": [
+          "Technical development lead",
+          "Project manager",
+          "Design and user experience coordinator",
+          "Marketing strategist"
+        ],
+        "answer": "Design and user experience coordinator"
+      },
+      {
+        "id": "ls-006-q4",
+        "question": "When is the next meeting scheduled?",
+        "options": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        "answer": "Thursday"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  }
+]

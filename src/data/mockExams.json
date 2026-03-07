@@ -1,0 +1,763 @@
+[
+  {
+    "id": "me-001",
+    "type": "mockExam",
+    "title": "Mock Exam 1: Full B1 Simulation",
+    "duration": 60,
+    "sections": [
+      {
+        "id": "me-001-s1",
+        "title": "Section 1: Reading Comprehension",
+        "type": "reading",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-001-s1-q0",
+            "question": "Read the following passage and answer the questions.\n\nEl mercado de San Miguel es uno de los lugares más visitados de Madrid. Situado en el centro histórico de la ciudad, cerca de la Plaza Mayor, este mercado cubierto fue construido a principios del siglo veinte y reformado completamente en el año dos mil nueve.\n\nActualmente, el mercado ofrece una gran variedad de productos típicos españoles: jamón ibérico, queso manchego, aceitunas, mariscos frescos, y una selección de vinos de diferentes regiones del país. También hay puestos de tapas y bocadillos donde los visitantes pueden comer o tomar algo mientras pasean por el mercado.\n\nEl mercado está abierto todos los días de la semana, desde las diez de la mañana hasta la medianoche. Los fines de semana es especialmente concurrido, y es habitual ver tanto a turistas como a madrileños disfrutando del ambiente. Muchos visitantes lo describen como una experiencia gastronómica única que combina la tradición del mercado clásico español con un diseño moderno y elegante.\n\nEl precio de los productos es algo más elevado que en los supermercados normales, pero la calidad y la variedad justifican la diferencia para muchos clientes. Además, el mercado organiza eventos culturales y catas de vino durante todo el año.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "explanation": "This question introduces the passage. Read it carefully before answering the questions below."
+          },
+          {
+            "id": "me-001-s1-q1",
+            "question": "Where is the Mercado de San Miguel located?",
+            "options": [
+              "Near the Prado Museum",
+              "Near the Plaza Mayor",
+              "Near the Royal Palace",
+              "Near the Retiro Park"
+            ],
+            "answer": "Near the Plaza Mayor",
+            "explanation": "The passage states the market is located near the Plaza Mayor in the historic center of Madrid."
+          },
+          {
+            "id": "me-001-s1-q2",
+            "question": "When was the market completely renovated?",
+            "options": ["1900", "1975", "2000", "2009"],
+            "answer": "2009",
+            "explanation": "The text says the market was 'reformado completamente en el año dos mil nueve' (completely renovated in the year 2009)."
+          },
+          {
+            "id": "me-001-s1-q3",
+            "question": "What time does the market close?",
+            "options": ["8 PM", "10 PM", "Midnight", "2 AM"],
+            "answer": "Midnight",
+            "explanation": "The passage states the market is open until 'la medianoche' (midnight) every day."
+          },
+          {
+            "id": "me-001-s1-q4",
+            "question": "According to the passage, what can visitors do at the market besides shopping?",
+            "options": [
+              "Take cooking classes",
+              "Attend wine tastings and cultural events",
+              "Watch live flamenco performances",
+              "Visit a museum"
+            ],
+            "answer": "Attend wine tastings and cultural events",
+            "explanation": "The passage mentions the market organizes 'eventos culturales y catas de vino' (cultural events and wine tastings) throughout the year."
+          }
+        ]
+      },
+      {
+        "id": "me-001-s2",
+        "title": "Section 2: Grammar",
+        "type": "grammar",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-001-s2-q1",
+            "question": "Ayer _____ al cine con mis amigos y lo pasamos muy bien.",
+            "options": ["fui", "voy", "iré", "iba"],
+            "answer": "fui",
+            "explanation": "'Ayer' (yesterday) requires the preterite tense. 'Fui' is the first-person singular preterite of 'ir' (to go)."
+          },
+          {
+            "id": "me-001-s2-q2",
+            "question": "Si tuviera más tiempo, _____ más deporte.",
+            "options": ["haré", "hago", "haría", "hice"],
+            "answer": "haría",
+            "explanation": "This is a conditional sentence with 'si + imperfect subjunctive', requiring the conditional tense in the main clause. 'Haría' is the conditional of 'hacer'."
+          },
+          {
+            "id": "me-001-s2-q3",
+            "question": "¿Has _____ alguna vez en un país extranjero?",
+            "options": ["vivido", "viviendo", "vivir", "vives"],
+            "answer": "vivido",
+            "explanation": "After the present perfect auxiliary 'has', a past participle is required. 'Vivido' is the past participle of 'vivir' (to live)."
+          },
+          {
+            "id": "me-001-s2-q4",
+            "question": "El libro _____ estás leyendo es muy interesante.",
+            "options": ["que", "quien", "lo que", "cual"],
+            "answer": "que",
+            "explanation": "'Que' is the relative pronoun used with things. 'Quien' is used for people, making 'que' the correct answer here."
+          },
+          {
+            "id": "me-001-s2-q5",
+            "question": "Necesito que tú _____ temprano mañana.",
+            "options": ["llegas", "llegues", "llegarás", "llegabas"],
+            "answer": "llegues",
+            "explanation": "'Necesito que' triggers the subjunctive mood. 'Llegues' is the present subjunctive of 'llegar' for the second person singular."
+          },
+          {
+            "id": "me-001-s2-q6",
+            "question": "Cuando _____ más joven, vivía en el campo.",
+            "options": ["era", "fui", "soy", "seré"],
+            "answer": "era",
+            "explanation": "The imperfect 'era' is used here to describe a habitual or ongoing state in the past, contrasting with the also imperfect 'vivía'."
+          },
+          {
+            "id": "me-001-s2-q7",
+            "question": "_____ que estudiar más si quieres aprobar el examen.",
+            "options": ["Tienes", "Tendrás", "Tenías", "Tengas"],
+            "answer": "Tienes",
+            "explanation": "'Tener que + infinitive' expresses obligation. The present tense 'tienes' is correct for giving general advice or stating a current obligation."
+          },
+          {
+            "id": "me-001-s2-q8",
+            "question": "La reunión _____ cancelada por el director esta mañana.",
+            "options": ["fue", "era", "ha sido", "estuvo"],
+            "answer": "fue",
+            "explanation": "The preterite passive 'fue cancelada' is used here to describe a completed past action at a specific time ('esta mañana')."
+          }
+        ]
+      },
+      {
+        "id": "me-001-s3",
+        "title": "Section 3: Vocabulary",
+        "type": "vocabulary",
+        "timeLimit": 10,
+        "questions": [
+          {
+            "id": "me-001-s3-q1",
+            "question": "Which word means 'to improve' in Spanish?",
+            "options": ["empeorar", "mejorar", "cambiar", "crecer"],
+            "answer": "mejorar",
+            "explanation": "'Mejorar' means to improve or to get better. 'Empeorar' means to worsen, 'cambiar' means to change, and 'crecer' means to grow."
+          },
+          {
+            "id": "me-001-s3-q2",
+            "question": "Choose the correct word: 'El médico me dio una _____ para comprar los medicamentos.'",
+            "options": ["receta", "factura", "entrada", "licencia"],
+            "answer": "receta",
+            "explanation": "'Receta' means prescription (or recipe). A doctor gives a 'receta' (prescription) to buy medicine."
+          },
+          {
+            "id": "me-001-s3-q3",
+            "question": "What does 'el ayuntamiento' mean?",
+            "options": ["The train station", "The town hall / city council", "The hospital", "The shopping center"],
+            "answer": "The town hall / city council",
+            "explanation": "'El ayuntamiento' is the local government building, equivalent to the town hall or city council."
+          },
+          {
+            "id": "me-001-s3-q4",
+            "question": "Choose the correct word: 'Tengo que _____ el formulario antes de mandarlo.'",
+            "options": ["rellenar", "romper", "doblar", "quemar"],
+            "answer": "rellenar",
+            "explanation": "'Rellenar' means to fill in or fill out (a form). You fill out a form before sending it."
+          },
+          {
+            "id": "me-001-s3-q5",
+            "question": "Which word means 'disappointed'?",
+            "options": ["orgulloso", "decepcionado", "agradecido", "avergonzado"],
+            "answer": "decepcionado",
+            "explanation": "'Decepcionado' means disappointed. 'Orgulloso' means proud, 'agradecido' means grateful, and 'avergonzado' means ashamed."
+          },
+          {
+            "id": "me-001-s3-q6",
+            "question": "Choose the correct word: 'El _____ del apartamento incluye agua y electricidad.'",
+            "options": ["alquiler", "préstamo", "ahorro", "gasto"],
+            "answer": "alquiler",
+            "explanation": "'El alquiler' means the rent. The rent of the apartment includes water and electricity."
+          },
+          {
+            "id": "me-001-s3-q7",
+            "question": "What does 'el semáforo' mean?",
+            "options": ["The road sign", "The pedestrian crossing", "The traffic light", "The roundabout"],
+            "answer": "The traffic light",
+            "explanation": "'El semáforo' is the traffic light. 'El paso de peatones' is the pedestrian crossing and 'la señal' is the road sign."
+          },
+          {
+            "id": "me-001-s3-q8",
+            "question": "Choose the correct word: 'No me gusta esa _____ contigo, es demasiado cara para mí.'",
+            "options": ["tienda", "marca", "moda", "talla"],
+            "answer": "marca",
+            "explanation": "'La marca' means brand. The sentence means 'I don't like that brand, it's too expensive for me.'"
+          }
+        ]
+      },
+      {
+        "id": "me-001-s4",
+        "title": "Section 4: Listening Comprehension",
+        "type": "listening",
+        "timeLimit": 20,
+        "questions": [
+          {
+            "id": "me-001-s4-q0",
+            "question": "Listen to the audio and answer the following questions.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "script": "Hola, me llamo Marta y os quiero hablar de mi experiencia estudiando en el extranjero. El año pasado estuve seis meses en Berlín para aprender alemán. Fue una experiencia increíble, aunque al principio fue bastante difícil adaptarme.\n\nLos primeros días me sentí un poco perdida porque no entendía casi nada. Pero poco a poco fui mejorando. Asistía a clases de alemán por las mañanas durante tres horas y por las tardes salía a explorar la ciudad o quedaba con otros estudiantes internacionales.\n\nVivía en una residencia universitaria con estudiantes de muchos países diferentes. Hice amigos de Italia, Francia, Japón y Brasil. Fue una oportunidad fantástica para practicar distintos idiomas y conocer otras culturas. Mi compañera de habitación era una chica francesa muy simpática llamada Claire, y todavía seguimos en contacto.\n\nLo más difícil fue estar lejos de mi familia, especialmente al principio. Llamaba a mis padres cada día por videollamada. También echaba de menos la comida española, sobre todo los domingos cuando mi madre hace paella.\n\nSi tuviera la oportunidad, volvería a estudiar en el extranjero sin dudarlo. La experiencia me cambió mucho como persona y mejoró mi alemán de forma impresionante. Os lo recomiendo a todos.",
+            "transcript": "Hola, me llamo Marta y os quiero hablar de mi experiencia estudiando en el extranjero. El año pasado estuve seis meses en Berlín para aprender alemán. Fue una experiencia increíble, aunque al principio fue bastante difícil adaptarme.\n\nLos primeros días me sentí un poco perdida porque no entendía casi nada. Pero poco a poco fui mejorando. Asistía a clases de alemán por las mañanas durante tres horas y por las tardes salía a explorar la ciudad o quedaba con otros estudiantes internacionales.\n\nVivía en una residencia universitaria con estudiantes de muchos países diferentes. Hice amigos de Italia, Francia, Japón y Brasil. Fue una oportunidad fantástica para practicar distintos idiomas y conocer otras culturas. Mi compañera de habitación era una chica francesa muy simpática llamada Claire, y todavía seguimos en contacto.\n\nLo más difícil fue estar lejos de mi familia, especialmente al principio. Llamaba a mis padres cada día por videollamada. También echaba de menos la comida española, sobre todo los domingos cuando mi madre hace paella.\n\nSi tuviera la oportunidad, volvería a estudiar en el extranjero sin dudarlo. La experiencia me cambió mucho como persona y mejoró mi alemán de forma impresionante. Os lo recomiendo a todos.",
+            "explanation": "This is the listening passage. Listen carefully before answering the questions."
+          },
+          {
+            "id": "me-001-s4-q1",
+            "question": "How long did Marta study abroad?",
+            "options": ["Three months", "Six months", "One year", "Two years"],
+            "answer": "Six months",
+            "script": "",
+            "transcript": "",
+            "explanation": "Marta says she spent 'seis meses en Berlín' (six months in Berlin)."
+          },
+          {
+            "id": "me-001-s4-q2",
+            "question": "How many hours of German classes did Marta attend each morning?",
+            "options": ["One hour", "Two hours", "Three hours", "Four hours"],
+            "answer": "Three hours",
+            "script": "",
+            "transcript": "",
+            "explanation": "The text says she attended German classes in the mornings 'durante tres horas' (for three hours)."
+          },
+          {
+            "id": "me-001-s4-q3",
+            "question": "What was the hardest thing about living abroad for Marta?",
+            "options": [
+              "Learning the German language",
+              "Making new friends",
+              "Being far from her family",
+              "Finding accommodation"
+            ],
+            "answer": "Being far from her family",
+            "script": "",
+            "transcript": "",
+            "explanation": "Marta says 'Lo más difícil fue estar lejos de mi familia' (The hardest thing was being far from my family)."
+          },
+          {
+            "id": "me-001-s4-q4",
+            "question": "What does Marta say she would do if she had the opportunity?",
+            "options": [
+              "Move to Germany permanently",
+              "Study abroad again without hesitation",
+              "Learn a different language",
+              "Take her family with her"
+            ],
+            "answer": "Study abroad again without hesitation",
+            "script": "",
+            "transcript": "",
+            "explanation": "Marta says 'volvería a estudiar en el extranjero sin dudarlo' (she would study abroad again without hesitation)."
+          }
+        ]
+      }
+    ],
+    "source": "seed"
+  },
+  {
+    "id": "me-002",
+    "type": "mockExam",
+    "title": "Mock Exam 2: Full B1 Simulation",
+    "duration": 60,
+    "sections": [
+      {
+        "id": "me-002-s1",
+        "title": "Section 1: Reading Comprehension",
+        "type": "reading",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-002-s1-q0",
+            "question": "Read the following passage and answer the questions.\n\nEl teletrabajo, o trabajo desde casa, se ha convertido en una parte esencial de la vida laboral moderna, especialmente después de la pandemia del año dos mil veinte. Muchas empresas que antes nunca habrían considerado esta opción se vieron obligadas a adoptarla de forma urgente, y muchas de ellas han decidido mantenerla de manera permanente o parcial.\n\nLos defensores del teletrabajo señalan numerosas ventajas. En primer lugar, los trabajadores ahorran tiempo y dinero al no tener que desplazarse hasta la oficina. Además, muchos estudios demuestran que la productividad aumenta cuando las personas trabajan desde casa, ya que hay menos interrupciones y distracciones. Por otro lado, el teletrabajo permite conciliar mejor la vida laboral y familiar.\n\nSin embargo, no todo son ventajas. Uno de los principales problemas es la sensación de aislamiento social que sienten algunos trabajadores al perder el contacto directo con sus compañeros. Además, para muchas personas resulta difícil separar el espacio de trabajo del espacio personal cuando ambos se encuentran en el mismo lugar.\n\nLas empresas también enfrentan desafíos: mantener la cohesión del equipo, garantizar la seguridad informática y supervisar el rendimiento de los empleados a distancia son tareas complicadas. Por eso, muchas organizaciones optan por un modelo híbrido que combina días en la oficina con días de trabajo remoto, buscando lo mejor de ambos mundos.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "explanation": "This question introduces the passage. Read it carefully before answering the questions below."
+          },
+          {
+            "id": "me-002-s1-q1",
+            "question": "According to the passage, what happened to remote work after the 2020 pandemic?",
+            "options": [
+              "It was banned by most companies",
+              "Many companies that had never considered it adopted it and many kept it",
+              "It was only used by large corporations",
+              "It became mandatory for all workers"
+            ],
+            "answer": "Many companies that had never considered it adopted it and many kept it",
+            "explanation": "The text says companies were 'obligadas a adoptarla' and many decided to 'mantenerla de manera permanente o parcial' (keep it permanently or partially)."
+          },
+          {
+            "id": "me-002-s1-q2",
+            "question": "What do studies show about productivity when working from home?",
+            "options": [
+              "Productivity decreases significantly",
+              "Productivity stays the same",
+              "Productivity increases due to fewer interruptions",
+              "Productivity depends on the type of job"
+            ],
+            "answer": "Productivity increases due to fewer interruptions",
+            "explanation": "The passage states 'la productividad aumenta cuando las personas trabajan desde casa, ya que hay menos interrupciones y distracciones'."
+          },
+          {
+            "id": "me-002-s1-q3",
+            "question": "What is cited as a main problem with remote work for employees?",
+            "options": [
+              "Lower salaries",
+              "Fewer promotion opportunities",
+              "Social isolation",
+              "Poor internet connection"
+            ],
+            "answer": "Social isolation",
+            "explanation": "The text mentions 'la sensación de aislamiento social' (the feeling of social isolation) as one of the main problems."
+          },
+          {
+            "id": "me-002-s1-q4",
+            "question": "What solution do many companies choose to address the challenges of remote work?",
+            "options": [
+              "Returning to full office work",
+              "A hybrid model combining office and remote days",
+              "Hiring only remote workers",
+              "Moving all operations online"
+            ],
+            "answer": "A hybrid model combining office and remote days",
+            "explanation": "The passage says many organizations opt for 'un modelo híbrido que combina días en la oficina con días de trabajo remoto' (a hybrid model combining office days with remote work days)."
+          }
+        ]
+      },
+      {
+        "id": "me-002-s2",
+        "title": "Section 2: Grammar",
+        "type": "grammar",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-002-s2-q1",
+            "question": "Llevamos dos horas _____ aquí sin recibir ninguna información.",
+            "options": ["esperando", "esperamos", "esperábamos", "esperaremos"],
+            "answer": "esperando",
+            "explanation": "'Llevar + gerund' is used to express an action that has been going on for a duration of time. 'Esperando' (waiting) is the gerund of 'esperar'."
+          },
+          {
+            "id": "me-002-s2-q2",
+            "question": "Le pedí al taxista que _____ más despacio.",
+            "options": ["conduce", "conducía", "condujera", "conducirá"],
+            "answer": "condujera",
+            "explanation": "After 'pedir que' (to ask that), the imperfect subjunctive is required when the main verb is in the past. 'Condujera' is the imperfect subjunctive of 'conducir'."
+          },
+          {
+            "id": "me-002-s2-q3",
+            "question": "Esta película _____ dirigida por un director español muy famoso.",
+            "options": ["estuvo", "fue", "está", "era"],
+            "answer": "fue",
+            "explanation": "'Fue dirigida' is the preterite passive, used for a completed action with a defined result. It is the correct form for a film that was directed at a specific point in the past."
+          },
+          {
+            "id": "me-002-s2-q4",
+            "question": "Cuanto más estudias, _____ aprendes.",
+            "options": ["más", "menos", "tanto", "mucho"],
+            "answer": "más",
+            "explanation": "'Cuanto más... más...' is a comparative construction meaning 'the more... the more...'. Both parts use 'más'."
+          },
+          {
+            "id": "me-002-s2-q5",
+            "question": "Me alegra que tus padres _____ bien de salud.",
+            "options": ["están", "estén", "estarán", "estaban"],
+            "answer": "estén",
+            "explanation": "'Alegrarse de que' expresses emotion and triggers the subjunctive. 'Estén' is the present subjunctive of 'estar'."
+          },
+          {
+            "id": "me-002-s2-q6",
+            "question": "Para cuando llegues a casa, yo ya _____ la cena.",
+            "options": ["preparo", "preparé", "habré preparado", "preparaба"],
+            "answer": "habré preparado",
+            "explanation": "The future perfect 'habré preparado' is used to indicate an action that will be completed before another future point in time ('para cuando llegues')."
+          },
+          {
+            "id": "me-002-s2-q7",
+            "question": "Fue _____ fácil que lo hice en diez minutos.",
+            "options": ["muy", "tan", "tanto", "más"],
+            "answer": "tan",
+            "explanation": "'Tan... que' is a result construction meaning 'so... that'. 'Tan fácil que' means 'so easy that'."
+          },
+          {
+            "id": "me-002-s2-q8",
+            "question": "No hay nadie que _____ hablar cinco idiomas perfectamente.",
+            "options": ["puede", "podría", "pueda", "pudo"],
+            "answer": "pueda",
+            "explanation": "After 'no hay nadie que', the subjunctive is required because the antecedent is non-existent. 'Pueda' is the present subjunctive of 'poder'."
+          }
+        ]
+      },
+      {
+        "id": "me-002-s3",
+        "title": "Section 3: Vocabulary",
+        "type": "vocabulary",
+        "timeLimit": 10,
+        "questions": [
+          {
+            "id": "me-002-s3-q1",
+            "question": "Which word means 'to complain' in Spanish?",
+            "options": ["quejarse", "callarse", "alegrarse", "equivocarse"],
+            "answer": "quejarse",
+            "explanation": "'Quejarse' means to complain. 'Callarse' means to be quiet, 'alegrarse' means to be happy about something, and 'equivocarse' means to make a mistake."
+          },
+          {
+            "id": "me-002-s3-q2",
+            "question": "Choose the correct word: 'Los _____ del edificio se reunieron para hablar del problema del ascensor.'",
+            "options": ["vecinos", "clientes", "empleados", "turistas"],
+            "answer": "vecinos",
+            "explanation": "'Los vecinos' means the neighbours. In the context of a building meeting, neighbours would gather to discuss a lift problem."
+          },
+          {
+            "id": "me-002-s3-q3",
+            "question": "What does 'el desempleo' mean?",
+            "options": ["Employment", "Unemployment", "Salary", "Retirement"],
+            "answer": "Unemployment",
+            "explanation": "'El desempleo' (also 'el paro') means unemployment. 'El empleo' means employment."
+          },
+          {
+            "id": "me-002-s3-q4",
+            "question": "Choose the correct word: 'El _____ de este barrio es peligroso por la noche.'",
+            "options": ["ambiente", "paisaje", "precio", "tráfico"],
+            "answer": "ambiente",
+            "explanation": "'El ambiente' means the atmosphere or environment of a place. The sentence means 'The atmosphere of this neighbourhood is dangerous at night.'"
+          },
+          {
+            "id": "me-002-s3-q5",
+            "question": "Which word means 'reliable' or 'trustworthy'?",
+            "options": ["amable", "seguro", "fiable", "eficaz"],
+            "answer": "fiable",
+            "explanation": "'Fiable' means reliable or trustworthy. 'Amable' means kind, 'seguro' means safe/sure, and 'eficaz' means effective."
+          },
+          {
+            "id": "me-002-s3-q6",
+            "question": "Choose the correct word: 'Necesito hacer _____ en el banco para pagar el alquiler.'",
+            "options": ["una transferencia", "un descuento", "una multa", "un préstamo"],
+            "answer": "una transferencia",
+            "explanation": "'Una transferencia' means a bank transfer. The sentence means 'I need to make a bank transfer to pay the rent.'"
+          },
+          {
+            "id": "me-002-s3-q7",
+            "question": "What does 'el embarazo' mean?",
+            "options": ["Embarrassment", "Pregnancy", "Engagement", "Emergency"],
+            "answer": "Pregnancy",
+            "explanation": "'El embarazo' means pregnancy, not embarrassment (a common false friend). 'Embarrassment' in Spanish is 'la vergüenza'."
+          },
+          {
+            "id": "me-002-s3-q8",
+            "question": "Choose the correct word: 'Voy a _____ un contrato con esa empresa para suministrar los materiales.'",
+            "options": ["firmar", "leer", "rechazar", "inventar"],
+            "answer": "firmar",
+            "explanation": "'Firmar' means to sign. You sign a contract with a company. 'Rechazar' means to reject."
+          }
+        ]
+      },
+      {
+        "id": "me-002-s4",
+        "title": "Section 4: Listening Comprehension",
+        "type": "listening",
+        "timeLimit": 20,
+        "questions": [
+          {
+            "id": "me-002-s4-q0",
+            "question": "Listen to the audio and answer the following questions.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "script": "Buenos días, les habla el inspector de tráfico García. Hoy quiero hablarles sobre los cambios en las normas de circulación que entrarán en vigor el próximo mes.\n\nEn primer lugar, a partir del día primero, la velocidad máxima en las zonas urbanas se reducirá de cincuenta a treinta kilómetros por hora en aquellas calles que tengan un solo carril por sentido. Esta medida tiene como objetivo reducir el número de accidentes y mejorar la seguridad de los peatones y ciclistas.\n\nEn segundo lugar, se ampliará la zona de aparcamiento de pago en el centro de la ciudad. El objetivo es reducir el tráfico en las calles principales y fomentar el uso del transporte público. Los residentes del centro podrán obtener un permiso especial con un descuento del cincuenta por ciento.\n\nAdemás, se instalarán nuevas cámaras de control de velocidad en diez puntos diferentes de la ciudad. Las multas por exceso de velocidad aumentarán un veinticinco por ciento respecto al año anterior.\n\nPor último, queremos recordar que el uso del teléfono móvil al volante sin manos libres puede suponer una multa de doscientos euros y la pérdida de seis puntos del carné de conducir. Les agradecemos su colaboración para mantener nuestras calles más seguras.",
+            "transcript": "Buenos días, les habla el inspector de tráfico García. Hoy quiero hablarles sobre los cambios en las normas de circulación que entrarán en vigor el próximo mes.\n\nEn primer lugar, a partir del día primero, la velocidad máxima en las zonas urbanas se reducirá de cincuenta a treinta kilómetros por hora en aquellas calles que tengan un solo carril por sentido. Esta medida tiene como objetivo reducir el número de accidentes y mejorar la seguridad de los peatones y ciclistas.\n\nEn segundo lugar, se ampliará la zona de aparcamiento de pago en el centro de la ciudad. El objetivo es reducir el tráfico en las calles principales y fomentar el uso del transporte público. Los residentes del centro podrán obtener un permiso especial con un descuento del cincuenta por ciento.\n\nAdemás, se instalarán nuevas cámaras de control de velocidad en diez puntos diferentes de la ciudad. Las multas por exceso de velocidad aumentarán un veinticinco por ciento respecto al año anterior.\n\nPor último, queremos recordar que el uso del teléfono móvil al volante sin manos libres puede suponer una multa de doscientos euros y la pérdida de seis puntos del carné de conducir. Les agradecemos su colaboración para mantener nuestras calles más seguras.",
+            "explanation": "This is the listening passage. Listen carefully before answering the questions."
+          },
+          {
+            "id": "me-002-s4-q1",
+            "question": "What will the new maximum speed limit be on single-lane urban streets?",
+            "options": ["20 km/h", "30 km/h", "40 km/h", "50 km/h"],
+            "answer": "30 km/h",
+            "script": "",
+            "transcript": "",
+            "explanation": "The speed limit will be reduced from 50 to 30 km/h on streets with a single lane per direction."
+          },
+          {
+            "id": "me-002-s4-q2",
+            "question": "What discount will city centre residents get for the paid parking permit?",
+            "options": ["25%", "30%", "40%", "50%"],
+            "answer": "50%",
+            "script": "",
+            "transcript": "",
+            "explanation": "The text states residents can obtain a special permit 'con un descuento del cincuenta por ciento' (with a 50% discount)."
+          },
+          {
+            "id": "me-002-s4-q3",
+            "question": "By how much will speeding fines increase?",
+            "options": ["10%", "15%", "20%", "25%"],
+            "answer": "25%",
+            "script": "",
+            "transcript": "",
+            "explanation": "The announcement states fines will increase 'un veinticinco por ciento' (25%) compared to the previous year."
+          },
+          {
+            "id": "me-002-s4-q4",
+            "question": "How many penalty points can a driver lose for using a mobile phone without hands-free?",
+            "options": ["2 points", "4 points", "6 points", "8 points"],
+            "answer": "6 points",
+            "script": "",
+            "transcript": "",
+            "explanation": "The text mentions 'la pérdida de seis puntos del carné de conducir' (the loss of six points from the driving licence)."
+          }
+        ]
+      }
+    ],
+    "source": "seed"
+  },
+  {
+    "id": "me-003",
+    "type": "mockExam",
+    "title": "Mock Exam 3: Full B1 Simulation",
+    "duration": 60,
+    "sections": [
+      {
+        "id": "me-003-s1",
+        "title": "Section 1: Reading Comprehension",
+        "type": "reading",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-003-s1-q0",
+            "question": "Read the following passage and answer the questions.\n\nLa inteligencia artificial está transformando profundamente el mercado laboral mundial. Según un informe publicado por el Foro Económico Mundial, para el año dos mil veintisiete se habrán destruido aproximadamente ochenta y cinco millones de puestos de trabajo a causa de la automatización, pero al mismo tiempo se habrán creado noventa y siete millones de nuevos empleos en sectores emergentes.\n\nLas profesiones más vulnerables a la automatización son aquellas que implican tareas repetitivas y predecibles: operadores de maquinaria, empleados de banca, cajeros de supermercado y conductores de vehículos de transporte, entre otros. En cambio, las ocupaciones que requieren creatividad, empatía, pensamiento crítico y habilidades interpersonales son más difíciles de automatizar y, por tanto, tienen mejores perspectivas de futuro.\n\nEl fenómeno tiene especial relevancia en países en vías de desarrollo, donde una gran parte de la población trabaja en sectores industriales que podrían verse gravemente afectados. Expertos en economía señalan que la clave para afrontar este desafío es la formación continua y la capacidad de adaptación.\n\nGobiernos, empresas y universidades deberán colaborar para diseñar programas de reciclaje profesional que permitan a los trabajadores adquirir las competencias necesarias para los empleos del futuro. La reconversión laboral no es solo una necesidad económica, sino también una cuestión de justicia social.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "explanation": "This question introduces the passage. Read it carefully before answering the questions below."
+          },
+          {
+            "id": "me-003-s1-q1",
+            "question": "According to the World Economic Forum report, how many new jobs will be created by 2027?",
+            "options": ["85 million", "90 million", "97 million", "100 million"],
+            "answer": "97 million",
+            "explanation": "The text states 'se habrán creado noventa y siete millones de nuevos empleos' (97 million new jobs will have been created)."
+          },
+          {
+            "id": "me-003-s1-q2",
+            "question": "Which type of jobs are most at risk from automation?",
+            "options": [
+              "Jobs requiring creativity and critical thinking",
+              "Jobs involving repetitive and predictable tasks",
+              "Jobs in the healthcare sector",
+              "Jobs requiring interpersonal skills"
+            ],
+            "answer": "Jobs involving repetitive and predictable tasks",
+            "explanation": "The passage states the most vulnerable professions are those involving 'tareas repetitivas y predecibles' (repetitive and predictable tasks)."
+          },
+          {
+            "id": "me-003-s1-q3",
+            "question": "Where does automation pose a particular challenge according to the text?",
+            "options": [
+              "In developed countries with aging populations",
+              "In developing countries with large industrial sectors",
+              "In countries with high levels of education",
+              "In the technology sector specifically"
+            ],
+            "answer": "In developing countries with large industrial sectors",
+            "explanation": "The text mentions 'países en vías de desarrollo, donde una gran parte de la población trabaja en sectores industriales' (developing countries where a large part of the population works in industrial sectors)."
+          },
+          {
+            "id": "me-003-s1-q4",
+            "question": "What does the author say professional retraining is, beyond an economic necessity?",
+            "options": [
+              "A political priority",
+              "A technological challenge",
+              "A matter of social justice",
+              "A voluntary option"
+            ],
+            "answer": "A matter of social justice",
+            "explanation": "The final sentence states 'La reconversión laboral no es solo una necesidad económica, sino también una cuestión de justicia social' (Professional retraining is not only an economic necessity, but also a matter of social justice)."
+          }
+        ]
+      },
+      {
+        "id": "me-003-s2",
+        "title": "Section 2: Grammar",
+        "type": "grammar",
+        "timeLimit": 15,
+        "questions": [
+          {
+            "id": "me-003-s2-q1",
+            "question": "Ojalá _____ haber terminado el proyecto antes de las vacaciones.",
+            "options": ["puedo", "podré", "pudiera", "pude"],
+            "answer": "pudiera",
+            "explanation": "'Ojalá' expressing an unlikely or impossible wish about the past or present takes the imperfect subjunctive. 'Pudiera' is the imperfect subjunctive of 'poder'."
+          },
+          {
+            "id": "me-003-s2-q2",
+            "question": "A pesar de _____ muy cansado, siguió trabajando hasta las doce.",
+            "options": ["que estaba", "estar", "estando", "que estuvo"],
+            "answer": "estar",
+            "explanation": "'A pesar de' followed by an infinitive is used when the subject of both clauses is the same. 'A pesar de estar' means 'despite being'."
+          },
+          {
+            "id": "me-003-s2-q3",
+            "question": "Si hubiera sabido la verdad, no _____ lo mismo.",
+            "options": ["habría hecho", "haría", "hiciera", "hubiera hecho"],
+            "answer": "habría hecho",
+            "explanation": "In third conditional sentences ('si + pluperfect subjunctive'), the main clause uses the conditional perfect ('habría + past participle')."
+          },
+          {
+            "id": "me-003-s2-q4",
+            "question": "Es importante que los ciudadanos _____ informados sobre sus derechos.",
+            "options": ["están", "estén", "estarán", "estarían"],
+            "answer": "estén",
+            "explanation": "After impersonal expressions like 'es importante que', the subjunctive is required. 'Estén' is the present subjunctive of 'estar'."
+          },
+          {
+            "id": "me-003-s2-q5",
+            "question": "El proyecto _____ aprobado por el comité antes de que llegues.",
+            "options": ["habrá sido", "será", "fue", "sería"],
+            "answer": "habrá sido",
+            "explanation": "The future perfect passive 'habrá sido aprobado' expresses an action that will have been completed before a future reference point ('antes de que llegues')."
+          },
+          {
+            "id": "me-003-s2-q6",
+            "question": "Lo que me _____ es que nadie me avisó del cambio de reunión.",
+            "options": ["molesta", "molesto", "molestó", "molestaba"],
+            "answer": "molesta",
+            "explanation": "The present tense 'molesta' is used here because the speaker is expressing a current, ongoing feeling about what happened. 'Lo que me molesta' sets up a general statement of current emotion."
+          },
+          {
+            "id": "me-003-s2-q7",
+            "question": "Aunque _____ mucho dinero, no compraría ese coche tan lujoso.",
+            "options": ["tuviera", "tengo", "tendré", "tuve"],
+            "answer": "tuviera",
+            "explanation": "'Aunque' with the imperfect subjunctive ('tuviera') expresses a hypothetical concession, meaning 'even if I had a lot of money'. This reflects an unlikely scenario."
+          },
+          {
+            "id": "me-003-s2-q8",
+            "question": "Según _____ el periódico, habrá elecciones en primavera.",
+            "options": ["dice", "diga", "dijera", "diría"],
+            "answer": "dice",
+            "explanation": "'Según dice el periódico' (according to what the newspaper says) uses the indicative because 'según' introduces a factual source of information, not a hypothetical."
+          }
+        ]
+      },
+      {
+        "id": "me-003-s3",
+        "title": "Section 3: Vocabulary",
+        "type": "vocabulary",
+        "timeLimit": 10,
+        "questions": [
+          {
+            "id": "me-003-s3-q1",
+            "question": "Which word best completes the sentence: 'La empresa tuvo que _____ a cincuenta trabajadores debido a la crisis económica.'",
+            "options": ["contratar", "despedir", "ascender", "jubilarse"],
+            "answer": "despedir",
+            "explanation": "'Despedir' means to dismiss or fire employees. 'Contratar' means to hire, 'ascender' means to promote, and 'jubilarse' means to retire."
+          },
+          {
+            "id": "me-003-s3-q2",
+            "question": "What does 'el matiz' mean in English?",
+            "options": ["The colour", "The nuance / shade of meaning", "The majority", "The morning"],
+            "answer": "The nuance / shade of meaning",
+            "explanation": "'El matiz' refers to a nuance, subtle distinction, or shade of meaning. It can also mean shade of colour but is most commonly used figuratively."
+          },
+          {
+            "id": "me-003-s3-q3",
+            "question": "Choose the correct word: 'El gobierno ha aprobado una nueva ley para _____ la discriminación en el trabajo.'",
+            "options": ["fomentar", "combatir", "ignorar", "provocar"],
+            "answer": "combatir",
+            "explanation": "'Combatir' means to fight or combat. A government approves laws to combat (fight against) discrimination. 'Fomentar' means to promote or encourage."
+          },
+          {
+            "id": "me-003-s3-q4",
+            "question": "Which word means 'breakthrough' or 'advance' in a scientific context?",
+            "options": ["el fracaso", "el logro", "el avance", "el riesgo"],
+            "answer": "el avance",
+            "explanation": "'El avance' means an advance or breakthrough. 'El logro' means an achievement, 'el fracaso' means failure, and 'el riesgo' means risk."
+          },
+          {
+            "id": "me-003-s3-q5",
+            "question": "Choose the correct word: 'Las _____ de ese político han generado mucha controversia en los medios de comunicación.'",
+            "options": ["declaraciones", "decisiones", "tradiciones", "actuaciones"],
+            "answer": "declaraciones",
+            "explanation": "'Las declaraciones' means statements or declarations. Politicians' statements generate controversy in the media. 'Las actuaciones' means performances or actions."
+          },
+          {
+            "id": "me-003-s3-q6",
+            "question": "What does 'efímero' mean?",
+            "options": ["Lasting forever", "Brief and short-lived", "Very efficient", "Extremely expensive"],
+            "answer": "Brief and short-lived",
+            "explanation": "'Efímero' means ephemeral, fleeting, or short-lived — something that lasts only a very short time."
+          },
+          {
+            "id": "me-003-s3-q7",
+            "question": "Choose the correct word: 'La _____ del paciente fue más rápida de lo que esperaban los médicos.'",
+            "options": ["operación", "recuperación", "prescripción", "infección"],
+            "answer": "recuperación",
+            "explanation": "'La recuperación' means recovery. The patient's recovery was faster than the doctors expected."
+          },
+          {
+            "id": "me-003-s3-q8",
+            "question": "Which phrase means 'to take into account'?",
+            "options": ["dar cuenta de", "tener en cuenta", "darse cuenta de", "poner en práctica"],
+            "answer": "tener en cuenta",
+            "explanation": "'Tener en cuenta' means to take into account or to bear in mind. 'Darse cuenta de' means to realize, and 'poner en práctica' means to put into practice."
+          }
+        ]
+      },
+      {
+        "id": "me-003-s4",
+        "title": "Section 4: Listening Comprehension",
+        "type": "listening",
+        "timeLimit": 20,
+        "questions": [
+          {
+            "id": "me-003-s4-q0",
+            "question": "Listen to the audio and answer the following questions.",
+            "options": ["A", "B", "C", "D"],
+            "answer": "A",
+            "script": "Buenas tardes. En el programa de hoy vamos a hablar con la doctora Elena Vidal, experta en neurociencia del sueño de la Universidad Complutense de Madrid. Bienvenida, Elena.\n\nGracias, es un placer estar aquí. Lo que quiero transmitir hoy es que el sueño no es un lujo, sino una necesidad biológica fundamental. Dormir bien tiene un impacto enorme en nuestra salud física y mental.\n\nDurante el sueño, el cerebro lleva a cabo procesos cruciales: consolida los recuerdos, elimina toxinas acumuladas durante el día y regula las emociones. Cuando dormimos menos de siete horas de forma habitual, aumenta significativamente el riesgo de desarrollar enfermedades como la hipertensión, la diabetes y la depresión.\n\nUno de los mayores enemigos del sueño hoy en día es el uso de dispositivos electrónicos antes de dormir. La luz azul que emiten las pantallas suprime la producción de melatonina, la hormona que regula el ciclo del sueño. Mi recomendación es apagar todos los dispositivos al menos una hora antes de acostarse.\n\nTambién es importante mantener horarios regulares de sueño, incluso los fines de semana. Muchas personas duermen poco entre semana y tratan de recuperar el sueño los sábados y domingos, pero esto desajusta el ritmo circadiano del cuerpo.\n\nPor último, el ejercicio físico regular mejora la calidad del sueño notablemente, siempre que no se practique en las dos horas previas a acostarse.",
+            "transcript": "Buenas tardes. En el programa de hoy vamos a hablar con la doctora Elena Vidal, experta en neurociencia del sueño de la Universidad Complutense de Madrid. Bienvenida, Elena.\n\nGracias, es un placer estar aquí. Lo que quiero transmitir hoy es que el sueño no es un lujo, sino una necesidad biológica fundamental. Dormir bien tiene un impacto enorme en nuestra salud física y mental.\n\nDurante el sueño, el cerebro lleva a cabo procesos cruciales: consolida los recuerdos, elimina toxinas acumuladas durante el día y regula las emociones. Cuando dormimos menos de siete horas de forma habitual, aumenta significativamente el riesgo de desarrollar enfermedades como la hipertensión, la diabetes y la depresión.\n\nUno de los mayores enemigos del sueño hoy en día es el uso de dispositivos electrónicos antes de dormir. La luz azul que emiten las pantallas suprime la producción de melatonina, la hormona que regula el ciclo del sueño. Mi recomendación es apagar todos los dispositivos al menos una hora antes de acostarse.\n\nTambién es importante mantener horarios regulares de sueño, incluso los fines de semana. Muchas personas duermen poco entre semana y tratan de recuperar el sueño los sábados y domingos, pero esto desajusta el ritmo circadiano del cuerpo.\n\nPor último, el ejercicio físico regular mejora la calidad del sueño notablemente, siempre que no se practique en las dos horas previas a acostarse.",
+            "explanation": "This is the listening passage. Listen carefully before answering the questions."
+          },
+          {
+            "id": "me-003-s4-q1",
+            "question": "According to Dr. Vidal, what is sleep?",
+            "options": [
+              "A luxury for those who can afford it",
+              "A fundamental biological necessity",
+              "A habit that varies between individuals",
+              "A minor factor in overall health"
+            ],
+            "answer": "A fundamental biological necessity",
+            "explanation": "Dr. Vidal states that sleep 'no es un lujo, sino una necesidad biológica fundamental' (is not a luxury, but a fundamental biological necessity)."
+          },
+          {
+            "id": "me-003-s4-q2",
+            "question": "What does blue light from screens do according to the doctor?",
+            "options": [
+              "It improves concentration before sleep",
+              "It suppresses the production of melatonin",
+              "It regulates the body's circadian rhythm",
+              "It has no significant effect on sleep"
+            ],
+            "answer": "It suppresses the production of melatonin",
+            "explanation": "The text states 'La luz azul que emiten las pantallas suprime la producción de melatonina' (The blue light emitted by screens suppresses melatonin production)."
+          },
+          {
+            "id": "me-003-s4-q3",
+            "question": "How long before going to bed does Dr. Vidal recommend turning off electronic devices?",
+            "options": ["30 minutes", "45 minutes", "1 hour", "2 hours"],
+            "answer": "1 hour",
+            "explanation": "The recommendation is to turn off all devices 'al menos una hora antes de acostarse' (at least one hour before going to bed)."
+          },
+          {
+            "id": "me-003-s4-q4",
+            "question": "What does Dr. Vidal say about exercise and sleep?",
+            "options": [
+              "Exercise has no effect on sleep quality",
+              "Exercise always improves sleep regardless of timing",
+              "Regular exercise improves sleep quality if not done in the two hours before bed",
+              "Evening exercise is the best time to exercise for better sleep"
+            ],
+            "answer": "Regular exercise improves sleep quality if not done in the two hours before bed",
+            "explanation": "Dr. Vidal states exercise improves sleep 'siempre que no se practique en las dos horas previas a acostarse' (as long as it is not done in the two hours before going to bed)."
+          }
+        ]
+      }
+    ],
+    "source": "seed"
+  }
+]
