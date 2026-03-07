@@ -1,0 +1,177 @@
+[
+  {
+    "id": "rd-001",
+    "type": "reading",
+    "theme": "travel",
+    "title": "Un viaje en tren por España",
+    "passage": "El año pasado decidí recorrer España en tren. Empecé mi viaje en Madrid y fui hasta Barcelona en el AVE, el tren de alta velocidad. El trayecto duró menos de tres horas, lo cual me pareció increíble. Desde mi asiento pude ver los campos de Castilla y los Pirineos al fondo.\n\nEn Barcelona visité el barrio Gótico y la Sagrada Familia. Me impresionó mucho la arquitectura de Gaudí, que es completamente diferente a todo lo que había visto antes. Después tomé otro tren hacia Valencia, donde disfruté de la paella junto al mar.\n\nLo mejor de viajar en tren es la comodidad. No hay que llegar horas antes como en el aeropuerto y puedes moverte libremente por el vagón. Además, el paisaje que ves desde la ventana es mucho más variado e interesante que desde un avión. Sin duda, repetiré esta experiencia el próximo verano.",
+    "questions": [
+      {
+        "id": "rd-001-q1",
+        "question": "How long did the journey from Madrid to Barcelona take?",
+        "options": ["Less than three hours", "Exactly three hours", "More than three hours", "About five hours"],
+        "answer": "Less than three hours"
+      },
+      {
+        "id": "rd-001-q2",
+        "question": "What did the writer find most impressive in Barcelona?",
+        "options": ["The Gothic Quarter", "The beach", "Gaudí's architecture", "The food"],
+        "answer": "Gaudí's architecture"
+      },
+      {
+        "id": "rd-001-q3",
+        "question": "According to the writer, what is one advantage of travelling by train?",
+        "options": ["It is always cheaper than flying", "You do not need to arrive hours in advance", "The seats are more comfortable than in planes", "There is free food on board"],
+        "answer": "You do not need to arrive hours in advance"
+      },
+      {
+        "id": "rd-001-q4",
+        "question": "What did the writer eat in Valencia?",
+        "options": ["Tapas", "Paella", "Churros", "Tortilla española"],
+        "answer": "Paella"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "rd-002",
+    "type": "reading",
+    "theme": "work",
+    "title": "El teletrabajo: ventajas e inconvenientes",
+    "passage": "Desde la pandemia, el teletrabajo se ha convertido en una opción habitual para muchos trabajadores en España. Según una encuesta reciente, el 35% de los empleados de oficina trabaja desde casa al menos dos días a la semana.\n\nLas ventajas son evidentes. Los trabajadores ahorran tiempo y dinero en desplazamientos, pueden conciliar mejor la vida laboral y familiar, y en muchos casos son más productivos en un entorno tranquilo. Por otro lado, algunas empresas han comprobado que los equipos son más creativos cuando se reúnen en persona.\n\nLos inconvenientes también existen. Trabajar desde casa puede provocar sensación de aislamiento, especialmente entre los trabajadores más jóvenes que buscan aprender de sus compañeros. Además, no todos disponen de un espacio adecuado en casa para concentrarse.\n\nLo más habitual ahora es el modelo híbrido: dos o tres días en la oficina y el resto en casa. Así se combinan las ventajas de ambas modalidades y se mantiene el contacto con el equipo.",
+    "questions": [
+      {
+        "id": "rd-002-q1",
+        "question": "What percentage of office employees in Spain work from home at least two days a week?",
+        "options": ["25%", "30%", "35%", "40%"],
+        "answer": "35%"
+      },
+      {
+        "id": "rd-002-q2",
+        "question": "Which group is particularly affected by feelings of isolation when working from home?",
+        "options": ["Senior managers", "Part-time workers", "Younger workers", "Workers with children"],
+        "answer": "Younger workers"
+      },
+      {
+        "id": "rd-002-q3",
+        "question": "What does the text say about in-person meetings?",
+        "options": ["They are less productive than remote meetings", "They help teams be more creative", "They are no longer necessary", "They waste too much time"],
+        "answer": "They help teams be more creative"
+      },
+      {
+        "id": "rd-002-q4",
+        "question": "What is described as the most common working model now?",
+        "options": ["Fully remote", "Fully in the office", "A hybrid model", "Flexible hours only"],
+        "answer": "A hybrid model"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-003",
+    "type": "reading",
+    "theme": "everyday",
+    "title": "El mercado de San Miguel",
+    "passage": "En el centro de Madrid, cerca de la Plaza Mayor, se encuentra el Mercado de San Miguel. Este mercado, construido en 1916, es uno de los pocos mercados de hierro que se conservan en la ciudad. Tras una importante renovación en 2009, se convirtió en un espacio gastronómico de referencia.\n\nHoy en día, el mercado ofrece una gran variedad de productos: tapas, quesos, embutidos, mariscos, vinos y dulces típicos españoles. Es un lugar perfecto para probar la gastronomía local sin necesidad de sentarse en un restaurante. Los precios son algo más elevados que en un supermercado normal, pero la calidad de los productos es excelente.\n\nEl mercado está abierto todos los días de la semana, desde las diez de la mañana hasta la medianoche. Los fines de semana suele estar bastante lleno, por lo que se recomienda visitarlo entre semana o llegar pronto por la mañana para evitar las aglomeraciones.",
+    "questions": [
+      {
+        "id": "rd-003-q1",
+        "question": "When was the Mercado de San Miguel built?",
+        "options": ["1890", "1916", "1945", "2009"],
+        "answer": "1916"
+      },
+      {
+        "id": "rd-003-q2",
+        "question": "What happened to the market in 2009?",
+        "options": ["It was closed permanently", "It was rebuilt from scratch", "It underwent an important renovation", "It moved to a new location"],
+        "answer": "It underwent an important renovation"
+      },
+      {
+        "id": "rd-003-q3",
+        "question": "How do the prices at the market compare to a regular supermarket?",
+        "options": ["They are much cheaper", "They are the same", "They are slightly higher", "They vary depending on the day"],
+        "answer": "They are slightly higher"
+      },
+      {
+        "id": "rd-003-q4",
+        "question": "When is it recommended to visit to avoid crowds?",
+        "options": ["On Saturday mornings", "On Sunday afternoons", "On weekdays or early in the morning", "At midnight"],
+        "answer": "On weekdays or early in the morning"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "rd-004",
+    "type": "reading",
+    "theme": "culture",
+    "title": "La Semana Santa en Sevilla",
+    "passage": "La Semana Santa de Sevilla es considerada una de las más importantes y espectaculares del mundo. Durante esta semana, que tiene lugar entre finales de marzo y principios de abril, las calles de la ciudad se llenan de procesiones religiosas que atraen a millones de turistas de todo el mundo.\n\nLas procesiones están organizadas por hermandades, asociaciones religiosas con siglos de historia. Los pasos — plataformas enormes decoradas con imágenes religiosas — son transportados a hombros por los costaleros, que pueden llegar a ser más de cien personas. Este trabajo requiere meses de entrenamiento y es considerado un honor participar en él.\n\nAdemás de las procesiones, la Semana Santa es una época de reunión familiar. Es tradición comer torrijas, un postre típico elaborado con pan, leche y miel. Los hoteles de la ciudad se reservan con meses de antelación, ya que la demanda es enorme.\n\nPara quienes visiten Sevilla por primera vez durante estas fechas, se recomienda consultar el programa oficial y llegar temprano para conseguir un buen lugar desde el que ver pasar los pasos.",
+    "questions": [
+      {
+        "id": "rd-004-q1",
+        "question": "When does Semana Santa in Seville take place?",
+        "options": ["In January or February", "Between late March and early April", "In June", "In December"],
+        "answer": "Between late March and early April"
+      },
+      {
+        "id": "rd-004-q2",
+        "question": "What are costaleros?",
+        "options": ["Religious musicians", "People who carry the pasos on their shoulders", "Organisers of the brotherhoods", "Tourist guides"],
+        "answer": "People who carry the pasos on their shoulders"
+      },
+      {
+        "id": "rd-004-q3",
+        "question": "What are torrijas?",
+        "options": ["A type of flamenco dance", "A religious ceremony", "A traditional dessert", "A type of flower used in processions"],
+        "answer": "A traditional dessert"
+      },
+      {
+        "id": "rd-004-q4",
+        "question": "What advice does the text give to first-time visitors?",
+        "options": ["Avoid the city centre", "Book a guided tour", "Check the official programme and arrive early", "Visit only on the last day"],
+        "answer": "Check the official programme and arrive early"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-005",
+    "type": "reading",
+    "theme": "work",
+    "title": "Cómo escribir un buen currículum",
+    "passage": "Encontrar trabajo en España puede ser un proceso largo y competitivo. Por eso, contar con un buen currículum es fundamental para destacar entre los candidatos. Aquí tienes algunos consejos prácticos.\n\nEn primer lugar, el currículum debe ser claro y conciso. Los expertos recomiendan que no supere las dos páginas. Es importante incluir los datos personales, la formación académica, la experiencia laboral y los idiomas que se hablan, indicando siempre el nivel.\n\nEn segundo lugar, adapta tu currículum a cada oferta de trabajo. No uses el mismo documento para todos los empleos. Lee bien la descripción del puesto y destaca las habilidades y experiencias que más se relacionen con lo que busca la empresa.\n\nFinalmente, cuida la presentación. Un currículum con errores ortográficos o con un diseño poco cuidado da una mala impresión. Pide a alguien de confianza que lo revise antes de enviarlo. Hoy en día, muchas empresas también valoran positivamente tener un perfil actualizado en LinkedIn.",
+    "questions": [
+      {
+        "id": "rd-005-q1",
+        "question": "How long do experts recommend a CV should be?",
+        "options": ["No more than one page", "No more than two pages", "Three to four pages", "As long as necessary"],
+        "answer": "No more than two pages"
+      },
+      {
+        "id": "rd-005-q2",
+        "question": "What does the text say about adapting your CV?",
+        "options": ["You should use the same CV for every job", "You should tailor your CV to each job offer", "You should only apply for jobs that match your exact experience", "You should send your CV without reading the job description"],
+        "answer": "You should tailor your CV to each job offer"
+      },
+      {
+        "id": "rd-005-q3",
+        "question": "What does the text recommend before sending your CV?",
+        "options": ["Having someone you trust review it", "Translating it into English", "Printing it in colour", "Attaching a photo"],
+        "answer": "Having someone you trust review it"
+      },
+      {
+        "id": "rd-005-q4",
+        "question": "What do many companies now value positively, according to the text?",
+        "options": ["A handwritten cover letter", "An updated LinkedIn profile", "References from previous employers", "A portfolio of past work"],
+        "answer": "An updated LinkedIn profile"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  }
+]
