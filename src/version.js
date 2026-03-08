@@ -1,9 +1,20 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.4'
+export const CURRENT_VERSION = 'v1.5'
 
 export const HISTORY = [
+  {
+    version: 'v1.5',
+    date: '2026-03-08',
+    summary: 'Translate reading and listening questions to Spanish',
+    changes: [
+      'All reading comprehension questions and answer options are now in Spanish',
+      'All listening comprehension questions and answer options are now in Spanish',
+      'Listening exercise titles also translated to Spanish',
+      'Seed version bump (v2) forces existing users to receive the updated questions automatically',
+    ],
+  },
   {
     version: 'v1.4',
     date: '2026-03-08',

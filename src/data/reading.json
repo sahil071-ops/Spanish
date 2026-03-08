@@ -8,25 +8,25 @@
     "questions": [
       {
         "id": "rd-001-q1",
-        "question": "How long did the journey from Madrid to Barcelona take?",
-        "options": ["Less than three hours", "Exactly three hours", "More than three hours", "About five hours"],
-        "answer": "Less than three hours"
+        "question": "¿Cuánto duró el trayecto de Madrid a Barcelona?",
+        "options": ["Menos de tres horas", "Exactamente tres horas", "Más de tres horas", "Unas cinco horas"],
+        "answer": "Menos de tres horas"
       },
       {
         "id": "rd-001-q2",
-        "question": "What did the writer find most impressive in Barcelona?",
-        "options": ["The Gothic Quarter", "The beach", "Gaudí's architecture", "The food"],
-        "answer": "Gaudí's architecture"
+        "question": "¿Qué fue lo que más impresionó al narrador en Barcelona?",
+        "options": ["El barrio Gótico", "La playa", "La arquitectura de Gaudí", "La comida"],
+        "answer": "La arquitectura de Gaudí"
       },
       {
         "id": "rd-001-q3",
-        "question": "According to the writer, what is one advantage of travelling by train?",
-        "options": ["It is always cheaper than flying", "You do not need to arrive hours in advance", "The seats are more comfortable than in planes", "There is free food on board"],
-        "answer": "You do not need to arrive hours in advance"
+        "question": "Según el texto, ¿cuál es una ventaja de viajar en tren?",
+        "options": ["Siempre es más barato que volar", "No hay que llegar horas antes", "Los asientos son más cómodos que en los aviones", "Hay comida gratuita a bordo"],
+        "answer": "No hay que llegar horas antes"
       },
       {
         "id": "rd-001-q4",
-        "question": "What did the writer eat in Valencia?",
+        "question": "¿Qué comió el narrador en Valencia?",
         "options": ["Tapas", "Paella", "Churros", "Tortilla española"],
         "answer": "Paella"
       }
@@ -43,27 +43,27 @@
     "questions": [
       {
         "id": "rd-002-q1",
-        "question": "What percentage of office employees in Spain work from home at least two days a week?",
-        "options": ["25%", "30%", "35%", "40%"],
-        "answer": "35%"
+        "question": "¿Qué porcentaje de los empleados de oficina en España trabaja desde casa al menos dos días a la semana?",
+        "options": ["El 25%", "El 30%", "El 35%", "El 40%"],
+        "answer": "El 35%"
       },
       {
         "id": "rd-002-q2",
-        "question": "Which group is particularly affected by feelings of isolation when working from home?",
-        "options": ["Senior managers", "Part-time workers", "Younger workers", "Workers with children"],
-        "answer": "Younger workers"
+        "question": "¿Qué grupo se ve especialmente afectado por la sensación de aislamiento al trabajar desde casa?",
+        "options": ["Los altos directivos", "Los trabajadores a tiempo parcial", "Los trabajadores más jóvenes", "Los trabajadores con hijos"],
+        "answer": "Los trabajadores más jóvenes"
       },
       {
         "id": "rd-002-q3",
-        "question": "What does the text say about in-person meetings?",
-        "options": ["They are less productive than remote meetings", "They help teams be more creative", "They are no longer necessary", "They waste too much time"],
-        "answer": "They help teams be more creative"
+        "question": "¿Qué dice el texto sobre las reuniones presenciales?",
+        "options": ["Son menos productivas que las virtuales", "Ayudan a los equipos a ser más creativos", "Ya no son necesarias", "Hacen perder demasiado tiempo"],
+        "answer": "Ayudan a los equipos a ser más creativos"
       },
       {
         "id": "rd-002-q4",
-        "question": "What is described as the most common working model now?",
-        "options": ["Fully remote", "Fully in the office", "A hybrid model", "Flexible hours only"],
-        "answer": "A hybrid model"
+        "question": "¿Cuál es el modelo de trabajo más habitual actualmente, según el texto?",
+        "options": ["El teletrabajo total", "El trabajo presencial total", "El modelo híbrido", "Solo el horario flexible"],
+        "answer": "El modelo híbrido"
       }
     ],
     "difficulty": 2,
@@ -78,27 +78,27 @@
     "questions": [
       {
         "id": "rd-003-q1",
-        "question": "When was the Mercado de San Miguel built?",
-        "options": ["1890", "1916", "1945", "2009"],
-        "answer": "1916"
+        "question": "¿En qué año se construyó el Mercado de San Miguel?",
+        "options": ["En 1890", "En 1916", "En 1945", "En 2009"],
+        "answer": "En 1916"
       },
       {
         "id": "rd-003-q2",
-        "question": "What happened to the market in 2009?",
-        "options": ["It was closed permanently", "It was rebuilt from scratch", "It underwent an important renovation", "It moved to a new location"],
-        "answer": "It underwent an important renovation"
+        "question": "¿Qué ocurrió con el mercado en 2009?",
+        "options": ["Cerró definitivamente", "Fue reconstruido desde cero", "Sufrió una importante renovación", "Se trasladó a otro lugar"],
+        "answer": "Sufrió una importante renovación"
       },
       {
         "id": "rd-003-q3",
-        "question": "How do the prices at the market compare to a regular supermarket?",
-        "options": ["They are much cheaper", "They are the same", "They are slightly higher", "They vary depending on the day"],
-        "answer": "They are slightly higher"
+        "question": "¿Cómo son los precios del mercado en comparación con un supermercado normal?",
+        "options": ["Son mucho más baratos", "Son iguales", "Son algo más elevados", "Varían según el día"],
+        "answer": "Son algo más elevados"
       },
       {
         "id": "rd-003-q4",
-        "question": "When is it recommended to visit to avoid crowds?",
-        "options": ["On Saturday mornings", "On Sunday afternoons", "On weekdays or early in the morning", "At midnight"],
-        "answer": "On weekdays or early in the morning"
+        "question": "¿Cuándo se recomienda visitar el mercado para evitar las aglomeraciones?",
+        "options": ["Los sábados por la mañana", "Los domingos por la tarde", "Entre semana o temprano por la mañana", "A medianoche"],
+        "answer": "Entre semana o temprano por la mañana"
       }
     ],
     "difficulty": 1,
@@ -113,27 +113,27 @@
     "questions": [
       {
         "id": "rd-004-q1",
-        "question": "When does Semana Santa in Seville take place?",
-        "options": ["In January or February", "Between late March and early April", "In June", "In December"],
-        "answer": "Between late March and early April"
+        "question": "¿Cuándo tiene lugar la Semana Santa en Sevilla?",
+        "options": ["En enero o febrero", "Entre finales de marzo y principios de abril", "En junio", "En diciembre"],
+        "answer": "Entre finales de marzo y principios de abril"
       },
       {
         "id": "rd-004-q2",
-        "question": "What are costaleros?",
-        "options": ["Religious musicians", "People who carry the pasos on their shoulders", "Organisers of the brotherhoods", "Tourist guides"],
-        "answer": "People who carry the pasos on their shoulders"
+        "question": "¿Quiénes son los costaleros?",
+        "options": ["Músicos religiosos", "Las personas que transportan los pasos a hombros", "Los organizadores de las hermandades", "Los guías turísticos"],
+        "answer": "Las personas que transportan los pasos a hombros"
       },
       {
         "id": "rd-004-q3",
-        "question": "What are torrijas?",
-        "options": ["A type of flamenco dance", "A religious ceremony", "A traditional dessert", "A type of flower used in processions"],
-        "answer": "A traditional dessert"
+        "question": "¿Qué son las torrijas?",
+        "options": ["Un tipo de baile flamenco", "Una ceremonia religiosa", "Un postre tradicional", "Un tipo de flor usada en las procesiones"],
+        "answer": "Un postre tradicional"
       },
       {
         "id": "rd-004-q4",
-        "question": "What advice does the text give to first-time visitors?",
-        "options": ["Avoid the city centre", "Book a guided tour", "Check the official programme and arrive early", "Visit only on the last day"],
-        "answer": "Check the official programme and arrive early"
+        "question": "¿Qué consejo da el texto a los visitantes que acuden por primera vez?",
+        "options": ["Evitar el centro de la ciudad", "Reservar una visita guiada", "Consultar el programa oficial y llegar temprano", "Visitar solo el último día"],
+        "answer": "Consultar el programa oficial y llegar temprano"
       }
     ],
     "difficulty": 2,
@@ -148,27 +148,27 @@
     "questions": [
       {
         "id": "rd-005-q1",
-        "question": "How long do experts recommend a CV should be?",
-        "options": ["No more than one page", "No more than two pages", "Three to four pages", "As long as necessary"],
-        "answer": "No more than two pages"
+        "question": "¿Cuántas páginas recomiendan los expertos que tenga el currículum?",
+        "options": ["No más de una página", "No más de dos páginas", "De tres a cuatro páginas", "Las que hagan falta"],
+        "answer": "No más de dos páginas"
       },
       {
         "id": "rd-005-q2",
-        "question": "What does the text say about adapting your CV?",
-        "options": ["You should use the same CV for every job", "You should tailor your CV to each job offer", "You should only apply for jobs that match your exact experience", "You should send your CV without reading the job description"],
-        "answer": "You should tailor your CV to each job offer"
+        "question": "¿Qué dice el texto sobre la adaptación del currículum?",
+        "options": ["Debes usar el mismo currículum para todos los empleos", "Debes adaptar tu currículum a cada oferta de trabajo", "Solo debes solicitar empleos que coincidan exactamente con tu experiencia", "Debes enviar el currículum sin leer la descripción del puesto"],
+        "answer": "Debes adaptar tu currículum a cada oferta de trabajo"
       },
       {
         "id": "rd-005-q3",
-        "question": "What does the text recommend before sending your CV?",
-        "options": ["Having someone you trust review it", "Translating it into English", "Printing it in colour", "Attaching a photo"],
-        "answer": "Having someone you trust review it"
+        "question": "¿Qué recomienda el texto antes de enviar el currículum?",
+        "options": ["Pedir a alguien de confianza que lo revise", "Traducirlo al inglés", "Imprimirlo en color", "Adjuntar una fotografía"],
+        "answer": "Pedir a alguien de confianza que lo revise"
       },
       {
         "id": "rd-005-q4",
-        "question": "What do many companies now value positively, according to the text?",
-        "options": ["A handwritten cover letter", "An updated LinkedIn profile", "References from previous employers", "A portfolio of past work"],
-        "answer": "An updated LinkedIn profile"
+        "question": "¿Qué valoran positivamente muchas empresas actualmente, según el texto?",
+        "options": ["Una carta de presentación escrita a mano", "Un perfil actualizado en LinkedIn", "Referencias de empleadores anteriores", "Un portafolio de trabajos anteriores"],
+        "answer": "Un perfil actualizado en LinkedIn"
       }
     ],
     "difficulty": 2,
