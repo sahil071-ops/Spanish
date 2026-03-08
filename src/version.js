@@ -1,9 +1,18 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.3'
+export const CURRENT_VERSION = 'v1.4'
 
 export const HISTORY = [
+  {
+    version: 'v1.4',
+    date: '2026-03-08',
+    summary: 'Fix version history visibility + grammar answer spoiler',
+    changes: [
+      'Version history now opens expanded by default so it is immediately visible in Settings',
+      'Grammar exercises no longer show the grammarPoint badge (e.g. "irregular (hacer → haga)") before you answer — it was giving away the answer; badge now appears only after submitting',
+    ],
+  },
   {
     version: 'v1.3',
     date: '2026-03-08',

@@ -38,7 +38,7 @@ function Section({ title, children }) {
 }
 
 function VersionHistory() {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(true)
 
   return (
     <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">

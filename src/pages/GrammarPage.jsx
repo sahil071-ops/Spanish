@@ -131,10 +131,12 @@ export default function GrammarPage() {
           <span className="text-xs text-gray-400 shrink-0">{current + 1}/{exercises.length}</span>
         </div>
 
-        {/* Grammar tag */}
+        {/* Grammar tag — grammarPoint hidden until answered to avoid spoilers */}
         <div className="flex gap-2 flex-wrap">
-          <span className="bg-purple-50 text-purple-600 text-xs px-2.5 py-1 rounded-full font-medium">{exercise.grammarPoint}</span>
-          <span className="bg-gray-50 text-gray-500 text-xs px-2.5 py-1 rounded-full">{exercise.theme}</span>
+          {selected !== null && (
+            <span className="bg-purple-50 text-purple-600 text-xs px-2.5 py-1 rounded-full font-medium">{exercise.grammarPoint}</span>
+          )}
+          <span className="bg-gray-50 text-gray-500 text-xs px-2.5 py-1 rounded-full capitalize">{exercise.theme}</span>
         </div>
 
         {/* Sentence */}
