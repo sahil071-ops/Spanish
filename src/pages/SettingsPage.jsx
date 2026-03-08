@@ -4,7 +4,8 @@ import TopBar from '../components/TopBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
 import { exportAllData, importAllData, resetAllProgress } from '../utils/storage.js'
 import { getDB } from '../utils/db.js'
-import { Eye, EyeOff, Download, Upload, Trash2, Key } from 'lucide-react'
+import { Eye, EyeOff, Download, Upload, Trash2, Key, ChevronDown, ChevronUp } from 'lucide-react'
+import { CURRENT_VERSION, HISTORY } from '../version.js'
 
 function Toggle({ checked, onChange, label, description }) {
   return (
@@ -32,6 +33,52 @@ function Section({ title, children }) {
       <div className="divide-y divide-gray-50 px-5 pb-4 space-y-3">
         {children}
       </div>
+    </div>
+  )
+}
+
+function VersionHistory() {
+  const [expanded, setExpanded] = useState(false)
+
+  return (
+    <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
+      <button
+        onClick={() => setExpanded(v => !v)}
+        className="w-full flex items-center justify-between px-5 py-4"
+      >
+        <div className="text-left">
+          <p className="text-sm font-semibold text-gray-700">Version History</p>
+          <p className="text-xs text-gray-400 mt-0.5">Current: {CURRENT_VERSION}</p>
+        </div>
+        {expanded ? <ChevronUp size={16} className="text-gray-400" /> : <ChevronDown size={16} className="text-gray-400" />}
+      </button>
+
+      {expanded && (
+        <div className="border-t border-gray-100 divide-y divide-gray-50">
+          {HISTORY.map((entry, i) => (
+            <div key={entry.version} className="px-5 py-4">
+              <div className="flex items-center gap-2 mb-2">
+                <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                  i === 0 ? 'bg-[#C60B1E] text-white' : 'bg-gray-100 text-gray-600'
+                }`}>
+                  {entry.version}
+                  {i === 0 && ' · latest'}
+                </span>
+                <span className="text-xs text-gray-400">{entry.date}</span>
+              </div>
+              <p className="text-xs font-medium text-gray-600 mb-2">{entry.summary}</p>
+              <ul className="space-y-1">
+                {entry.changes.map((c, ci) => (
+                  <li key={ci} className="text-xs text-gray-500 flex gap-2">
+                    <span className="text-gray-300 shrink-0">–</span>
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   )
 }
@@ -256,6 +303,9 @@ export default function SettingsPage() {
             </div>
           )}
         </Section>
+
+        {/* Version history */}
+        <VersionHistory />
 
         <p className="text-center text-xs text-gray-400 pb-2">Spanish B1 Prep · Fully offline capable</p>
       </div>
