@@ -1,9 +1,20 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.2'
+export const CURRENT_VERSION = 'v1.3'
 
 export const HISTORY = [
+  {
+    version: 'v1.3',
+    date: '2026-03-08',
+    summary: 'Fix PWA auto-update banner',
+    changes: [
+      'UpdateBanner now correctly fires when a new version is deployed — previously setUpdateAvailable was never called so the banner never showed',
+      'SW registration moved to main.jsx using registerSW() from virtual:pwa-register; fires pwa-update-available custom event',
+      'AppContext listens for that event to set updateAvailable state',
+      'Added version history changelog section to Settings page',
+    ],
+  },
   {
     version: 'v1.2',
     date: '2026-03-08',

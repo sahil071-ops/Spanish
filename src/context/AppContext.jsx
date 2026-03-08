@@ -51,6 +51,13 @@ export function AppProvider({ children }) {
     init()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Listen for SW update signal fired from main.jsx
+  useEffect(() => {
+    const handler = () => setUpdateAvailable(true)
+    window.addEventListener('pwa-update-available', handler)
+    return () => window.removeEventListener('pwa-update-available', handler)
+  }, [])
+
   // Online/offline detection
   useEffect(() => {
     const handleOnline = async () => {
