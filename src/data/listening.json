@@ -266,5 +266,385 @@
     ],
     "difficulty": 2,
     "source": "seed"
+  },
+  {
+    "id": "ls-007",
+    "type": "listening",
+    "theme": "everyday",
+    "title": "En el médico de cabecera",
+    "format": "dialogue",
+    "script": "Médico: Buenos días, pase y siéntese. ¿Qué le ocurre?\nPaciente: Buenos días, doctor. Llevo tres días con dolor de garganta y fiebre. Anoche tuve casi treinta y ocho grados y medio.\nMédico: ¿Tiene tos o mocos?\nPaciente: Sí, tengo bastante tos, sobre todo por la noche. Y me duele un poco la cabeza.\nMédico: Voy a examinarle. Abra la boca, por favor... Sí, tiene la garganta muy roja e inflamada. ¿Ha tomado algún medicamento?\nPaciente: Solo paracetamol para bajar la fiebre.\nMédico: Bien. Tiene una faringitis bacteriana. Le voy a recetar un antibiótico — tiene que tomarlo cada ocho horas durante siete días. Es muy importante que termine todo el tratamiento aunque se encuentre mejor antes.\nPaciente: ¿Puedo ir a trabajar?\nMédico: Le recomiendo que descanse hoy y mañana. A partir del tercer día de antibiótico ya debería encontrarse mucho mejor. Beba mucho líquido y evite el frío.\nPaciente: De acuerdo. ¿Necesito volver para una revisión?\nMédico: No es necesario, a menos que la fiebre suba por encima de treinta y nueve grados o los síntomas empeoren. En ese caso, vuelva enseguida.",
+    "transcript": "Médico: Buenos días, pase y siéntese. ¿Qué le ocurre?\nPaciente: Buenos días, doctor. Llevo tres días con dolor de garganta y fiebre. Anoche tuve casi treinta y ocho grados y medio.\nMédico: ¿Tiene tos o mocos?\nPaciente: Sí, tengo bastante tos, sobre todo por la noche. Y me duele un poco la cabeza.\nMédico: Voy a examinarle. Abra la boca, por favor... Sí, tiene la garganta muy roja e inflamada. ¿Ha tomado algún medicamento?\nPaciente: Solo paracetamol para bajar la fiebre.\nMédico: Bien. Tiene una faringitis bacteriana. Le voy a recetar un antibiótico — tiene que tomarlo cada ocho horas durante siete días. Es muy importante que termine todo el tratamiento aunque se encuentre mejor antes.\nPaciente: ¿Puedo ir a trabajar?\nMédico: Le recomiendo que descanse hoy y mañana. A partir del tercer día de antibiótico ya debería encontrarse mucho mejor. Beba mucho líquido y evite el frío.\nPaciente: De acuerdo. ¿Necesito volver para una revisión?\nMédico: No es necesario, a menos que la fiebre suba por encima de treinta y nueve grados o los síntomas empeoren. En ese caso, vuelva enseguida.",
+    "duration": 90,
+    "questions": [
+      {
+        "id": "ls-007-q1",
+        "question": "¿Cuántos días lleva el paciente con los síntomas?",
+        "options": ["Un día", "Dos días", "Tres días", "Una semana"],
+        "answer": "Tres días"
+      },
+      {
+        "id": "ls-007-q2",
+        "question": "¿Qué diagnóstico da el médico?",
+        "options": ["Un resfriado común", "Una gripe", "Una faringitis bacteriana", "Una alergia"],
+        "answer": "Una faringitis bacteriana"
+      },
+      {
+        "id": "ls-007-q3",
+        "question": "¿Con qué frecuencia debe tomar el antibiótico el paciente?",
+        "options": ["Cada cuatro horas", "Cada seis horas", "Cada ocho horas", "Una vez al día"],
+        "answer": "Cada ocho horas"
+      },
+      {
+        "id": "ls-007-q4",
+        "question": "¿Cuándo debe volver el paciente al médico, según la consulta?",
+        "options": ["En tres días para revisión", "Solo si la fiebre sube de 39 grados o empeoran los síntomas", "Al terminar el antibiótico", "Nunca, ya está curado"],
+        "answer": "Solo si la fiebre sube de 39 grados o empeoran los síntomas"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-008",
+    "type": "listening",
+    "theme": "travel",
+    "title": "Reservando un hotel por teléfono",
+    "format": "dialogue",
+    "script": "Recepcionista: Hotel Palacio Real, buenas tardes, ¿en qué puedo ayudarle?\nCliente: Buenas tardes. Querría reservar una habitación para dos personas para el fin de semana del quince al diecisiete de abril, es decir, dos noches.\nRecepcionista: Déjeme comprobar la disponibilidad... Sí, tenemos disponibilidad. ¿Prefiere una habitación doble o dos camas individuales?\nCliente: Una habitación doble, por favor. ¿Tiene algo con vistas al jardín? Es para celebrar nuestro aniversario.\nRecepcionista: ¡Qué bonito! Sí, tenemos una habitación doble superior con vistas al jardín. El precio sería de ciento cuarenta euros por noche, desayuno incluido.\nCliente: ¿Y hay posibilidad de añadir una cena romántica el sábado por la noche?\nRecepcionista: Por supuesto. Nuestro restaurante ofrece un menú especial para ocasiones especiales por cincuenta euros por persona. Necesitaría reservarlo con antelación.\nCliente: Perfecto, me interesa. ¿A qué hora es el check-in?\nRecepcionista: El check-in es a partir de las tres de la tarde. Si llegan antes, podemos guardar su equipaje.\nCliente: De acuerdo. ¿Cómo puedo confirmar la reserva?\nRecepcionista: Le enviaré un email de confirmación ahora mismo. Solo necesito su nombre completo y una dirección de correo electrónico.",
+    "transcript": "Recepcionista: Hotel Palacio Real, buenas tardes, ¿en qué puedo ayudarle?\nCliente: Buenas tardes. Querría reservar una habitación para dos personas para el fin de semana del quince al diecisiete de abril, es decir, dos noches.\nRecepcionista: Déjeme comprobar la disponibilidad... Sí, tenemos disponibilidad. ¿Prefiere una habitación doble o dos camas individuales?\nCliente: Una habitación doble, por favor. ¿Tiene algo con vistas al jardín? Es para celebrar nuestro aniversario.\nRecepcionista: ¡Qué bonito! Sí, tenemos una habitación doble superior con vistas al jardín. El precio sería de ciento cuarenta euros por noche, desayuno incluido.\nCliente: ¿Y hay posibilidad de añadir una cena romántica el sábado por la noche?\nRecepcionista: Por supuesto. Nuestro restaurante ofrece un menú especial para ocasiones especiales por cincuenta euros por persona. Necesitaría reservarlo con antelación.\nCliente: Perfecto, me interesa. ¿A qué hora es el check-in?\nRecepcionista: El check-in es a partir de las tres de la tarde. Si llegan antes, podemos guardar su equipaje.\nCliente: De acuerdo. ¿Cómo puedo confirmar la reserva?\nRecepcionista: Le enviaré un email de confirmación ahora mismo. Solo necesito su nombre completo y una dirección de correo electrónico.",
+    "duration": 95,
+    "questions": [
+      {
+        "id": "ls-008-q1",
+        "question": "¿Cuántas noches quiere reservar el cliente?",
+        "options": ["Una noche", "Dos noches", "Tres noches", "Una semana"],
+        "answer": "Dos noches"
+      },
+      {
+        "id": "ls-008-q2",
+        "question": "¿Cuál es el precio de la habitación doble superior por noche?",
+        "options": ["Cien euros", "Ciento veinte euros", "Ciento cuarenta euros", "Ciento sesenta euros"],
+        "answer": "Ciento cuarenta euros"
+      },
+      {
+        "id": "ls-008-q3",
+        "question": "¿Por qué motivo viajan los clientes al hotel?",
+        "options": ["Por un viaje de negocios", "Por un cumpleaños", "Para celebrar su aniversario", "Para una reunión familiar"],
+        "answer": "Para celebrar su aniversario"
+      },
+      {
+        "id": "ls-008-q4",
+        "question": "¿A partir de qué hora es el check-in en el hotel?",
+        "options": ["A partir de las doce del mediodía", "A partir de la una de la tarde", "A partir de las dos de la tarde", "A partir de las tres de la tarde"],
+        "answer": "A partir de las tres de la tarde"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-009",
+    "type": "listening",
+    "theme": "culture",
+    "title": "Noticia de radio: el festival de cine de San Sebastián",
+    "format": "monologue",
+    "script": "Y continuamos con la actualidad cultural. El Festival Internacional de Cine de San Sebastián ha anunciado hoy su programación oficial para esta edición. El festival, que se celebra cada año en septiembre en el País Vasco, es uno de los más antiguos y prestigiosos de Europa, con más de setenta años de historia.\n\nEste año, la Sección Oficial a concurso incluye veinte películas procedentes de quince países diferentes. Entre ellas destaca la nueva producción del director mexicano Alejandro González, que compite por la Concha de Oro, el máximo galardón del festival. La película española 'El último verano' también participará en esta categoría.\n\nEl festival contará con la presencia de varios actores y directores de fama internacional. La presidenta del jurado será la reconocida actriz francesa Isabelle Moreau, ganadora de dos premios César. Las proyecciones se celebrarán en el Kursaal, el famoso edificio de cristal situado junto a la playa de la Zurriola. Las entradas para el público general ya están disponibles en la web oficial del festival.",
+    "transcript": "Y continuamos con la actualidad cultural. El Festival Internacional de Cine de San Sebastián ha anunciado hoy su programación oficial para esta edición. El festival, que se celebra cada año en septiembre en el País Vasco, es uno de los más antiguos y prestigiosos de Europa, con más de setenta años de historia.\n\nEste año, la Sección Oficial a concurso incluye veinte películas procedentes de quince países diferentes. Entre ellas destaca la nueva producción del director mexicano Alejandro González, que compite por la Concha de Oro, el máximo galardón del festival. La película española 'El último verano' también participará en esta categoría.\n\nEl festival contará con la presencia de varios actores y directores de fama internacional. La presidenta del jurado será la reconocida actriz francesa Isabelle Moreau, ganadora de dos premios César. Las proyecciones se celebrarán en el Kursaal, el famoso edificio de cristal situado junto a la playa de la Zurriola. Las entradas para el público general ya están disponibles en la web oficial del festival.",
+    "duration": 85,
+    "questions": [
+      {
+        "id": "ls-009-q1",
+        "question": "¿Dónde se celebra el Festival de Cine de San Sebastián?",
+        "options": ["En Madrid", "En Barcelona", "En el País Vasco", "En Andalucía"],
+        "answer": "En el País Vasco"
+      },
+      {
+        "id": "ls-009-q2",
+        "question": "¿Cuántas películas incluye la Sección Oficial a concurso este año?",
+        "options": ["Quince películas", "Veinte películas", "Veinticinco películas", "Treinta películas"],
+        "answer": "Veinte películas"
+      },
+      {
+        "id": "ls-009-q3",
+        "question": "¿Cuál es el máximo galardón del festival?",
+        "options": ["La Palma de Oro", "El León de Oro", "La Concha de Oro", "El Oso de Oro"],
+        "answer": "La Concha de Oro"
+      },
+      {
+        "id": "ls-009-q4",
+        "question": "¿Quién presidirá el jurado del festival este año?",
+        "options": ["Un director mexicano", "Una actriz francesa", "Un productor español", "Una directora italiana"],
+        "answer": "Una actriz francesa"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-010",
+    "type": "listening",
+    "theme": "everyday",
+    "title": "Conversación entre vecinos",
+    "format": "dialogue",
+    "script": "Elena: Hola, Carlos. ¿Qué tal? Hace tiempo que no te veo.\nCarlos: ¡Elena! Hola. Sí, es que he estado muy liado. He cambiado de trabajo hace un mes y los primeros días siempre son muy intensos.\nElena: ¡Ah, no sabía nada! ¿Y qué tal el nuevo trabajo?\nCarlos: Muy bien, la verdad. Trabajo en una empresa de diseño gráfico. El ambiente es muy bueno y el horario es más flexible que en mi trabajo anterior. Puedo entrar entre las ocho y las diez, lo cual me viene genial para evitar el tráfico.\nElena: Qué bien. Oye, te quería preguntar — ¿sabes algo de las obras del portal? Llevan dos semanas y todavía no han terminado.\nCarlos: Sí, hablé con el presidente de la comunidad ayer. Me dijo que hay un problema con la empresa contratada — al parecer, han encontrado una fuga de agua que no estaba prevista. Puede que se alargue otra semana más.\nElena: ¡Dos semanas más! Qué rollo. El ruido por la mañana es insoportable.\nCarlos: Ya lo sé. Pero dice que van a intentar hacer el trabajo más ruidoso solo por las tardes para no molestar tanto.\nElena: Espero que sea verdad. Bueno, te dejo, que tengo prisa. ¡Hasta luego!\nCarlos: ¡Hasta pronto!",
+    "transcript": "Elena: Hola, Carlos. ¿Qué tal? Hace tiempo que no te veo.\nCarlos: ¡Elena! Hola. Sí, es que he estado muy liado. He cambiado de trabajo hace un mes y los primeros días siempre son muy intensos.\nElena: ¡Ah, no sabía nada! ¿Y qué tal el nuevo trabajo?\nCarlos: Muy bien, la verdad. Trabajo en una empresa de diseño gráfico. El ambiente es muy bueno y el horario es más flexible que en mi trabajo anterior. Puedo entrar entre las ocho y las diez, lo cual me viene genial para evitar el tráfico.\nElena: Qué bien. Oye, te quería preguntar — ¿sabes algo de las obras del portal? Llevan dos semanas y todavía no han terminado.\nCarlos: Sí, hablé con el presidente de la comunidad ayer. Me dijo que hay un problema con la empresa contratada — al parecer, han encontrado una fuga de agua que no estaba prevista. Puede que se alargue otra semana más.\nElena: ¡Dos semanas más! Qué rollo. El ruido por la mañana es insoportable.\nCarlos: Ya lo sé. Pero dice que van a intentar hacer el trabajo más ruidoso solo por las tardes para no molestar tanto.\nElena: Espero que sea verdad. Bueno, te dejo, que tengo prisa. ¡Hasta luego!\nCarlos: ¡Hasta pronto!",
+    "duration": 90,
+    "questions": [
+      {
+        "id": "ls-010-q1",
+        "question": "¿Cuánto tiempo lleva Carlos en su nuevo trabajo?",
+        "options": ["Una semana", "Un mes", "Tres meses", "Medio año"],
+        "answer": "Un mes"
+      },
+      {
+        "id": "ls-010-q2",
+        "question": "¿Qué ventaja tiene el horario del nuevo trabajo de Carlos?",
+        "options": ["Trabaja solo cuatro días a la semana", "Puede trabajar desde casa", "Tiene horario flexible de entrada", "Sale antes de las cinco"],
+        "answer": "Tiene horario flexible de entrada"
+      },
+      {
+        "id": "ls-010-q3",
+        "question": "¿Por qué se han alargado las obras del portal?",
+        "options": ["Porque los obreros están de huelga", "Porque hay un problema con los materiales", "Porque han encontrado una fuga de agua", "Porque el ayuntamiento no ha dado el permiso"],
+        "answer": "Porque han encontrado una fuga de agua"
+      },
+      {
+        "id": "ls-010-q4",
+        "question": "¿Qué solución propone el presidente de la comunidad para el ruido?",
+        "options": ["Parar las obras por las mañanas", "Hacer el trabajo ruidoso solo por las tardes", "Cerrar el portal durante las obras", "Pagar una compensación a los vecinos"],
+        "answer": "Hacer el trabajo ruidoso solo por las tardes"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-011",
+    "type": "listening",
+    "theme": "work",
+    "title": "Podcast: el futuro del trabajo remoto",
+    "format": "monologue",
+    "script": "Bienvenidos a 'Trabajo y Vida', el podcast donde hablamos de tendencias laborales. Hoy vamos a hablar del trabajo remoto y de cómo está cambiando el mercado laboral en España y en el mundo.\n\nSegún un estudio reciente de la consultora Deloitte, el cuarenta y cinco por ciento de los trabajadores del conocimiento en Europa prefiere el modelo híbrido — es decir, combinar días en la oficina con días en casa. Solo el quince por ciento quiere trabajar completamente en remoto, mientras que el cuarenta por ciento prefiere el modelo presencial.\n\nLas empresas también están adaptando sus espacios. Muchas están reduciendo el número de mesas fijas y apostando por el llamado 'hot desking' — escritorios compartidos que se reservan según las necesidades del día. Esto les permite reducir costes de alquiler y al mismo tiempo crear espacios de colaboración más dinámicos.\n\nSin embargo, el trabajo remoto también presenta desafíos. Los más citados son la dificultad para separar la vida laboral de la personal, la sensación de aislamiento y los problemas de comunicación con el equipo. Los expertos recomiendan establecer rutinas claras y dedicar un espacio exclusivo al trabajo en casa para minimizar estas dificultades.",
+    "transcript": "Bienvenidos a 'Trabajo y Vida', el podcast donde hablamos de tendencias laborales. Hoy vamos a hablar del trabajo remoto y de cómo está cambiando el mercado laboral en España y en el mundo.\n\nSegún un estudio reciente de la consultora Deloitte, el cuarenta y cinco por ciento de los trabajadores del conocimiento en Europa prefiere el modelo híbrido — es decir, combinar días en la oficina con días en casa. Solo el quince por ciento quiere trabajar completamente en remoto, mientras que el cuarenta por ciento prefiere el modelo presencial.\n\nLas empresas también están adaptando sus espacios. Muchas están reduciendo el número de mesas fijas y apostando por el llamado 'hot desking' — escritorios compartidos que se reservan según las necesidades del día. Esto les permite reducir costes de alquiler y al mismo tiempo crear espacios de colaboración más dinámicos.\n\nSin embargo, el trabajo remoto también presenta desafíos. Los más citados son la dificultad para separar la vida laboral de la personal, la sensación de aislamiento y los problemas de comunicación con el equipo. Los expertos recomiendan establecer rutinas claras y dedicar un espacio exclusivo al trabajo en casa para minimizar estas dificultades.",
+    "duration": 85,
+    "questions": [
+      {
+        "id": "ls-011-q1",
+        "question": "Según el estudio de Deloitte, ¿qué porcentaje de trabajadores prefiere el modelo híbrido?",
+        "options": ["El 15%", "El 40%", "El 45%", "El 60%"],
+        "answer": "El 45%"
+      },
+      {
+        "id": "ls-011-q2",
+        "question": "¿Qué es el 'hot desking', según el podcast?",
+        "options": ["Un tipo de oficina en el extranjero", "Escritorios compartidos que se reservan por días", "Un programa de formación para teletrabajadores", "Un contrato de trabajo temporal"],
+        "answer": "Escritorios compartidos que se reservan por días"
+      },
+      {
+        "id": "ls-011-q3",
+        "question": "¿Cuál es uno de los desafíos del trabajo remoto mencionado en el podcast?",
+        "options": ["El coste del internet en casa", "La falta de ordenadores adecuados", "La dificultad para separar la vida laboral de la personal", "Los problemas de transporte"],
+        "answer": "La dificultad para separar la vida laboral de la personal"
+      },
+      {
+        "id": "ls-011-q4",
+        "question": "¿Qué recomiendan los expertos para quienes trabajan desde casa?",
+        "options": ["Trabajar en una cafetería para cambiar de ambiente", "Hacer pausas frecuentes de treinta minutos", "Establecer rutinas claras y un espacio exclusivo de trabajo", "Trabajar siempre con música de fondo"],
+        "answer": "Establecer rutinas claras y un espacio exclusivo de trabajo"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-012",
+    "type": "listening",
+    "theme": "everyday",
+    "title": "En la tienda de ropa",
+    "format": "dialogue",
+    "script": "Vendedora: Buenos días, ¿le puedo ayudar en algo?\nCliente: Sí, estoy buscando un vestido para una boda. Es en verano, al aire libre.\nVendedora: Perfecto. ¿Tiene algún color en mente?\nCliente: Preferiría algo en tonos claros, quizás azul o verde. No demasiado largo, pero tampoco muy corto.\nVendedora: Tenemos una colección preciosa para este verano. Le muestro algunas opciones. ¿Qué talla usa?\nCliente: Normalmente la cuarenta, pero depende de la marca.\nVendedora: Aquí tiene este modelo en azul marino con flores blancas — es midi, llega por debajo de la rodilla. Y este otro en verde menta, que es un poco más suelto y muy cómodo para el calor.\nCliente: Me gusta mucho el verde. ¿Puedo probármelo?\nVendedora: Claro, el probador está al fondo a la derecha. ¿Le traigo también la talla cuarenta y dos por si acaso?\nCliente: Sí, por favor. Ah, ¿y tiene algo a juego para los zapatos? Necesito algo cómodo porque habrá baile.\nVendedora: En zapatos tenemos sandalias de tacón bajo que combinan muy bien. Las tiene en blanco, nude y verde para hacer juego con el vestido.",
+    "transcript": "Vendedora: Buenos días, ¿le puedo ayudar en algo?\nCliente: Sí, estoy buscando un vestido para una boda. Es en verano, al aire libre.\nVendedora: Perfecto. ¿Tiene algún color en mente?\nCliente: Preferiría algo en tonos claros, quizás azul o verde. No demasiado largo, pero tampoco muy corto.\nVendedora: Tenemos una colección preciosa para este verano. Le muestro algunas opciones. ¿Qué talla usa?\nCliente: Normalmente la cuarenta, pero depende de la marca.\nVendedora: Aquí tiene este modelo en azul marino con flores blancas — es midi, llega por debajo de la rodilla. Y este otro en verde menta, que es un poco más suelto y muy cómodo para el calor.\nCliente: Me gusta mucho el verde. ¿Puedo probármelo?\nVendedora: Claro, el probador está al fondo a la derecha. ¿Le traigo también la talla cuarenta y dos por si acaso?\nCliente: Sí, por favor. Ah, ¿y tiene algo a juego para los zapatos? Necesito algo cómodo porque habrá baile.\nVendedora: En zapatos tenemos sandalias de tacón bajo que combinan muy bien. Las tiene en blanco, nude y verde para hacer juego con el vestido.",
+    "duration": 80,
+    "questions": [
+      {
+        "id": "ls-012-q1",
+        "question": "¿Para qué ocasión busca vestido la cliente?",
+        "options": ["Para una entrevista de trabajo", "Para una boda", "Para una fiesta de cumpleaños", "Para una cena de negocios"],
+        "answer": "Para una boda"
+      },
+      {
+        "id": "ls-012-q2",
+        "question": "¿Qué color de vestido prefiere la cliente?",
+        "options": ["Rojo o naranja", "Negro o gris", "Azul o verde", "Rosa o morado"],
+        "answer": "Azul o verde"
+      },
+      {
+        "id": "ls-012-q3",
+        "question": "¿Por qué la cliente quiere zapatos cómodos?",
+        "options": ["Porque tiene problemas de espalda", "Porque tendrá que caminar mucho", "Porque habrá baile en la boda", "Porque la boda es en la playa"],
+        "answer": "Porque habrá baile en la boda"
+      },
+      {
+        "id": "ls-012-q4",
+        "question": "¿Dónde está el probador en la tienda?",
+        "options": ["A la entrada, a la izquierda", "Al fondo a la derecha", "En el primer piso", "Junto a la caja"],
+        "answer": "Al fondo a la derecha"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-013",
+    "type": "listening",
+    "theme": "culture",
+    "title": "Visita guiada al Museo del Prado",
+    "format": "monologue",
+    "script": "Bienvenidos al Museo del Prado. Mi nombre es Ana y seré su guía durante esta visita. El Museo del Prado es uno de los museos de arte más importantes del mundo y alberga una de las colecciones de pintura europea más completas que existen.\n\nEl edificio fue construido originalmente en el siglo dieciocho por orden del rey Carlos III, aunque inicialmente iba a ser un museo de ciencias naturales. No fue hasta 1819, durante el reinado de Fernando VII, cuando se abrió al público como museo de pintura.\n\nLa colección incluye más de ocho mil pinturas, aunque solo se exponen al público alrededor de mil doscientas en las salas permanentes. Entre las obras más destacadas se encuentran 'Las Meninas' de Diego Velázquez, 'El jardín de las delicias' de El Bosco y 'Los fusilamientos del tres de mayo' de Francisco de Goya.\n\nDurante nuestra visita de hoy, nos centraremos en las obras del Siglo de Oro español. Les pido que mantengan un tono de voz bajo y que no toquen las obras bajo ningún concepto. Si tienen alguna pregunta, no duden en hacérmela.",
+    "transcript": "Bienvenidos al Museo del Prado. Mi nombre es Ana y seré su guía durante esta visita. El Museo del Prado es uno de los museos de arte más importantes del mundo y alberga una de las colecciones de pintura europea más completas que existen.\n\nEl edificio fue construido originalmente en el siglo dieciocho por orden del rey Carlos III, aunque inicialmente iba a ser un museo de ciencias naturales. No fue hasta 1819, durante el reinado de Fernando VII, cuando se abrió al público como museo de pintura.\n\nLa colección incluye más de ocho mil pinturas, aunque solo se exponen al público alrededor de mil doscientas en las salas permanentes. Entre las obras más destacadas se encuentran 'Las Meninas' de Diego Velázquez, 'El jardín de las delicias' de El Bosco y 'Los fusilamientos del tres de mayo' de Francisco de Goya.\n\nDurante nuestra visita de hoy, nos centraremos en las obras del Siglo de Oro español. Les pido que mantengan un tono de voz bajo y que no toquen las obras bajo ningún concepto. Si tienen alguna pregunta, no duden en hacérmela.",
+    "duration": 85,
+    "questions": [
+      {
+        "id": "ls-013-q1",
+        "question": "¿Para qué iba a ser utilizado originalmente el edificio del Prado?",
+        "options": ["Como palacio real", "Como museo de ciencias naturales", "Como biblioteca nacional", "Como sede del gobierno"],
+        "answer": "Como museo de ciencias naturales"
+      },
+      {
+        "id": "ls-013-q2",
+        "question": "¿En qué año se abrió el Prado al público como museo de pintura?",
+        "options": ["En 1700", "En 1750", "En 1819", "En 1900"],
+        "answer": "En 1819"
+      },
+      {
+        "id": "ls-013-q3",
+        "question": "¿Cuántas pinturas se exponen actualmente en las salas permanentes?",
+        "options": ["Más de ocho mil", "Alrededor de mil doscientas", "Unas quinientas", "Más de dos mil"],
+        "answer": "Alrededor de mil doscientas"
+      },
+      {
+        "id": "ls-013-q4",
+        "question": "¿En qué se centrará la visita guiada de hoy?",
+        "options": ["En las obras de Goya", "En la arquitectura del edificio", "En las obras del Siglo de Oro español", "En la colección de escultura"],
+        "answer": "En las obras del Siglo de Oro español"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-014",
+    "type": "listening",
+    "theme": "everyday",
+    "title": "Planificando las vacaciones en familia",
+    "format": "dialogue",
+    "script": "Madre: Bueno, ya es hora de organizar las vacaciones de este verano. ¿Qué os apetece hacer?\nPadre: A mí me gustaría ir a algún sitio tranquilo, con playa, donde pueda descansar de verdad. Estoy agotado.\nHija mayor: ¿Y si vamos a algún país extranjero? Nunca hemos estado en Grecia. He visto fotos de las islas y son preciosas.\nHijo menor: ¡Sí! ¡Grecia, Grecia! Con muchas ruinas y edificios antiguos.\nPadre: Grecia puede ser caro, ¿no? Habría que mirar los precios.\nMadre: Podríamos comparar con Portugal. El sur de Portugal, el Algarve, tiene playas espectaculares y es más económico. Además está más cerca, podríamos ir en coche.\nHija mayor: Es verdad, pero a mí me apetece conocer algo más diferente. ¿Qué tal si este año vamos a Portugal y el año que viene a Grecia?\nHijo menor: ¡Pero quiero ver el Partenón!\nPadre: Mira, vamos a hacer una cosa: cada uno busca opciones esta semana en internet — hoteles, vuelos, actividades — y el domingo lo comentamos juntos y decidimos.\nMadre: Me parece bien. Eso sí, que sea antes del quince de julio, que después la gente de la oficina empieza a pedir las mismas fechas.",
+    "transcript": "Madre: Bueno, ya es hora de organizar las vacaciones de este verano. ¿Qué os apetece hacer?\nPadre: A mí me gustaría ir a algún sitio tranquilo, con playa, donde pueda descansar de verdad. Estoy agotado.\nHija mayor: ¿Y si vamos a algún país extranjero? Nunca hemos estado en Grecia. He visto fotos de las islas y son preciosas.\nHijo menor: ¡Sí! ¡Grecia, Grecia! Con muchas ruinas y edificios antiguos.\nPadre: Grecia puede ser caro, ¿no? Habría que mirar los precios.\nMadre: Podríamos comparar con Portugal. El sur de Portugal, el Algarve, tiene playas espectaculares y es más económico. Además está más cerca, podríamos ir en coche.\nHija mayor: Es verdad, pero a mí me apetece conocer algo más diferente. ¿Qué tal si este año vamos a Portugal y el año que viene a Grecia?\nHijo menor: ¡Pero quiero ver el Partenón!\nPadre: Mira, vamos a hacer una cosa: cada uno busca opciones esta semana en internet — hoteles, vuelos, actividades — y el domingo lo comentamos juntos y decidimos.\nMadre: Me parece bien. Eso sí, que sea antes del quince de julio, que después la gente de la oficina empieza a pedir las mismas fechas.",
+    "duration": 95,
+    "questions": [
+      {
+        "id": "ls-014-q1",
+        "question": "¿Qué destino propone la hija mayor?",
+        "options": ["Portugal", "Italia", "Grecia", "Francia"],
+        "answer": "Grecia"
+      },
+      {
+        "id": "ls-014-q2",
+        "question": "¿Qué ventaja menciona la madre sobre Portugal?",
+        "options": ["El tiempo es mejor que en Grecia", "Es más económico y está más cerca", "Hablan español", "Los hoteles son de más calidad"],
+        "answer": "Es más económico y está más cerca"
+      },
+      {
+        "id": "ls-014-q3",
+        "question": "¿Qué decide el padre al final de la conversación?",
+        "options": ["Ir directamente a Grecia", "Reservar el hotel esa misma noche", "Que cada uno busque opciones y lo comenten el domingo", "Preguntarle a un agente de viajes"],
+        "answer": "Que cada uno busque opciones y lo comenten el domingo"
+      },
+      {
+        "id": "ls-014-q4",
+        "question": "¿Cuándo quiere la madre que sean las vacaciones?",
+        "options": ["En agosto", "Antes del quince de julio", "En septiembre", "En la primera semana de julio"],
+        "answer": "Antes del quince de julio"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "ls-015",
+    "type": "listening",
+    "theme": "work",
+    "title": "Negociando un aumento de sueldo",
+    "format": "dialogue",
+    "script": "Empleada: Buenas tardes, señor Martínez. Gracias por recibirme. Quería hablar con usted sobre mi situación laboral.\nJefe: Claro, siéntate. ¿De qué se trata?\nEmpleada: Llevo cuatro años en la empresa y en este tiempo he asumido muchas más responsabilidades de las que tenía cuando empecé. He gestionado tres proyectos importantes y los resultados han sido muy positivos.\nJefe: Sí, es cierto, tu trabajo ha sido muy bueno. ¿Qué es lo que me quieres proponer?\nEmpleada: Me gustaría solicitar un aumento de sueldo. Actualmente cobro veintiocho mil euros al año y me parece que, dada mi experiencia y mis responsabilidades actuales, un sueldo de treinta y dos mil sería más acorde con mi perfil.\nJefe: Entiendo tu punto de vista. El problema es que en este momento tenemos el presupuesto bastante ajustado. No podemos llegar a los treinta y dos mil de golpe.\nEmpleada: ¿Habría alguna posibilidad de hacer un aumento en dos fases? Por ejemplo, tres mil euros ahora y otros mil dentro de seis meses, si los resultados siguen siendo buenos.\nJefe: Eso es algo que podría plantear a dirección. Dame una semana para consultarlo y te doy una respuesta.\nEmpleada: Perfecto, muchas gracias por escucharme.",
+    "transcript": "Empleada: Buenas tardes, señor Martínez. Gracias por recibirme. Quería hablar con usted sobre mi situación laboral.\nJefe: Claro, siéntate. ¿De qué se trata?\nEmpleada: Llevo cuatro años en la empresa y en este tiempo he asumido muchas más responsabilidades de las que tenía cuando empecé. He gestionado tres proyectos importantes y los resultados han sido muy positivos.\nJefe: Sí, es cierto, tu trabajo ha sido muy bueno. ¿Qué es lo que me quieres proponer?\nEmpleada: Me gustaría solicitar un aumento de sueldo. Actualmente cobro veintiocho mil euros al año y me parece que, dada mi experiencia y mis responsabilidades actuales, un sueldo de treinta y dos mil sería más acorde con mi perfil.\nJefe: Entiendo tu punto de vista. El problema es que en este momento tenemos el presupuesto bastante ajustado. No podemos llegar a los treinta y dos mil de golpe.\nEmpleada: ¿Habría alguna posibilidad de hacer un aumento en dos fases? Por ejemplo, tres mil euros ahora y otros mil dentro de seis meses, si los resultados siguen siendo buenos.\nJefe: Eso es algo que podría plantear a dirección. Dame una semana para consultarlo y te doy una respuesta.\nEmpleada: Perfecto, muchas gracias por escucharme.",
+    "duration": 90,
+    "questions": [
+      {
+        "id": "ls-015-q1",
+        "question": "¿Cuántos años lleva la empleada en la empresa?",
+        "options": ["Dos años", "Tres años", "Cuatro años", "Cinco años"],
+        "answer": "Cuatro años"
+      },
+      {
+        "id": "ls-015-q2",
+        "question": "¿Cuánto cobra actualmente la empleada al año?",
+        "options": ["Veinticuatro mil euros", "Veintiocho mil euros", "Treinta mil euros", "Treinta y dos mil euros"],
+        "answer": "Veintiocho mil euros"
+      },
+      {
+        "id": "ls-015-q3",
+        "question": "¿Qué propone la empleada cuando el jefe dice que el presupuesto está ajustado?",
+        "options": ["Aceptar sin aumento pero con más días de vacaciones", "Hacer el aumento en dos fases", "Pedir un bono anual en lugar de aumento de sueldo", "Esperar hasta el año siguiente"],
+        "answer": "Hacer el aumento en dos fases"
+      },
+      {
+        "id": "ls-015-q4",
+        "question": "¿Qué responde el jefe a la propuesta de la empleada?",
+        "options": ["La rechaza directamente", "La acepta de inmediato", "Dice que lo consultará con dirección en una semana", "Le pide que lo ponga por escrito"],
+        "answer": "Dice que lo consultará con dirección en una semana"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "ls-016",
+    "type": "listening",
+    "theme": "culture",
+    "title": "Reportaje: el movimiento slow food en España",
+    "format": "monologue",
+    "script": "El movimiento Slow Food nació en Italia en 1989 como reacción a la expansión de la comida rápida y la homogeneización de la alimentación. Hoy, treinta y cinco años después, cuenta con más de cien mil miembros en ciento sesenta países, y España es uno de sus miembros más activos.\n\nEn esencia, Slow Food defiende tres principios: que la comida sea buena, es decir, de calidad y con sabor; limpia, producida sin dañar el medio ambiente; y justa, con precios razonables tanto para el consumidor como para el productor.\n\nEn España, el movimiento ha impulsado la recuperación de productos locales casi olvidados, como la alubias de Tolosa, el arroz de Valencia o el cerdo ibérico de bellota. También ha promovido los mercados de productores locales, donde el agricultor vende directamente al consumidor, eliminando intermediarios y asegurando una remuneración más justa.\n\nCritican, eso sí, que algunos restaurantes usen el término 'slow food' simplemente como estrategia de marketing sin aplicar realmente sus principios. Para diferenciarse, los restaurantes y productores que cumplen los criterios pueden obtener una certificación oficial del movimiento.",
+    "transcript": "El movimiento Slow Food nació en Italia en 1989 como reacción a la expansión de la comida rápida y la homogeneización de la alimentación. Hoy, treinta y cinco años después, cuenta con más de cien mil miembros en ciento sesenta países, y España es uno de sus miembros más activos.\n\nEn esencia, Slow Food defiende tres principios: que la comida sea buena, es decir, de calidad y con sabor; limpia, producida sin dañar el medio ambiente; y justa, con precios razonables tanto para el consumidor como para el productor.\n\nEn España, el movimiento ha impulsado la recuperación de productos locales casi olvidados, como la alubias de Tolosa, el arroz de Valencia o el cerdo ibérico de bellota. También ha promovido los mercados de productores locales, donde el agricultor vende directamente al consumidor, eliminando intermediarios y asegurando una remuneración más justa.\n\nCritican, eso sí, que algunos restaurantes usen el término 'slow food' simplemente como estrategia de marketing sin aplicar realmente sus principios. Para diferenciarse, los restaurantes y productores que cumplen los criterios pueden obtener una certificación oficial del movimiento.",
+    "duration": 80,
+    "questions": [
+      {
+        "id": "ls-016-q1",
+        "question": "¿En qué país y año nació el movimiento Slow Food?",
+        "options": ["En Francia, en 1985", "En Italia, en 1989", "En España, en 1995", "En Estados Unidos, en 2000"],
+        "answer": "En Italia, en 1989"
+      },
+      {
+        "id": "ls-016-q2",
+        "question": "¿Cuántos miembros tiene el movimiento Slow Food actualmente?",
+        "options": ["Más de diez mil", "Más de cincuenta mil", "Más de cien mil", "Más de un millón"],
+        "answer": "Más de cien mil"
+      },
+      {
+        "id": "ls-016-q3",
+        "question": "¿Cuáles son los tres principios del Slow Food según el reportaje?",
+        "options": ["Natural, sostenible y barato", "Bueno, limpio y justo", "Lento, local y ecológico", "Tradicional, artesanal y sano"],
+        "answer": "Bueno, limpio y justo"
+      },
+      {
+        "id": "ls-016-q4",
+        "question": "¿Cuál es la crítica que se menciona sobre algunos restaurantes?",
+        "options": ["Que cobran precios demasiado altos", "Que usan el término como estrategia de marketing sin aplicar sus principios", "Que no compran productos locales", "Que no tienen certificación de calidad"],
+        "answer": "Que usan el término como estrategia de marketing sin aplicar sus principios"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
   }
 ]

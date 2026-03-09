@@ -1,9 +1,21 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.5'
+export const CURRENT_VERSION = 'v1.6'
 
 export const HISTORY = [
+  {
+    version: 'v1.6',
+    date: '2026-03-09',
+    summary: 'Massive content expansion + grammar topics from teacher',
+    changes: [
+      'Grammar: 50 new exercises (gr-111 to gr-160) covering teacher\'s requested topics — pretérito indefinido irregulars (ser/ir, hacer, tener, estar, poder, poner, querer, venir, decir, saber, dar, ver, traer, oír), indefinido vs imperfecto contrasts, affirmative & negative imperatives (regular + all 8 irregular tú forms), and extra condicional simple',
+      'Reading: expanded from 5 to 15 passages (el flamenco, dieta mediterránea, emprendimiento joven, sistema educativo, La Tomatina, Camino de Santiago, beneficios del deporte, Sagrada Familia, plástico, Islas Canarias)',
+      'Listening: expanded from 6 to 16 exercises (en el médico, reservando hotel, festival de cine, conversación entre vecinos, podcast sobre teletrabajo, tienda de ropa, visita al Prado, vacaciones en familia, negociando aumento, Slow Food)',
+      'Auto-generator fix: questions and answers in reading/listening now generated in Spanish; grammar focus cycles through teacher\'s topics; volume tripled (4 reading + 3 listening per day)',
+      'Seed version bump (v3) forces all users to receive the new content automatically',
+    ],
+  },
   {
     version: 'v1.5',
     date: '2026-03-08',

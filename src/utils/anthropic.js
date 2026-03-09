@@ -1,10 +1,22 @@
 import { saveContent, markGenerated, getGeneratedBatches } from './db.js'
 
 const API_KEY = import.meta.env.VITE_ANTHROPIC_API_KEY
-const MODEL = 'claude-sonnet-4-20250514'
+const MODEL = 'claude-sonnet-4-6'
 
-const WEAK_AREAS = ['Grammar & verb conjugations', 'Vocabulary', 'Reading comprehension', 'Listening & speaking']
 const THEMES = ['travel & transport', 'work & professional', 'everyday life', 'news & culture']
+
+const GRAMMAR_TOPICS = [
+  'Pretérito indefinido – irregular verbs (ser/ir, hacer, tener, estar, poder, poner, querer, venir, decir, saber, dar, ver, traer, oír)',
+  'Indefinido vs imperfecto – completed events vs background states and habits',
+  'Imperativo afirmativo – tú regular and irregular (ven, di, haz, ten, pon, sal, sé, ve)',
+  'Imperativo negativo – tú uses present subjunctive (no hables, no vayas, no hagas)',
+  'Condicional simple – polite requests, advice (en tu lugar), hypothetical conditions',
+  'Present subjunctive – triggers (querer que, esperar que, dudar que, cuando + future)',
+  'Present subjunctive – irregular forms (sea, tenga, haga, vaya, sepa, pueda)',
+  'Ser vs estar – permanent vs temporary states',
+  'Por vs para – purpose, cause, duration vs destination, deadline, opinion',
+  'Pluperfect subjunctive – si clauses with past unreal conditions',
+]
 
 function getBatchId() {
   const today = new Date().toISOString().split('T')[0]
@@ -41,18 +53,20 @@ export async function generateDailyContent() {
 
 function buildPrompt() {
   const timestamp = Date.now()
+  const randomTopic = GRAMMAR_TOPICS[Math.floor(Math.random() * GRAMMAR_TOPICS.length)]
+  const randomTheme = THEMES[Math.floor(Math.random() * THEMES.length)]
   return `You are generating Spanish B1 exam preparation content. Create fresh, varied content for a language learning app.
 
-User's weak areas: ${WEAK_AREAS.join(', ')}
-Topics to cover: ${THEMES.join(', ')}
+Today's grammar focus: ${randomTopic}
+Today's theme focus: ${randomTheme}
 
 Generate the following as a valid JSON object with these exact keys:
 
 {
   "flashcards": [ /* 20 items */ ],
   "grammar": [ /* 10 items */ ],
-  "reading": [ /* 2 items */ ],
-  "listening": [ /* 1 item */ ]
+  "reading": [ /* 4 items */ ],
+  "listening": [ /* 3 items */ ]
 }
 
 FLASHCARD format (20 items, B1 level Spanish vocabulary):
@@ -67,7 +81,7 @@ FLASHCARD format (20 items, B1 level Spanish vocabulary):
   "source": "generated"
 }
 
-GRAMMAR format (10 items, fill-in-the-blank):
+GRAMMAR format (10 items, fill-in-the-blank). Focus today's grammar exercises on: ${randomTopic}
 {
   "id": "gen-gr-${timestamp}-1",
   "type": "grammar",
@@ -75,59 +89,62 @@ GRAMMAR format (10 items, fill-in-the-blank):
   "sentence": "Spanish sentence with ___ for the blank",
   "options": ["option1", "option2", "option3", "option4"],
   "answer": "correct option",
-  "explanation": "English explanation of why this is correct",
-  "grammarPoint": "grammar concept name",
+  "explanation": "English explanation of why this is correct and what the grammar rule is",
+  "grammarPoint": "specific grammar concept name matching the focus topic",
   "difficulty": 1-3,
   "source": "generated"
 }
 
-READING format (2 items):
+READING format (4 items, 150-250 word passages on varied topics):
 {
   "id": "gen-rd-${timestamp}-1",
   "type": "reading",
   "theme": "travel|work|everyday|culture",
-  "title": "Passage title",
+  "title": "Título del texto en español",
   "passage": "150-250 word Spanish passage",
   "questions": [
     {
       "id": "gen-rd-${timestamp}-1-q1",
-      "question": "English question",
-      "options": ["A", "B", "C", "D"],
-      "answer": "correct option"
+      "question": "Pregunta en español sobre el texto",
+      "options": ["Opción A en español", "Opción B en español", "Opción C en español", "Opción D en español"],
+      "answer": "La opción correcta (must match one of the options exactly)"
     }
   ],
   "difficulty": 1-3,
   "source": "generated"
 }
 
-LISTENING format (1 item):
+LISTENING format (3 items, 150-250 word scripts — mix of dialogues and monologues):
 {
   "id": "gen-ls-${timestamp}-1",
   "type": "listening",
   "theme": "travel|work|everyday|culture",
-  "title": "Title",
+  "title": "Título en español",
   "format": "dialogue|monologue",
-  "script": "150-250 word Spanish text",
+  "script": "150-250 word Spanish dialogue or monologue",
   "transcript": "same as script",
   "duration": 90,
   "questions": [
     {
       "id": "gen-ls-${timestamp}-1-q1",
-      "question": "English question",
-      "options": ["A", "B", "C", "D"],
-      "answer": "correct option"
+      "question": "Pregunta en español sobre el audio",
+      "options": ["Opción A en español", "Opción B en español", "Opción C en español", "Opción D en español"],
+      "answer": "La opción correcta (must match one of the options exactly)"
     }
   ],
   "difficulty": 1-3,
   "source": "generated"
 }
 
-IMPORTANT:
+CRITICAL RULES:
 - Respond with ONLY the JSON object, no markdown, no explanation
+- ALL reading and listening questions, options, and answers MUST be written in Spanish
+- Grammar explanations should be in English (to help the learner understand the rule)
 - Make content varied, interesting, and genuinely B1 appropriate
 - Ensure all Spanish text is grammatically correct
-- Include at least 3 reading comprehension questions per passage
-- Include at least 3 questions per listening script`
+- Include exactly 4 questions per reading passage
+- Include exactly 4 questions per listening script
+- The "answer" field must exactly match one of the "options" strings`
 }
 
 async function callClaude(prompt) {

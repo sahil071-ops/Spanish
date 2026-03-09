@@ -173,5 +173,355 @@
     ],
     "difficulty": 2,
     "source": "seed"
+  },
+  {
+    "id": "rd-006",
+    "type": "reading",
+    "theme": "culture",
+    "title": "El flamenco: arte y pasión",
+    "passage": "El flamenco es una de las expresiones artísticas más reconocidas de España en todo el mundo. Aunque se asocia principalmente con Andalucía, especialmente con Sevilla y Jerez de la Frontera, sus raíces son diversas: incluyen influencias gitanas, árabes, judías y africanas, lo que lo convierte en un arte profundamente mestizo.\n\nEl flamenco tiene tres elementos fundamentales: el cante (el canto), el toque (la guitarra) y el baile. Cada uno puede existir de forma independiente, aunque su combinación crea una experiencia única. Los artistas flamencos más respetados dedican toda su vida a perfeccionar su arte.\n\nEn 2010, la UNESCO declaró el flamenco Patrimonio Cultural Inmaterial de la Humanidad, reconociendo su valor universal. Hoy en día, el flamenco se enseña en academias de todo el mundo, y miles de turistas visitan España cada año para asistir a espectáculos en directo en los llamados 'tablaos'.",
+    "questions": [
+      {
+        "id": "rd-006-q1",
+        "question": "¿Con qué región de España se asocia principalmente el flamenco?",
+        "options": ["Cataluña", "Galicia", "Andalucía", "Madrid"],
+        "answer": "Andalucía"
+      },
+      {
+        "id": "rd-006-q2",
+        "question": "¿Cuáles son los tres elementos fundamentales del flamenco?",
+        "options": ["La letra, la música y el vestuario", "El cante, el toque y el baile", "La guitarra, el violín y la danza", "El ritmo, la melodía y la armonía"],
+        "answer": "El cante, el toque y el baile"
+      },
+      {
+        "id": "rd-006-q3",
+        "question": "¿Qué organización reconoció el valor del flamenco en 2010?",
+        "options": ["La Unión Europea", "La UNESCO", "El Gobierno de España", "La Real Academia Española"],
+        "answer": "La UNESCO"
+      },
+      {
+        "id": "rd-006-q4",
+        "question": "¿Cómo se llaman los locales donde se pueden ver espectáculos de flamenco?",
+        "options": ["Flamenquerías", "Cafés cantantes", "Tablaos", "Peñas"],
+        "answer": "Tablaos"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-007",
+    "type": "reading",
+    "theme": "everyday",
+    "title": "La dieta mediterránea",
+    "passage": "La dieta mediterránea es considerada por muchos expertos como una de las más saludables del mundo. Se basa principalmente en el consumo de frutas, verduras, legumbres, cereales integrales, aceite de oliva y pescado. La carne roja se consume con moderación y los productos procesados tienen poca presencia.\n\nEsta forma de alimentarse tiene su origen en los países que bordean el mar Mediterráneo, como España, Italia, Grecia y Marruecos. Además de sus beneficios para la salud — reduce el riesgo de enfermedades cardíacas, diabetes tipo 2 y algunos tipos de cáncer — también tiene un fuerte componente social: las comidas se hacen en familia o con amigos, y se come despacio, sin prisas.\n\nEn 2013, la UNESCO la incluyó en la lista de Patrimonio Cultural Inmaterial. Sin embargo, los expertos advierten que incluso en los países mediterráneos, las nuevas generaciones están abandonando esta dieta en favor de la comida rápida.",
+    "questions": [
+      {
+        "id": "rd-007-q1",
+        "question": "¿Cuál es el principal ingrediente graso de la dieta mediterránea?",
+        "options": ["La mantequilla", "El aceite de girasol", "El aceite de oliva", "La margarina"],
+        "answer": "El aceite de oliva"
+      },
+      {
+        "id": "rd-007-q2",
+        "question": "Según el texto, ¿qué enfermedades ayuda a prevenir la dieta mediterránea?",
+        "options": ["La gripe y el resfriado", "Las enfermedades cardíacas y la diabetes tipo 2", "Las alergias alimentarias", "Los problemas de columna"],
+        "answer": "Las enfermedades cardíacas y la diabetes tipo 2"
+      },
+      {
+        "id": "rd-007-q3",
+        "question": "¿Cuál es el componente social de la dieta mediterránea mencionado en el texto?",
+        "options": ["Comer de pie y rápido", "Comer solo para ahorrar tiempo", "Comer en familia o con amigos, sin prisas", "Comer únicamente en restaurantes"],
+        "answer": "Comer en familia o con amigos, sin prisas"
+      },
+      {
+        "id": "rd-007-q4",
+        "question": "¿Qué problema señalan los expertos sobre las nuevas generaciones en los países mediterráneos?",
+        "options": ["Comen demasiado pescado", "Están adoptando la comida rápida en lugar de la dieta mediterránea", "No consumen suficiente aceite de oliva", "Tienen alergia a los productos del mar"],
+        "answer": "Están adoptando la comida rápida en lugar de la dieta mediterránea"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "rd-008",
+    "type": "reading",
+    "theme": "work",
+    "title": "El emprendimiento joven en España",
+    "passage": "En los últimos años, España ha visto crecer el número de jóvenes emprendedores que deciden crear su propia empresa en lugar de buscar trabajo por cuenta ajena. Según los datos del Instituto de Juventud, el 22% de los jóvenes entre 18 y 30 años ha considerado seriamente esta opción.\n\nLas razones son diversas. Algunos buscan independencia y flexibilidad horaria. Otros quieren desarrollar sus propias ideas y no depender de un jefe. También influye la dificultad para encontrar empleo estable en ciertos sectores, especialmente en el ámbito cultural y creativo.\n\nSin embargo, emprender no es fácil. Los principales obstáculos son la falta de financiación inicial, el desconocimiento de los trámites administrativos y la inexperiencia en gestión empresarial. Por eso, en España existen varias iniciativas públicas y privadas — como viveros de empresas y programas de mentoring — que ayudan a los jóvenes emprendedores en sus primeros pasos.",
+    "questions": [
+      {
+        "id": "rd-008-q1",
+        "question": "¿Qué porcentaje de jóvenes entre 18 y 30 años ha considerado seriamente crear su propia empresa?",
+        "options": ["El 10%", "El 15%", "El 22%", "El 30%"],
+        "answer": "El 22%"
+      },
+      {
+        "id": "rd-008-q2",
+        "question": "Según el texto, ¿cuál es uno de los motivos por los que los jóvenes quieren emprender?",
+        "options": ["Ganar más dinero que en una empresa grande", "Buscar independencia y flexibilidad horaria", "Evitar pagar impuestos", "Trabajar menos horas"],
+        "answer": "Buscar independencia y flexibilidad horaria"
+      },
+      {
+        "id": "rd-008-q3",
+        "question": "¿Cuál es el principal obstáculo para los jóvenes emprendedores, según el texto?",
+        "options": ["La competencia extranjera", "El idioma", "La falta de financiación inicial", "El exceso de burocracia fiscal"],
+        "answer": "La falta de financiación inicial"
+      },
+      {
+        "id": "rd-008-q4",
+        "question": "¿Qué son los 'viveros de empresas'?",
+        "options": ["Empresas que venden plantas", "Iniciativas para ayudar a nuevos emprendedores", "Bancos especializados en préstamos", "Asociaciones de grandes empresas"],
+        "answer": "Iniciativas para ayudar a nuevos emprendedores"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-009",
+    "type": "reading",
+    "theme": "everyday",
+    "title": "El sistema educativo español",
+    "passage": "El sistema educativo en España está organizado en varias etapas. La educación infantil, para niños de cero a seis años, es voluntaria y gratuita en los centros públicos a partir de los tres años. La educación primaria es obligatoria y abarca de los seis a los doce años. A continuación viene la educación secundaria obligatoria (ESO), de doce a dieciséis años.\n\nAl terminar la ESO, los alumnos pueden elegir entre el Bachillerato (dos años preparatorios para la universidad) o la Formación Profesional (FP), que ofrece una formación más práctica y orientada al mundo laboral. Muchas familias ven ahora la FP como una opción muy valiosa, ya que la empleabilidad de sus titulados es alta.\n\nEn cuanto a la universidad, para acceder es necesario superar la selectividad (ahora llamada EBAU), un examen nacional. Las tasas universitarias en España son más bajas que en países como el Reino Unido, lo que permite que muchos estudiantes accedan a la educación superior.",
+    "questions": [
+      {
+        "id": "rd-009-q1",
+        "question": "¿A partir de qué edad la educación infantil es gratuita en los centros públicos?",
+        "options": ["Desde el nacimiento", "Desde los dos años", "Desde los tres años", "Desde los cuatro años"],
+        "answer": "Desde los tres años"
+      },
+      {
+        "id": "rd-009-q2",
+        "question": "¿Qué son las siglas ESO?",
+        "options": ["Educación Secundaria Obligatoria", "Enseñanza Superior Oficial", "Escuela Superior de Oposiciones", "Estudios Secundarios Online"],
+        "answer": "Educación Secundaria Obligatoria"
+      },
+      {
+        "id": "rd-009-q3",
+        "question": "¿Por qué muchas familias valoran positivamente la Formación Profesional?",
+        "options": ["Porque es más barata que el Bachillerato", "Porque la empleabilidad de sus titulados es alta", "Porque dura menos años", "Porque no requiere examen de acceso"],
+        "answer": "Porque la empleabilidad de sus titulados es alta"
+      },
+      {
+        "id": "rd-009-q4",
+        "question": "¿Cómo se llama actualmente el examen de acceso a la universidad en España?",
+        "options": ["La selectividad", "El bachillerato", "La EBAU", "El examen de estado"],
+        "answer": "La EBAU"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-010",
+    "type": "reading",
+    "theme": "culture",
+    "title": "La Tomatina de Buñol",
+    "passage": "Cada año, el último miércoles del mes de agosto, el pequeño pueblo de Buñol, en la provincia de Valencia, se convierte en el escenario de una de las fiestas más originales del mundo: La Tomatina. Durante una hora, miles de personas se lanzan tomates los unos a los otros en las calles del pueblo.\n\nEl origen de esta fiesta es incierto, aunque la versión más popular sitúa el primer episodio en 1945, cuando un grupo de jóvenes empezó a lanzarse tomates durante una procesión local. La tradición fue creciendo con el paso de los años hasta convertirse en un festival internacional.\n\nActualmente, La Tomatina atrae a decenas de miles de visitantes de todo el mundo. El ayuntamiento de Buñol controla el acceso con entradas para garantizar la seguridad. Antes de empezar la batalla de tomates, hay que escalar un poste enjabonado para conseguir el jamón que hay en lo alto — señal de que puede comenzar la batalla.",
+    "questions": [
+      {
+        "id": "rd-010-q1",
+        "question": "¿Cuándo se celebra La Tomatina?",
+        "options": ["El primer miércoles de julio", "El último miércoles de agosto", "El primer sábado de septiembre", "El último domingo de junio"],
+        "answer": "El último miércoles de agosto"
+      },
+      {
+        "id": "rd-010-q2",
+        "question": "¿Cuánto tiempo dura la batalla de tomates?",
+        "options": ["Media hora", "Una hora", "Dos horas", "Toda la tarde"],
+        "answer": "Una hora"
+      },
+      {
+        "id": "rd-010-q3",
+        "question": "Según la versión más popular, ¿cuándo ocurrió el primer episodio de La Tomatina?",
+        "options": ["En 1936", "En 1945", "En 1960", "En 1975"],
+        "answer": "En 1945"
+      },
+      {
+        "id": "rd-010-q4",
+        "question": "¿Qué señal indica que puede comenzar la batalla de tomates?",
+        "options": ["El disparo de un cañón", "Una señal del alcalde", "Conseguir el jamón del poste enjabonado", "El sonido de una campana"],
+        "answer": "Conseguir el jamón del poste enjabonado"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "rd-011",
+    "type": "reading",
+    "theme": "travel",
+    "title": "El Camino de Santiago",
+    "passage": "El Camino de Santiago es una red de rutas de peregrinación que llegan hasta la catedral de Santiago de Compostela, en Galicia, donde según la tradición están enterrados los restos del apóstol Santiago. Aunque tiene una dimensión religiosa, hoy en día muchas personas lo hacen por razones culturales, deportivas o simplemente personales.\n\nExisten varios caminos: el más conocido es el Camino Francés, que comienza en los Pirineos, en Saint-Jean-Pied-de-Port, y recorre unos 800 kilómetros hasta Compostela. Otros caminos populares son el Camino Portugués y el Camino del Norte, que bordea la costa cantábrica.\n\nCada peregrino lleva una credencial — un documento que se sella en los albergues y monumentos a lo largo del camino. Al llegar a Santiago, si el peregrino ha recorrido al menos los últimos 100 kilómetros a pie (o 200 en bicicleta), puede obtener la Compostela, un certificado oficial en latín.",
+    "questions": [
+      {
+        "id": "rd-011-q1",
+        "question": "¿Dónde termina el Camino de Santiago?",
+        "options": ["En Madrid", "En Sevilla", "En la catedral de Santiago de Compostela", "En los Pirineos"],
+        "answer": "En la catedral de Santiago de Compostela"
+      },
+      {
+        "id": "rd-011-q2",
+        "question": "¿Cuántos kilómetros tiene aproximadamente el Camino Francés?",
+        "options": ["400 kilómetros", "600 kilómetros", "800 kilómetros", "1000 kilómetros"],
+        "answer": "800 kilómetros"
+      },
+      {
+        "id": "rd-011-q3",
+        "question": "¿Para qué sirve la credencial del peregrino?",
+        "options": ["Para pagar en los albergues", "Para registrar los sellos del camino", "Para identificarse en las fronteras", "Para reservar alojamiento con descuento"],
+        "answer": "Para registrar los sellos del camino"
+      },
+      {
+        "id": "rd-011-q4",
+        "question": "¿Cuántos kilómetros mínimo a pie debe recorrer un peregrino para obtener la Compostela?",
+        "options": ["50 kilómetros", "100 kilómetros", "150 kilómetros", "200 kilómetros"],
+        "answer": "100 kilómetros"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-012",
+    "type": "reading",
+    "theme": "everyday",
+    "title": "Los beneficios del deporte regular",
+    "passage": "Practicar deporte con regularidad aporta numerosos beneficios tanto físicos como mentales. A nivel físico, mejora la salud cardiovascular, fortalece los músculos y los huesos, ayuda a mantener un peso saludable y reduce el riesgo de enfermedades crónicas como la diabetes o la hipertensión.\n\nA nivel mental, el ejercicio estimula la producción de endorfinas, las llamadas 'hormonas de la felicidad', que mejoran el estado de ánimo y reducen el estrés y la ansiedad. Las personas que hacen deporte con regularidad suelen dormir mejor y tienen mayor capacidad de concentración.\n\nLa Organización Mundial de la Salud recomienda al menos 150 minutos de actividad física moderada a la semana para los adultos. Sin embargo, según las encuestas, casi la mitad de los españoles no alcanza este mínimo recomendado. Los expertos señalan que no hace falta apuntarse a un gimnasio: caminar, montar en bicicleta o subir escaleras ya cuenta como actividad física beneficiosa.",
+    "questions": [
+      {
+        "id": "rd-012-q1",
+        "question": "¿Qué son las endorfinas, según el texto?",
+        "options": ["Vitaminas que ayudan a los músculos", "Las hormonas de la felicidad", "Un tipo de proteína", "Medicamentos para el estrés"],
+        "answer": "Las hormonas de la felicidad"
+      },
+      {
+        "id": "rd-012-q2",
+        "question": "¿Cuántos minutos de actividad física moderada recomienda la OMS para los adultos a la semana?",
+        "options": ["Al menos 60 minutos", "Al menos 90 minutos", "Al menos 150 minutos", "Al menos 300 minutos"],
+        "answer": "Al menos 150 minutos"
+      },
+      {
+        "id": "rd-012-q3",
+        "question": "Según el texto, ¿qué proporción de españoles no alcanza el mínimo de ejercicio recomendado?",
+        "options": ["Un cuarto", "Un tercio", "Casi la mitad", "Más de la mitad"],
+        "answer": "Casi la mitad"
+      },
+      {
+        "id": "rd-012-q4",
+        "question": "¿Qué ejemplo da el texto de actividad física que no requiere ir al gimnasio?",
+        "options": ["Hacer yoga en casa", "Nadar en la piscina", "Caminar o montar en bicicleta", "Jugar al fútbol"],
+        "answer": "Caminar o montar en bicicleta"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
+  },
+  {
+    "id": "rd-013",
+    "type": "reading",
+    "theme": "culture",
+    "title": "La Sagrada Familia: una obra sin fin",
+    "passage": "La Sagrada Familia es el monumento más visitado de España y una de las obras arquitectónicas más singulares del mundo. Diseñada por el arquitecto Antoni Gaudí, su construcción comenzó en 1882 y, según las previsiones, no se terminará hasta el año 2026, coincidiendo con el centenario de la muerte de Gaudí.\n\nEl edificio combina elementos del Art Nouveau con formas inspiradas en la naturaleza, como columnas que imitan troncos de árbol y techos que recuerdan a las copas de un bosque. Hay tres grandes fachadas: la de la Natividad (la más antigua, terminada en vida de Gaudí), la de la Pasión y la de la Gloria, todavía en construcción.\n\nGaudí dedicó los últimos quince años de su vida exclusivamente a este proyecto, viviendo incluso dentro del templo. Murió en 1926 atropellado por un tranvía antes de ver terminada su obra. Hoy en día, las obras se financian exclusivamente con las entradas que pagan los visitantes — más de cuatro millones al año — sin ayuda pública.",
+    "questions": [
+      {
+        "id": "rd-013-q1",
+        "question": "¿Cuándo comenzó la construcción de la Sagrada Familia?",
+        "options": ["En 1850", "En 1882", "En 1900", "En 1926"],
+        "answer": "En 1882"
+      },
+      {
+        "id": "rd-013-q2",
+        "question": "¿Cuál es la fachada más antigua de la Sagrada Familia?",
+        "options": ["La fachada de la Gloria", "La fachada de la Pasión", "La fachada de la Natividad", "La fachada principal"],
+        "answer": "La fachada de la Natividad"
+      },
+      {
+        "id": "rd-013-q3",
+        "question": "¿Cómo murió Antoni Gaudí?",
+        "options": ["De una enfermedad", "En un incendio", "Atropellado por un tranvía", "Cayendo desde el andamio"],
+        "answer": "Atropellado por un tranvía"
+      },
+      {
+        "id": "rd-013-q4",
+        "question": "¿Cómo se financia actualmente la construcción de la Sagrada Familia?",
+        "options": ["Con donaciones privadas", "Con fondos del gobierno español", "Con las entradas de los visitantes", "Con subvenciones de la Unión Europea"],
+        "answer": "Con las entradas de los visitantes"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-014",
+    "type": "reading",
+    "theme": "everyday",
+    "title": "Vivir sin plástico: un reto cotidiano",
+    "passage": "Cada año se producen en el mundo más de 380 millones de toneladas de plástico. Solo el 9% de este plástico se recicla; el resto acaba en vertederos, incineradoras o, lo que es peor, en los océanos y la naturaleza. Reducir el uso del plástico se ha convertido en uno de los grandes retos medioambientales de nuestro tiempo.\n\nCada vez más personas deciden adoptar hábitos de vida más sostenibles. Algunos ejemplos son: llevar bolsas de tela al supermercado, usar botellas de agua reutilizables, comprar productos a granel y evitar los envases de plástico de un solo uso. Pequeños gestos que, repetidos por millones de personas, pueden tener un gran impacto.\n\nEn España, la Ley de Residuos aprobada en 2022 prohíbe determinados productos de plástico de un solo uso, como pajitas, cubiertos y platos desechables. Las empresas que no cumplen esta normativa pueden enfrentarse a multas importantes.",
+    "questions": [
+      {
+        "id": "rd-014-q1",
+        "question": "¿Qué porcentaje del plástico producido se recicla, según el texto?",
+        "options": ["El 5%", "El 9%", "El 25%", "El 50%"],
+        "answer": "El 9%"
+      },
+      {
+        "id": "rd-014-q2",
+        "question": "¿Cuál de las siguientes acciones menciona el texto como ejemplo para reducir el plástico?",
+        "options": ["Comprar en mercados ecológicos", "Llevar bolsas de tela al supermercado", "Consumir menos agua embotellada", "Separar mejor la basura en casa"],
+        "answer": "Llevar bolsas de tela al supermercado"
+      },
+      {
+        "id": "rd-014-q3",
+        "question": "¿Qué prohíbe la Ley de Residuos española de 2022?",
+        "options": ["Vender agua en botellas de plástico", "Usar plástico en la industria alimentaria", "Determinados productos de plástico de un solo uso", "Importar plásticos del extranjero"],
+        "answer": "Determinados productos de plástico de un solo uso"
+      },
+      {
+        "id": "rd-014-q4",
+        "question": "¿Qué consecuencias pueden tener las empresas que no cumplan la normativa?",
+        "options": ["Cierre inmediato del negocio", "Multas importantes", "Prohibición de vender sus productos", "Publicación negativa en medios de comunicación"],
+        "answer": "Multas importantes"
+      }
+    ],
+    "difficulty": 2,
+    "source": "seed"
+  },
+  {
+    "id": "rd-015",
+    "type": "reading",
+    "theme": "travel",
+    "title": "Las Islas Canarias: un destino para todo el año",
+    "passage": "Las Islas Canarias son un archipiélago español situado en el Océano Atlántico, frente a la costa noroeste de África. Están formadas por ocho islas principales, siendo las más grandes Tenerife y Gran Canaria. Su clima subtropical — con temperaturas suaves durante todo el año — hace que sean un destino turístico popular en todas las estaciones.\n\nCada isla tiene su propia personalidad. Lanzarote es conocida por su paisaje volcánico único, declarado Reserva de la Biosfera. Fuerteventura atrae a los amantes del windsurf y el kitesurf gracias a sus vientos y playas. La Palma, por otro lado, es famosa por su cielo nocturno, considerado uno de los mejores del mundo para la observación de estrellas.\n\nAdemás del turismo de sol y playa, las Canarias ofrecen senderismo, gastronomía local (como el mojo rojo y el gofio) y una cultura rica influenciada por África, América Latina y la península ibérica. Cada año las visitan más de 16 millones de turistas.",
+    "questions": [
+      {
+        "id": "rd-015-q1",
+        "question": "¿Dónde están situadas las Islas Canarias?",
+        "options": ["En el mar Mediterráneo, cerca de Italia", "En el Océano Atlántico, frente a África", "En el Océano Índico", "En el mar Cantábrico"],
+        "answer": "En el Océano Atlántico, frente a África"
+      },
+      {
+        "id": "rd-015-q2",
+        "question": "¿Por qué es famosa la isla de La Palma?",
+        "options": ["Por su playa más larga de España", "Por su gastronomía única", "Por su cielo nocturno para observar estrellas", "Por su parque temático"],
+        "answer": "Por su cielo nocturno para observar estrellas"
+      },
+      {
+        "id": "rd-015-q3",
+        "question": "¿Qué hace que las Canarias sean un destino popular en todas las estaciones del año?",
+        "options": ["Sus playas de arena blanca", "Su clima subtropical con temperaturas suaves todo el año", "Los precios bajos de los hoteles", "La facilidad de acceso desde Europa"],
+        "answer": "Su clima subtropical con temperaturas suaves todo el año"
+      },
+      {
+        "id": "rd-015-q4",
+        "question": "¿Cuántos turistas visitan las Canarias cada año, según el texto?",
+        "options": ["Más de 8 millones", "Más de 10 millones", "Más de 16 millones", "Más de 20 millones"],
+        "answer": "Más de 16 millones"
+      }
+    ],
+    "difficulty": 1,
+    "source": "seed"
   }
 ]

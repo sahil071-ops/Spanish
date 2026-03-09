@@ -7,7 +7,7 @@ import mockExamsData from '../data/mockExams.json'
 
 // Bump this number whenever seed data changes (questions translated, content updated, etc.)
 // A version mismatch forces all seed items to be re-written in IndexedDB.
-const SEED_VERSION = 2
+const SEED_VERSION = 3
 
 const SEED_VERSION_KEY = 'spanish-b1-seed-version'
 
