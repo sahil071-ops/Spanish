@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import { getAllContent } from '../utils/db.js'
-import { updateSRSItem, logActivity, updateStreak } from '../utils/storage.js'
+import { updateSRSItem, logActivity, updateStreak, markContentSeen, getUnseenContent } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react'
 
@@ -20,7 +20,8 @@ export default function ReadingPage() {
   useEffect(() => {
     async function load() {
       const all = await getAllContent('reading')
-      const shuffled = [...all].sort(() => Math.random() - 0.5)
+      const unseen = getUnseenContent(all)
+      const shuffled = [...unseen].sort(() => Math.random() - 0.5)
       setPassages(shuffled.slice(0, 3))
       setLoading(false)
     }
@@ -38,6 +39,7 @@ export default function ReadingPage() {
     setSubmitted(true)
     const correct = passage.questions.filter(q => answers[q.id] === q.answer).length
     updateSRSItem(passage.id, correct >= passage.questions.length * 0.7 ? 4 : 2)
+    markContentSeen(passage.id)
     setTotalScore(prev => ({ correct: prev.correct + correct, total: prev.total + passage.questions.length }))
   }
 

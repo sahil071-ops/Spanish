@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import AudioPlayer from '../components/AudioPlayer.jsx'
 import { getAllContent } from '../utils/db.js'
-import { updateSRSItem, logActivity, updateStreak } from '../utils/storage.js'
+import { updateSRSItem, logActivity, updateStreak, markContentSeen, getUnseenContent } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
 import { CheckCircle, XCircle, ArrowRight } from 'lucide-react'
 
@@ -21,7 +21,8 @@ export default function ListeningPage() {
   useEffect(() => {
     async function load() {
       const all = await getAllContent('listening')
-      const shuffled = [...all].sort(() => Math.random() - 0.5)
+      const unseen = getUnseenContent(all)
+      const shuffled = [...unseen].sort(() => Math.random() - 0.5)
       setExercises(shuffled.slice(0, 2))
       setLoading(false)
     }
@@ -39,6 +40,7 @@ export default function ListeningPage() {
     setSubmitted(true)
     const correct = exercise.questions.filter(q => answers[q.id] === q.answer).length
     updateSRSItem(exercise.id, correct >= exercise.questions.length * 0.7 ? 4 : 2)
+    markContentSeen(exercise.id)
     setTotalScore(prev => ({ correct: prev.correct + correct, total: prev.total + exercise.questions.length }))
   }
 

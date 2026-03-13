@@ -1,9 +1,22 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.6'
+export const CURRENT_VERSION = 'v1.7'
 
 export const HISTORY = [
+  {
+    version: 'v1.7',
+    date: '2026-03-13',
+    summary: 'Proper SRS, content rotation, ODP grammar, 400 new flashcards',
+    changes: [
+      'Flashcard SRS fix: practice mode now shows only cards due for review (SRS interval expired) plus up to 10 new cards per session — you will no longer see the same cards back-to-back every day',
+      '"All caught up" screen appears when no cards are due, showing when the next review session is scheduled',
+      'Reading & listening 14-day rotation: each passage/audio is hidden for 14 days after you complete it, so you never see the same story twice in a fortnight',
+      'Grammar: 20 new exercises (gr-161 to gr-180) covering Direct and Indirect Object Pronouns — lo/la/los/las, me/te/le/nos/os/les, double pronouns (le→se), position rules, gustar-type verbs',
+      'Flashcards: 400 new seed words (fc-301 to fc-700) covering health, environment, technology, emotions, housing, food, transport, work/economy, education, sports, and connectors/expressions',
+      'Seed version bump (v4) forces all users to receive the new content automatically',
+    ],
+  },
   {
     version: 'v1.6',
     date: '2026-03-09',

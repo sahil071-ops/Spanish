@@ -240,6 +240,51 @@ export function getWeakTopics(minAttempts = 2) {
     .sort((a, b) => a.accuracy - b.accuracy)
 }
 
+// ─── Content Rotation (reading & listening) ───────────────────────────────────
+
+const CONTENT_SEEN_KEY = 'spanish-b1-content-seen'
+const ROTATION_DAYS = 14
+
+export function markContentSeen(itemId) {
+  try {
+    const stored = localStorage.getItem(CONTENT_SEEN_KEY)
+    const data = stored ? JSON.parse(stored) : {}
+    data[itemId] = Date.now()
+    localStorage.setItem(CONTENT_SEEN_KEY, JSON.stringify(data))
+  } catch {}
+}
+
+export function getUnseenContent(allItems) {
+  try {
+    const stored = localStorage.getItem(CONTENT_SEEN_KEY)
+    const seen = stored ? JSON.parse(stored) : {}
+    const cutoff = Date.now() - ROTATION_DAYS * 24 * 60 * 60 * 1000
+    const unseen = allItems.filter(item => {
+      const seenAt = seen[item.id]
+      return !seenAt || seenAt < cutoff
+    })
+    return unseen.length > 0 ? unseen : allItems // fallback: show all if all recently seen
+  } catch {
+    return allItems
+  }
+}
+
+export function getNextContentAvailableDate(allItems) {
+  try {
+    const stored = localStorage.getItem(CONTENT_SEEN_KEY)
+    const seen = stored ? JSON.parse(stored) : {}
+    const cutoff = Date.now() - ROTATION_DAYS * 24 * 60 * 60 * 1000
+    // Find the earliest time an item will become available again
+    const seenTimes = allItems.map(item => seen[item.id]).filter(Boolean)
+    if (seenTimes.length < allItems.length) return null // some items never seen
+    const earliestExpiry = Math.min(...seenTimes) + ROTATION_DAYS * 24 * 60 * 60 * 1000
+    if (earliestExpiry <= Date.now()) return null
+    return new Date(earliestExpiry)
+  } catch {
+    return null
+  }
+}
+
 // ─── Export / Import ──────────────────────────────────────────────────────────
 
 export function exportAllData() {
@@ -267,4 +312,5 @@ export function resetAllProgress() {
   localStorage.removeItem(SRS_KEY)
   localStorage.removeItem(ACTIVITY_KEY)
   localStorage.removeItem(TOPIC_KEY)
+  localStorage.removeItem(CONTENT_SEEN_KEY)
 }
