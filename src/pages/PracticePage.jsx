@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { BookOpen, Brain, FileText, Headphones, ClipboardList, ChevronRight, List } from 'lucide-react'
+import { BookOpen, Brain, FileText, Headphones, ClipboardList, ChevronRight, List, Zap } from 'lucide-react'
 import TopBar from '../components/TopBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
 
@@ -30,6 +30,15 @@ const modes = [
     color: 'bg-purple-50',
     iconColor: 'text-purple-600',
     path: '/practice/grammar',
+  },
+  {
+    id: 'diagnostic',
+    icon: Zap,
+    label: 'Grammar Diagnostic',
+    description: 'Discover weak topics — 1 Q per topic',
+    color: 'bg-amber-50',
+    iconColor: 'text-amber-600',
+    path: '/practice/diagnostic',
   },
   {
     id: 'reading',

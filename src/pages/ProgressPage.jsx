@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
-import { getActivityData, getSRSData, getWeakTopics } from '../utils/storage.js'
+import { getActivityData, getSRSData, getWeakTopics, getTopicPerformance } from '../utils/storage.js'
 import { getAllContent } from '../utils/db.js'
-import { BookOpen, Brain, FileText, Headphones, Flame, Calendar, AlertTriangle, ChevronRight } from 'lucide-react'
+import { BookOpen, Brain, FileText, Headphones, Flame, Calendar, AlertTriangle, ChevronRight, Zap } from 'lucide-react'
 
 function ActivityHeatmap() {
   const activity = getActivityData()
@@ -81,7 +81,7 @@ export default function ProgressPage() {
         reading: calcMastery(reading),
         listening: calcMastery(listening),
       })
-      setWeakTopics(getWeakTopics(2).slice(0, 5))
+      setWeakTopics(getWeakTopics(1).slice(0, 8))
       setLoading(false)
     }
     load()
@@ -163,6 +163,21 @@ export default function ProgressPage() {
             </div>
           )}
         </div>
+
+        {/* Diagnostic CTA */}
+        <button
+          onClick={() => navigate('/practice/diagnostic')}
+          className="w-full bg-amber-50 border border-amber-100 rounded-2xl p-4 flex items-center gap-4 active:scale-99 transition-transform"
+        >
+          <div className="w-11 h-11 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+            <Zap size={20} className="text-amber-600" />
+          </div>
+          <div className="text-left flex-1">
+            <p className="font-semibold text-gray-800">Grammar Diagnostic</p>
+            <p className="text-xs text-gray-500 mt-0.5">Test yourself across all topics to find gaps</p>
+          </div>
+          <ChevronRight size={18} className="text-gray-300 shrink-0" />
+        </button>
 
         {/* Weak grammar topics */}
         {weakTopics.length > 0 && (

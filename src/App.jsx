@@ -10,6 +10,7 @@ import GrammarPage from './pages/GrammarPage.jsx'
 import ReadingPage from './pages/ReadingPage.jsx'
 import ListeningPage from './pages/ListeningPage.jsx'
 import MockExamPage from './pages/MockExamPage.jsx'
+import DiagnosticQuizPage from './pages/DiagnosticQuizPage.jsx'
 import ProgressPage from './pages/ProgressPage.jsx'
 import SettingsPage from './pages/SettingsPage.jsx'
 import VocabularyPage from './pages/VocabularyPage.jsx'
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/practice/reading" element={<ReadingPage />} />
             <Route path="/practice/listening" element={<ListeningPage />} />
             <Route path="/practice/mock-exam" element={<MockExamPage />} />
+            <Route path="/practice/diagnostic" element={<DiagnosticQuizPage />} />
             <Route path="/vocabulary" element={<VocabularyPage />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/settings" element={<SettingsPage />} />
