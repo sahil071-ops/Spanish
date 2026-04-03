@@ -4,8 +4,9 @@ import TopBar from '../components/TopBar.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
 import { getActivityData, getSRSData, getWeakTopics, getTopicPerformance } from '../utils/storage.js'
+import { generateFreshDrill } from '../utils/anthropic.js'
 import { getAllContent } from '../utils/db.js'
-import { BookOpen, Brain, FileText, Headphones, Flame, Calendar, AlertTriangle, ChevronRight, Zap } from 'lucide-react'
+import { BookOpen, Brain, FileText, Headphones, Flame, Calendar, AlertTriangle, ChevronRight, Zap, X, ArrowUpDown, CheckCircle } from 'lucide-react'
 
 function ActivityHeatmap() {
   const activity = getActivityData()
@@ -16,7 +17,6 @@ function ActivityHeatmap() {
     days.push({ date: key, count: activity[key] || 0, day: date.getDay() })
   }
 
-  // Group into weeks
   const weeks = []
   for (let i = 0; i < days.length; i += 7) {
     weeks.push(days.slice(i, i + 7))
@@ -48,12 +48,92 @@ function ActivityHeatmap() {
   )
 }
 
+function StatusBadge({ accuracy, total }) {
+  if (total === 0) return <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-400">Untested</span>
+  if (accuracy >= 85) return <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700">Strong</span>
+  if (accuracy >= 60) return <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">OK</span>
+  return <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600">Weak</span>
+}
+
+function TopicDetailModal({ topic, data, onClose, onDrill, onNavigate }) {
+  const [drilling, setDrilling] = useState(false)
+
+  const accuracy = data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0
+
+  const handleDrill = async () => {
+    setDrilling(true)
+    try {
+      await onDrill(topic)
+    } finally {
+      setDrilling(false)
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-end" onClick={onClose}>
+      <div
+        className="bg-white rounded-t-3xl w-full max-w-lg mx-auto p-6 space-y-4"
+        onClick={e => e.stopPropagation()}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="font-bold text-gray-900 text-base flex-1">{topic}</h3>
+          <button onClick={onClose} className="shrink-0 p-1 text-gray-400">
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-3 gap-3 text-center">
+          <div className="bg-gray-50 rounded-xl p-3">
+            <p className="text-2xl font-bold text-gray-900">{accuracy}%</p>
+            <p className="text-xs text-gray-400">Accuracy</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-3">
+            <p className="text-2xl font-bold text-gray-900">{data.correct}</p>
+            <p className="text-xs text-gray-400">Correct</p>
+          </div>
+          <div className="bg-gray-50 rounded-xl p-3">
+            <p className="text-2xl font-bold text-gray-900">{data.total}</p>
+            <p className="text-xs text-gray-400">Attempts</p>
+          </div>
+        </div>
+
+        {data.lastSeen && (
+          <p className="text-xs text-gray-400">
+            Last practised: {new Date(data.lastSeen).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+          </p>
+        )}
+
+        <button
+          onClick={() => { onNavigate(topic); onClose() }}
+          className="w-full bg-[#C60B1E] text-white font-semibold py-3 rounded-2xl"
+        >
+          Practise This Topic
+        </button>
+
+        <button
+          onClick={handleDrill}
+          disabled={drilling}
+          className="w-full bg-amber-500 text-white font-semibold py-3 rounded-2xl flex items-center justify-center gap-2 disabled:opacity-60"
+        >
+          {drilling ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <Zap size={18} />}
+          {drilling ? 'Generating…' : 'Fresh Drill (5 AI questions)'}
+        </button>
+      </div>
+    </div>
+  )
+}
+
 export default function ProgressPage() {
   const navigate = useNavigate()
   const { streak, contentCounts } = useApp()
   const [masteryData, setMasteryData] = useState({})
   const [weakTopics, setWeakTopics] = useState([])
+  const [allTopics, setAllTopics] = useState([])
   const [loading, setLoading] = useState(true)
+  const [sortBy, setSortBy] = useState('accuracy') // 'accuracy' | 'attempts' | 'name'
+  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [drillExercises, setDrillExercises] = useState(null)
+  const [drillTopic, setDrillTopic] = useState(null)
 
   useEffect(() => {
     async function load() {
@@ -81,11 +161,39 @@ export default function ProgressPage() {
         reading: calcMastery(reading),
         listening: calcMastery(listening),
       })
+
+      // Build full topic list from both seed data and performance data
+      const topicPerf = getTopicPerformance()
+      const grammarTopics = [...new Set(grammar.map(g => g.grammarPoint).filter(Boolean))]
+      const allTopicNames = [...new Set([...grammarTopics, ...Object.keys(topicPerf)])]
+
+      const topics = allTopicNames.map(topic => {
+        const perf = topicPerf[topic] || { correct: 0, total: 0, lastSeen: null }
+        const accuracy = perf.total > 0 ? Math.round((perf.correct / perf.total) * 100) : 0
+        return { topic, accuracy, correct: perf.correct, total: perf.total, lastSeen: perf.lastSeen }
+      })
+
+      setAllTopics(topics)
       setWeakTopics(getWeakTopics(1).slice(0, 8))
       setLoading(false)
     }
     load()
   }, [])
+
+  const sortedTopics = [...allTopics].sort((a, b) => {
+    if (sortBy === 'accuracy') {
+      if (a.total === 0 && b.total === 0) return a.topic.localeCompare(b.topic)
+      if (a.total === 0) return 1
+      if (b.total === 0) return -1
+      return a.accuracy - b.accuracy
+    }
+    if (sortBy === 'attempts') return b.total - a.total
+    return a.topic.localeCompare(b.topic)
+  })
+
+  const strongTopics = allTopics.filter(t => t.total >= 3 && t.accuracy >= 85)
+    .sort((a, b) => b.accuracy - a.accuracy)
+    .slice(0, 5)
 
   const skills = [
     { key: 'vocabulary', label: 'Vocabulary', icon: BookOpen, color: 'text-blue-600' },
@@ -93,6 +201,20 @@ export default function ProgressPage() {
     { key: 'reading', label: 'Reading', icon: FileText, color: 'text-green-600' },
     { key: 'listening', label: 'Listening', icon: Headphones, color: 'text-orange-600' },
   ]
+
+  const handleDrillFromModal = async (topic) => {
+    const exercises = await generateFreshDrill(topic)
+    if (exercises.length > 0) {
+      setDrillExercises(exercises)
+      setDrillTopic(topic)
+      setSelectedTopic(null)
+      navigate(`/practice/grammar?topic=${encodeURIComponent(topic)}`)
+    }
+  }
+
+  const selectedTopicData = selectedTopic
+    ? (allTopics.find(t => t.topic === selectedTopic) || { correct: 0, total: 0 })
+    : null
 
   return (
     <div className="flex flex-col pb-24">
@@ -179,6 +301,80 @@ export default function ProgressPage() {
           <ChevronRight size={18} className="text-gray-300 shrink-0" />
         </button>
 
+        {/* Strengths */}
+        {strongTopics.length > 0 && (
+          <div className="bg-white rounded-2xl border border-gray-100 p-5">
+            <div className="flex items-center gap-2 mb-3">
+              <CheckCircle size={18} className="text-green-600" />
+              <h2 className="font-semibold text-gray-800">Strengths</h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {strongTopics.map(({ topic, accuracy }) => (
+                <button
+                  key={topic}
+                  onClick={() => setSelectedTopic(topic)}
+                  className="bg-green-50 text-green-700 text-xs px-2.5 py-1 rounded-full border border-green-200"
+                >
+                  {topic} · {accuracy}%
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Full Grammar Topic Mastery Table */}
+        <div className="bg-white rounded-2xl border border-gray-100 p-5">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-2">
+              <Brain size={18} className="text-purple-600" />
+              <h2 className="font-semibold text-gray-800">Grammar Topics</h2>
+            </div>
+            <button
+              onClick={() => setSortBy(s => s === 'accuracy' ? 'attempts' : s === 'attempts' ? 'name' : 'accuracy')}
+              className="flex items-center gap-1 text-xs text-gray-400 border border-gray-200 px-2 py-1 rounded-full"
+            >
+              <ArrowUpDown size={11} />
+              {sortBy === 'accuracy' ? 'By accuracy' : sortBy === 'attempts' ? 'By attempts' : 'A–Z'}
+            </button>
+          </div>
+
+          {loading ? (
+            <div className="animate-pulse space-y-2">
+              {[1, 2, 3, 4].map(i => <div key={i} className="h-10 bg-gray-100 rounded-xl" />)}
+            </div>
+          ) : allTopics.length === 0 ? (
+            <p className="text-sm text-gray-400 text-center py-4">Complete the Grammar Diagnostic to populate this table</p>
+          ) : (
+            <>
+              {/* Table header */}
+              <div className="grid grid-cols-[1fr_auto_auto_auto] gap-2 text-xs text-gray-400 px-3 pb-2 border-b border-gray-100">
+                <span>Topic</span>
+                <span className="text-center w-12">Acc%</span>
+                <span className="text-center w-12">Tries</span>
+                <span className="w-16 text-right">Status</span>
+              </div>
+              <div className="space-y-1 mt-2">
+                {sortedTopics.map(({ topic, accuracy, total }) => (
+                  <button
+                    key={topic}
+                    onClick={() => setSelectedTopic(topic)}
+                    className="w-full grid grid-cols-[1fr_auto_auto_auto] gap-2 items-center px-3 py-2.5 rounded-xl hover:bg-gray-50 active:bg-gray-100 text-left"
+                  >
+                    <span className="text-xs text-gray-700 truncate">{topic}</span>
+                    <span className="text-xs font-semibold text-gray-800 text-center w-12">
+                      {total > 0 ? `${accuracy}%` : '—'}
+                    </span>
+                    <span className="text-xs text-gray-400 text-center w-12">{total}</span>
+                    <div className="w-16 flex justify-end">
+                      <StatusBadge accuracy={accuracy} total={total} />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
         {/* Weak grammar topics */}
         {weakTopics.length > 0 && (
           <div className="bg-white rounded-2xl border border-gray-100 p-5">
@@ -231,6 +427,17 @@ export default function ProgressPage() {
           </div>
         </div>
       </div>
+
+      {/* Topic Detail Modal */}
+      {selectedTopic && selectedTopicData && (
+        <TopicDetailModal
+          topic={selectedTopic}
+          data={selectedTopicData}
+          onClose={() => setSelectedTopic(null)}
+          onDrill={handleDrillFromModal}
+          onNavigate={(topic) => navigate(`/practice/grammar?topic=${encodeURIComponent(topic)}`)}
+        />
+      )}
     </div>
   )
 }

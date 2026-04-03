@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { Play, Pause, RotateCcw, ChevronDown, ChevronUp } from 'lucide-react'
 import { getOrGenerateAudio, speakWithWebSpeech, stopSpeech } from '../utils/audio.js'
+import TappableText from './TappableText.jsx'
 import { useApp } from '../context/AppContext.jsx'
 
-export default function AudioPlayer({ contentId, text, transcript, showTranscriptToggle = true }) {
+export default function AudioPlayer({ contentId, text, transcript, showTranscriptToggle = true, onWordTap }) {
   const { isOnline, settings } = useApp()
   const [isPlaying, setIsPlaying] = useState(false)
   const [speed, setSpeed] = useState(1)
@@ -181,16 +182,20 @@ export default function AudioPlayer({ contentId, text, transcript, showTranscrip
 
           {showTranscript && (
             <div className="px-5 pb-5 text-sm text-gray-700 leading-relaxed">
-              {words.map((word, i) => (
-                <span
-                  key={i}
-                  className={`transition-colors ${
-                    i === currentWordIndex ? 'bg-[#C60B1E] text-white rounded px-0.5' : ''
-                  }`}
-                >
-                  {word}{' '}
-                </span>
-              ))}
+              {onWordTap ? (
+                <TappableText text={transcript} onWordTap={onWordTap} />
+              ) : (
+                words.map((word, i) => (
+                  <span
+                    key={i}
+                    className={`transition-colors ${
+                      i === currentWordIndex ? 'bg-[#C60B1E] text-white rounded px-0.5' : ''
+                    }`}
+                  >
+                    {word}{' '}
+                  </span>
+                ))
+              )}
             </div>
           )}
         </>

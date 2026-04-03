@@ -2,8 +2,8 @@ import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import { getAllContent } from '../utils/db.js'
-import { getSRSData } from '../utils/storage.js'
-import { Search, CheckCircle, Circle, Clock } from 'lucide-react'
+import { getSRSData, getCapturedWords, removeCapturedWord } from '../utils/storage.js'
+import { Search, CheckCircle, Circle, Clock, BookOpen, Trash2 } from 'lucide-react'
 
 const THEME_COLORS = {
   travel: 'bg-blue-50 text-blue-600',
@@ -43,19 +43,26 @@ export default function VocabularyPage() {
   const [filterTheme, setFilterTheme] = useState('all')
   const [filterStatus, setFilterStatus] = useState('all') // 'all' | 'mastered' | 'learning' | 'new'
   const [loading, setLoading] = useState(true)
+  const [capturedWords, setCapturedWords] = useState([])
+  const [showCaptured, setShowCaptured] = useState(false)
 
   useEffect(() => {
     async function load() {
       const all = await getAllContent('flashcard')
       const srsData = getSRSData()
-      // Sort alphabetically by Spanish word
       all.sort((a, b) => a.front.localeCompare(b.front, 'es'))
       setCards(all)
       setSrs(srsData)
+      setCapturedWords(getCapturedWords())
       setLoading(false)
     }
     load()
   }, [])
+
+  const handleRemoveCaptured = (word) => {
+    removeCapturedWord(word)
+    setCapturedWords(getCapturedWords())
+  }
 
   const themes = useMemo(() => {
     const set = new Set(cards.map(c => c.theme).filter(Boolean))
@@ -173,6 +180,42 @@ export default function VocabularyPage() {
             </button>
           ))}
         </div>
+
+        {/* My Captured Words */}
+        {capturedWords.length > 0 && (
+          <div className="bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden">
+            <button
+              onClick={() => setShowCaptured(v => !v)}
+              className="w-full flex items-center justify-between px-4 py-3"
+            >
+              <div className="flex items-center gap-2">
+                <BookOpen size={16} className="text-amber-600" />
+                <span className="text-sm font-semibold text-amber-800">My Captured Words</span>
+                <span className="bg-amber-200 text-amber-800 text-xs px-2 py-0.5 rounded-full">{capturedWords.length}</span>
+              </div>
+              <span className="text-xs text-amber-600">{showCaptured ? 'Hide' : 'Show'}</span>
+            </button>
+            {showCaptured && (
+              <div className="px-4 pb-4 space-y-2">
+                {capturedWords.map(w => (
+                  <div key={w.word} className="bg-white rounded-xl px-3 py-2.5 flex items-center gap-3">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-gray-900 text-sm">{w.word}</p>
+                      <p className="text-xs text-gray-500">{w.english}{w.pos ? ` · ${w.pos}` : ''}</p>
+                      {w.example && <p className="text-xs text-gray-400 italic mt-0.5 truncate">"{w.example}"</p>}
+                    </div>
+                    <button
+                      onClick={() => handleRemoveCaptured(w.word)}
+                      className="shrink-0 p-1 text-gray-300 hover:text-red-400"
+                    >
+                      <Trash2 size={15} />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Count */}
         <p className="text-xs text-gray-400">{filtered.length} word{filtered.length !== 1 ? 's' : ''}</p>

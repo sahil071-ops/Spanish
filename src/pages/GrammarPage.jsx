@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import { getAllContent } from '../utils/db.js'
-import { updateSRSItem, logActivity, updateStreak, recordTopicResult, getWeakTopics } from '../utils/storage.js'
+import { updateSRSItem, logActivity, updateStreak, recordTopicResult, getWeakTopics, getTopicPerformance } from '../utils/storage.js'
+import { generateFreshDrill } from '../utils/anthropic.js'
 import { useApp } from '../context/AppContext.jsx'
-import { CheckCircle, XCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle, XCircle, ArrowRight, Zap } from 'lucide-react'
 
 export default function GrammarPage() {
   const navigate = useNavigate()
@@ -19,6 +20,7 @@ export default function GrammarPage() {
   const [stats, setStats] = useState({ correct: 0, wrong: 0 })
   const [finished, setFinished] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [drilling, setDrilling] = useState(false)
 
   useEffect(() => {
     async function load() {
@@ -32,12 +34,23 @@ export default function GrammarPage() {
         const shuffledOthers = [...others].sort(() => Math.random() - 0.5)
         toShow = [...focused.sort(() => Math.random() - 0.5), ...shuffledOthers.slice(0, 5)]
       } else {
-        // Adaptive: double-weight exercises from weak topics
-        const weakTopics = getWeakTopics(2).slice(0, 4).map(t => t.topic)
+        // Adaptive: 3× weight for weak topics (<60%), exclude strong (>85%)
+        const topicPerf = getTopicPerformance()
+        const weakTopics = []
+        const strongTopics = []
+        for (const [topic, v] of Object.entries(topicPerf)) {
+          if (v.total < 2) continue
+          const acc = Math.round((v.correct / v.total) * 100)
+          if (acc < 60) weakTopics.push(topic)
+          else if (acc >= 85) strongTopics.push(topic)
+        }
         const weak = all.filter(e => weakTopics.includes(e.grammarPoint))
-        const rest = all.filter(e => !weakTopics.includes(e.grammarPoint))
-        // Weak exercises appear twice in the pool, giving them ~double probability
-        const pool = [...weak, ...weak, ...rest].sort(() => Math.random() - 0.5)
+        const strong = all.filter(e => strongTopics.includes(e.grammarPoint))
+        const rest = all.filter(e => !weakTopics.includes(e.grammarPoint) && !strongTopics.includes(e.grammarPoint))
+        // Weak topics get 3× representation; strong topics excluded if enough rest content
+        const excluded = rest.length + weak.length >= 10 ? strong : []
+        const available = all.filter(e => !excluded.includes(e))
+        const pool = [...weak, ...weak, ...weak, ...rest, ...available.filter(e => !weak.includes(e) && !rest.includes(e))].sort(() => Math.random() - 0.5)
         toShow = pool.slice(0, 15)
       }
 
@@ -87,8 +100,30 @@ export default function GrammarPage() {
     )
   }
 
+  const handleFreshDrill = async () => {
+    const topic = focusTopic || (getWeakTopics(1)[0]?.topic)
+    if (!topic) return
+    setDrilling(true)
+    try {
+      const newExercises = await generateFreshDrill(topic)
+      if (newExercises.length > 0) {
+        setExercises(newExercises)
+        setCurrent(0)
+        setSelected(null)
+        setShowExplanation(false)
+        setStats({ correct: 0, wrong: 0 })
+        setFinished(false)
+      }
+    } catch (e) {
+      console.error('[Drill]', e)
+    } finally {
+      setDrilling(false)
+    }
+  }
+
   if (finished || exercises.length === 0) {
     const pct = exercises.length > 0 ? Math.round((stats.correct / exercises.length) * 100) : 0
+    const drillTopic = focusTopic || (getWeakTopics(1)[0]?.topic)
     return (
       <div className="flex flex-col pb-24">
         <TopBar title="Grammar" onBack={() => navigate('/practice')} />
@@ -106,6 +141,16 @@ export default function GrammarPage() {
               <p className="text-sm text-gray-500">Incorrect</p>
             </div>
           </div>
+          {drillTopic && (
+            <button
+              onClick={handleFreshDrill}
+              disabled={drilling}
+              className="w-full mb-3 bg-amber-500 text-white font-semibold py-3.5 rounded-2xl flex items-center justify-center gap-2 disabled:opacity-60"
+            >
+              {drilling ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <Zap size={18} />}
+              {drilling ? 'Generating…' : 'Fresh Drill (5 new AI questions)'}
+            </button>
+          )}
           <button onClick={() => navigate('/practice')} className="w-full bg-[#C60B1E] text-white font-semibold py-3.5 rounded-2xl">
             Back to Practice
           </button>
@@ -129,6 +174,16 @@ export default function GrammarPage() {
               style={{ width: `${(current / exercises.length) * 100}%` }} />
           </div>
           <span className="text-xs text-gray-400 shrink-0">{current + 1}/{exercises.length}</span>
+          {focusTopic && (
+            <button
+              onClick={handleFreshDrill}
+              disabled={drilling}
+              className="shrink-0 flex items-center gap-1 bg-amber-50 text-amber-600 text-xs px-2.5 py-1 rounded-full border border-amber-200 disabled:opacity-50"
+            >
+              <Zap size={11} />
+              {drilling ? '…' : 'Fresh Drill'}
+            </button>
+          )}
         </div>
 
         {/* Grammar tag — grammarPoint hidden until answered to avoid spoilers */}

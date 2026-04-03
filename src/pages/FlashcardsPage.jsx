@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import FlashCard from '../components/FlashCard.jsx'
 import { getAllContent } from '../utils/db.js'
-import { getDueItems, getSRSData, logActivity, updateStreak } from '../utils/storage.js'
+import { getDueItems, getSRSData, logActivity, updateStreak, getSettings } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
 
 export default function FlashcardsPage() {
@@ -43,10 +43,27 @@ export default function FlashcardsPage() {
           const item = srs[c.id]
           return item && item.nextReview <= now && item.repetitions < 3
         })
-        // New cards: never seen before
+        // New cards: never seen before — ordered by weak vocab themes first
         const newCards = allCards.filter(c => !srs[c.id])
-        const shuffledNew = [...newCards].sort(() => Math.random() - 0.5)
-        const newBatch = shuffledNew.slice(0, NEW_CARDS_PER_SESSION)
+        // Identify weak vocab themes: themes where most seen cards have low repetitions
+        const themeCounts = {}
+        for (const c of allCards) {
+          if (!c.theme) continue
+          const item = srs[c.id]
+          if (!themeCounts[c.theme]) themeCounts[c.theme] = { total: 0, weak: 0 }
+          if (item) {
+            themeCounts[c.theme].total++
+            if (item.repetitions < 2) themeCounts[c.theme].weak++
+          }
+        }
+        const weakThemes = Object.entries(themeCounts)
+          .filter(([, v]) => v.total > 0 && v.weak / v.total > 0.5)
+          .map(([theme]) => theme)
+        const prioritised = [
+          ...newCards.filter(c => weakThemes.includes(c.theme)).sort(() => Math.random() - 0.5),
+          ...newCards.filter(c => !weakThemes.includes(c.theme)).sort(() => Math.random() - 0.5),
+        ]
+        const newBatch = prioritised.slice(0, NEW_CARDS_PER_SESSION)
 
         setDueCount(dueForReview.length)
         setNewCount(newCards.length)

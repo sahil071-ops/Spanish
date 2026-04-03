@@ -1,9 +1,23 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v1.7'
+export const CURRENT_VERSION = 'v2.0'
 
 export const HISTORY = [
+  {
+    version: 'v2.0',
+    date: '2026-04-03',
+    summary: 'Major feature upgrade: Fresh Drill, Word Lookup, Grammar Mastery Table, Ambient Listen, Adaptive AI',
+    changes: [
+      'Feature 1 – Fresh Grammar Drill: tap "Fresh Drill" on any grammar session to instantly generate 5 new AI questions tailored to that topic',
+      'Feature 2 – Reading rotation extended from 14 to 30 days; "Generate New Story" button creates a fresh AI passage when all content has been seen',
+      'Feature 3 – Full Grammar Topic Mastery Table on Progress page: every topic shown with Accuracy%, Attempts, and Status badge (Untested/Weak/OK/Strong); sortable by accuracy, attempts, or name; tap any topic for a detail sheet with drill and practice buttons; top 5 strong topics shown as green chips',
+      'Feature 4 – Word Lookup: tap any Spanish word in Reading, Listening, or Ambient stories to open a bottom sheet with POS, gender, English translation, example sentence, and "Add to Vocabulary" button; lookups cached in IndexedDB; "My Captured Words" section added to Vocabulary page',
+      'Feature 5 – Ambient Listen mode: AI-generated 400-600 word Spanish stories with Web Speech playback, tappable transcript, 3 comprehension questions; accessible from Practice page; stories pre-cached during daily sync',
+      'Feature 6 – Adaptive difficulty: grammar sessions now apply 3× weighting to weak topics (<60%) and exclude mastered topics (>85%) when enough content remains; flashcard new-card queue prioritises themes you struggle with; every AI generation call includes your weak/strong topics as context; "Today\'s focus" chip on Home shows your weakest grammar topic',
+      'IndexedDB upgraded to v2 with new word-lookups and ambient-stories stores',
+    ],
+  },
   {
     version: 'v1.7',
     date: '2026-03-13',

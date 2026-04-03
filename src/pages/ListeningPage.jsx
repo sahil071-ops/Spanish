@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
 import AudioPlayer from '../components/AudioPlayer.jsx'
+import TappableText from '../components/TappableText.jsx'
+import WordLookupSheet from '../components/WordLookupSheet.jsx'
 import { getAllContent } from '../utils/db.js'
 import { updateSRSItem, logActivity, updateStreak, markContentSeen, getUnseenContent } from '../utils/storage.js'
 import { useApp } from '../context/AppContext.jsx'
@@ -17,6 +19,7 @@ export default function ListeningPage() {
   const [finished, setFinished] = useState(false)
   const [loading, setLoading] = useState(true)
   const [totalScore, setTotalScore] = useState({ correct: 0, total: 0 })
+  const [lookupWord, setLookupWord] = useState(null)
 
   useEffect(() => {
     async function load() {
@@ -88,6 +91,7 @@ export default function ListeningPage() {
   const allAnswered = exercise.questions.every(q => answers[q.id])
 
   return (
+    <>
     <div className="flex flex-col pb-24">
       <TopBar title="Listening" onBack={() => navigate('/practice')} />
 
@@ -116,6 +120,7 @@ export default function ListeningPage() {
           contentId={exercise.id}
           text={exercise.script}
           transcript={exercise.transcript}
+          onWordTap={setLookupWord}
         />
 
         {/* Questions */}
@@ -183,5 +188,9 @@ export default function ListeningPage() {
         )}
       </div>
     </div>
+    {lookupWord && (
+      <WordLookupSheet word={lookupWord} onClose={() => setLookupWord(null)} />
+    )}
+    </>
   )
 }

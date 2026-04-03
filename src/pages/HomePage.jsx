@@ -6,13 +6,14 @@ import OfflineBanner from '../components/OfflineBanner.jsx'
 import ProgressBar from '../components/ProgressBar.jsx'
 import { useApp } from '../context/AppContext.jsx'
 import { getAllContent } from '../utils/db.js'
-import { getDueItems, getSRSData, getMasteryPercent } from '../utils/storage.js'
+import { getDueItems, getSRSData, getMasteryPercent, getWeakTopics } from '../utils/storage.js'
 
 export default function HomePage() {
   const navigate = useNavigate()
   const { streak, progress, contentCounts } = useApp()
   const [dueItems, setDueItems] = useState([])
   const [masteryData, setMasteryData] = useState({ vocabulary: 0, grammar: 0, reading: 0, listening: 0 })
+  const [todayFocus, setTodayFocus] = useState(null)
 
   useEffect(() => {
     async function loadDueItems() {
@@ -31,6 +32,12 @@ export default function HomePage() {
         reading: 0,
         listening: 0,
       })
+
+      // Today's focus: weakest grammar topic with enough attempts
+      const weak = getWeakTopics(2)
+      if (weak.length > 0) {
+        setTodayFocus(weak[0].topic)
+      }
     }
     loadDueItems()
   }, [])
@@ -62,6 +69,21 @@ export default function HomePage() {
             <p className="text-xs text-gray-400">all time</p>
           </div>
         </div>
+
+        {/* Today's focus */}
+        {todayFocus && (
+          <button
+            onClick={() => navigate(`/practice/grammar?topic=${encodeURIComponent(todayFocus)}`)}
+            className="w-full bg-amber-50 border border-amber-100 rounded-2xl p-4 flex items-center gap-3 active:scale-99 transition-transform"
+          >
+            <Zap size={18} className="text-amber-500 shrink-0" />
+            <div className="text-left flex-1 min-w-0">
+              <p className="text-xs text-amber-600 font-medium">Today's focus</p>
+              <p className="text-sm font-semibold text-gray-800 truncate">{todayFocus}</p>
+            </div>
+            <span className="text-xs text-amber-600 shrink-0">Practise →</span>
+          </button>
+        )}
 
         {/* Due for review */}
         {dueItems.length > 0 && (

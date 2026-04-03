@@ -59,6 +59,15 @@ const modes = [
     path: '/practice/listening',
   },
   {
+    id: 'ambient',
+    icon: Headphones,
+    label: 'Ambient Listen',
+    description: 'AI story + comprehension, tap words to look up',
+    color: 'bg-indigo-50',
+    iconColor: 'text-indigo-600',
+    path: '/practice/ambient',
+  },
+  {
     id: 'mock-exam',
     icon: ClipboardList,
     label: 'Mock Exam',

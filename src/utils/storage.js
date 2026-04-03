@@ -243,7 +243,7 @@ export function getWeakTopics(minAttempts = 2) {
 // ─── Content Rotation (reading & listening) ───────────────────────────────────
 
 const CONTENT_SEEN_KEY = 'spanish-b1-content-seen'
-const ROTATION_DAYS = 14
+const ROTATION_DAYS = 30
 
 export function markContentSeen(itemId) {
   try {
@@ -283,6 +283,57 @@ export function getNextContentAvailableDate(allItems) {
   } catch {
     return null
   }
+}
+
+// ─── User Context (for adaptive AI prompts) ───────────────────────────────────
+
+export function getUserContext() {
+  const topicPerf = getTopicPerformance()
+  const weak = []
+  const strong = []
+  const recentMistakes = []
+
+  for (const [topic, v] of Object.entries(topicPerf)) {
+    if (v.total < 1) continue
+    const acc = Math.round((v.correct / v.total) * 100)
+    if (acc < 60) weak.push(topic)
+    else if (acc >= 85) strong.push(topic)
+    if (acc < 50 && v.total >= 2) recentMistakes.push(topic)
+  }
+
+  return {
+    level: 'B1',
+    weakGrammarTopics: weak,
+    strongGrammarTopics: strong,
+    recentMistakes: recentMistakes.slice(0, 5),
+  }
+}
+
+// ─── Captured Vocabulary (word-lookup → flashcard) ────────────────────────────
+
+const CAPTURED_KEY = 'spanish-b1-captured-words'
+
+export function getCapturedWords() {
+  try {
+    const stored = localStorage.getItem(CAPTURED_KEY)
+    return stored ? JSON.parse(stored) : []
+  } catch {
+    return []
+  }
+}
+
+export function saveCapturedWord(word) {
+  const words = getCapturedWords()
+  const exists = words.find(w => w.word === word.word)
+  if (!exists) {
+    words.unshift({ ...word, capturedAt: Date.now() })
+    localStorage.setItem(CAPTURED_KEY, JSON.stringify(words))
+  }
+}
+
+export function removeCapturedWord(wordStr) {
+  const words = getCapturedWords().filter(w => w.word !== wordStr)
+  localStorage.setItem(CAPTURED_KEY, JSON.stringify(words))
 }
 
 // ─── Export / Import ──────────────────────────────────────────────────────────

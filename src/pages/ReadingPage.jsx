@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import TopBar from '../components/TopBar.jsx'
+import TappableText from '../components/TappableText.jsx'
+import WordLookupSheet from '../components/WordLookupSheet.jsx'
 import { getAllContent } from '../utils/db.js'
 import { updateSRSItem, logActivity, updateStreak, markContentSeen, getUnseenContent } from '../utils/storage.js'
+import { generateReadingPassage } from '../utils/anthropic.js'
 import { useApp } from '../context/AppContext.jsx'
-import { CheckCircle, XCircle, ArrowRight } from 'lucide-react'
+import { CheckCircle, XCircle, ArrowRight, Zap } from 'lucide-react'
 
 export default function ReadingPage() {
   const navigate = useNavigate()
@@ -16,6 +19,8 @@ export default function ReadingPage() {
   const [finished, setFinished] = useState(false)
   const [loading, setLoading] = useState(true)
   const [totalScore, setTotalScore] = useState({ correct: 0, total: 0 })
+  const [generating, setGenerating] = useState(false)
+  const [lookupWord, setLookupWord] = useState(null)
 
   useEffect(() => {
     async function load() {
@@ -67,6 +72,26 @@ export default function ReadingPage() {
     )
   }
 
+  const handleGenerateNewStory = async () => {
+    setGenerating(true)
+    try {
+      const item = await generateReadingPassage()
+      if (item) {
+        setPassages(prev => [...prev, item])
+        if (finished) {
+          setFinished(false)
+          setCurrent(passages.length)
+          setAnswers({})
+          setSubmitted(false)
+        }
+      }
+    } catch (e) {
+      console.error('[Reading]', e)
+    } finally {
+      setGenerating(false)
+    }
+  }
+
   if (finished || passages.length === 0) {
     const pct = totalScore.total > 0 ? Math.round((totalScore.correct / totalScore.total) * 100) : 0
     return (
@@ -76,6 +101,14 @@ export default function ReadingPage() {
           <div className="text-5xl mb-4">{pct >= 70 ? '📚' : '💪'}</div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Session Complete!</h2>
           <p className="text-gray-500 mb-8">Score: {totalScore.correct}/{totalScore.total} ({pct}%)</p>
+          <button
+            onClick={handleGenerateNewStory}
+            disabled={generating}
+            className="w-full mb-3 bg-amber-500 text-white font-semibold py-3.5 rounded-2xl flex items-center justify-center gap-2 disabled:opacity-60"
+          >
+            {generating ? <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <Zap size={18} />}
+            {generating ? 'Generating…' : 'Generate New Story'}
+          </button>
           <button onClick={() => navigate('/practice')} className="w-full bg-[#C60B1E] text-white font-semibold py-3.5 rounded-2xl">
             Back to Practice
           </button>
@@ -87,6 +120,7 @@ export default function ReadingPage() {
   const allAnswered = passage.questions.every(q => answers[q.id])
 
   return (
+    <>
     <div className="flex flex-col pb-24">
       <TopBar title="Reading" onBack={() => navigate('/practice')} />
 
@@ -101,17 +135,21 @@ export default function ReadingPage() {
         </div>
 
         {/* Theme/difficulty */}
-        <div className="flex gap-2">
-          <span className="bg-green-50 text-green-600 text-xs px-2.5 py-1 rounded-full font-medium">{passage.theme}</span>
+        <div className="flex gap-2 flex-wrap">
+          <span className="bg-green-50 text-green-600 text-xs px-2.5 py-1 rounded-full font-medium capitalize">{passage.theme}</span>
           <span className="bg-gray-50 text-gray-500 text-xs px-2.5 py-1 rounded-full">
             {'★'.repeat(passage.difficulty || 1)}
           </span>
+          <span className="bg-gray-50 text-gray-400 text-xs px-2.5 py-1 rounded-full font-mono">{passage.id}</span>
         </div>
 
         {/* Passage */}
         <div className="bg-white rounded-2xl border border-gray-100 p-5">
           <h2 className="font-bold text-gray-900 mb-3">{passage.title}</h2>
-          <p className="text-sm text-gray-700 leading-relaxed">{passage.passage}</p>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            <TappableText text={passage.passage} onWordTap={setLookupWord} />
+          </p>
+          <p className="text-xs text-gray-300 mt-2">Tap any word to look it up</p>
         </div>
 
         {/* Questions */}
@@ -180,5 +218,9 @@ export default function ReadingPage() {
         )}
       </div>
     </div>
+    {lookupWord && (
+      <WordLookupSheet word={lookupWord} onClose={() => setLookupWord(null)} />
+    )}
+    </>
   )
 }
