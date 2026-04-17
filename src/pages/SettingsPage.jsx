@@ -6,6 +6,7 @@ import { exportAllData, importAllData, resetAllProgress } from '../utils/storage
 import { getDB } from '../utils/db.js'
 import { Eye, EyeOff, Download, Upload, Trash2, Key, ChevronDown, ChevronUp } from 'lucide-react'
 import { CURRENT_VERSION, HISTORY } from '../version.js'
+import TeacherImportButton from '../components/TeacherImportButton.jsx'
 
 function Toggle({ checked, onChange, label, description }) {
   return (
@@ -247,6 +248,11 @@ export default function SettingsPage() {
               Anthropic API key is set via environment variable (VITE_ANTHROPIC_API_KEY). See README for setup.
             </p>
           </div>
+        </Section>
+
+        {/* Content Sources */}
+        <Section title="Content Sources">
+          <TeacherImportButton />
         </Section>
 
         {/* Data */}

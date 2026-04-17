@@ -3,6 +3,7 @@ import { loadSeedContent } from '../utils/seedLoader.js'
 import { generateDailyContent } from '../utils/anthropic.js'
 import { getSettings, saveSettings, getProgress, getStreak, updateStreak, logActivity } from '../utils/storage.js'
 import { getContentCount } from '../utils/db.js'
+import { importAllTeacherContent } from '../utils/importTeacherContent.js'
 
 const AppContext = createContext(null)
 
@@ -47,6 +48,14 @@ export function AppProvider({ children }) {
       setStreak(getStreak())
       logActivity()
       await syncContent()
+
+      // Silent first-run import of teacher chat content (non-blocking)
+      try {
+        const log = JSON.parse(localStorage.getItem('spanish-b1-import-log') || '{}')
+        if (!log['teacher-chat-v1']) {
+          importAllTeacherContent().then(() => refreshContentCounts()).catch(() => {})
+        }
+      } catch {}
     }
     init()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps

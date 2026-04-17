@@ -1,9 +1,21 @@
 // ─── App Version History ───────────────────────────────────────────────────────
 // Update this file with every push. Add a new entry at the TOP of HISTORY.
 
-export const CURRENT_VERSION = 'v2.0'
+export const CURRENT_VERSION = 'v2.1'
 
 export const HISTORY = [
+  {
+    version: 'v2.1',
+    date: '2026-04-17',
+    summary: 'Teacher chat content import: 159 flashcards + 10 grammar topics',
+    changes: [
+      'Added 159 vocabulary flashcards from teacher chat (tc-001 to tc-159), covering idioms, verbs, work, culture, and grammar structures',
+      'Added 10 grammar topics from teacher chat with worked exercises: Double Object Pronouns, Temporal Subjunctive, PENDO triggers, Creer/Me parece, Emotion Verbs, Si Clauses, Irregular Future/Conditional, Imperative (Ver/Ser), Llevar+sin, Duration structures (Hace/Desde hace)',
+      'New "Content Sources" section in Settings with TeacherImportButton — import or re-import teacher content at any time',
+      'Silent first-run background import: teacher content is automatically loaded on the first app launch (no UI blocker)',
+      'Import is idempotent — running it again only adds items not yet in the database',
+    ],
+  },
   {
     version: 'v2.0',
     date: '2026-04-03',

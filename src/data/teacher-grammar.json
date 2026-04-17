@@ -1,0 +1,123 @@
+[
+  {
+    "id": "tcg-001",
+    "topic": "Double Object Pronouns",
+    "explanation": "When both direct and indirect object pronouns appear together, the indirect pronoun (le/les) changes to 'se' before lo/la/los/las.",
+    "rules": ["le lo → se lo","le la → se la","le los → se los","le las → se las","les lo → se lo","les la → se la","les los → se los","les las → se las"],
+    "exercises": [
+      { "id": "tcg-001-ex-01", "sentence": "¿Le das el libro a María? Sí, ___ ___ doy.", "answer": "se lo", "explanation": "le + lo = se lo. Never say 'le lo'." },
+      { "id": "tcg-001-ex-02", "sentence": "¿Les explicas las normas a los estudiantes? Sí, ___ ___ explico.", "answer": "se las", "explanation": "les + las = se las." },
+      { "id": "tcg-001-ex-03", "sentence": "¿Me traes la cerveza? Sí, ___ ___ traigo ahora.", "answer": "te la", "explanation": "te + la = te la (only le/les change to se)." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-002",
+    "topic": "Subjunctive with Temporal Conjunctions (Future Reference)",
+    "explanation": "When referring to a future action, temporal conjunctions like cuando, en cuanto, tan pronto como, hasta que, antes de que are followed by the present subjunctive.",
+    "rules": ["Cuando + subjuntivo → future action","En cuanto + subjuntivo → as soon as (future)","Tan pronto como + subjuntivo → as soon as (future)","Hasta que + subjuntivo → until (future)","Antes de que + subjuntivo → before (future)","Cuando + indicativo → habitual/present actions","Antes de / Después de + infinitivo → same subject"],
+    "exercises": [
+      { "id": "tcg-002-ex-01", "sentence": "Cuando ___ (llegar) a casa, te llamo.", "answer": "llegues", "explanation": "Future action after cuando → subjunctive." },
+      { "id": "tcg-002-ex-02", "sentence": "En cuanto ___ (terminar) el trabajo, saldremos a cenar.", "answer": "termines", "explanation": "En cuanto + future reference → present subjunctive." },
+      { "id": "tcg-002-ex-03", "sentence": "Espera aquí hasta que yo ___ (volver).", "answer": "vuelva", "explanation": "Hasta que + future → subjunctive. Volver is irregular: vuelva." },
+      { "id": "tcg-002-ex-04", "sentence": "Cuando ___ (hacer) frío, me quedo en casa. (habitual present)", "answer": "hace", "explanation": "Habitual present → indicative, not subjunctive." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-003",
+    "topic": "PENDO — Triggers for the Subjunctive",
+    "explanation": "A mnemonic for remembering the main categories that trigger the subjunctive mood.",
+    "rules": ["P — Possibilities, Probabilities, Petitions","E — Exigencia (demands), Emociones (emotions)","N — Negaciones (negations of belief/opinion)","D — Deseos (wishes), Duda (doubt)","O — Opinión negativa, Ojalá"],
+    "exercises": [
+      { "id": "tcg-003-ex-01", "sentence": "Ojalá ___ (tener) más tiempo libre.", "answer": "tenga", "explanation": "Ojalá always triggers subjunctive." },
+      { "id": "tcg-003-ex-02", "sentence": "Dudo que él ___ (saber) la respuesta.", "answer": "sepa", "explanation": "Duda (doubt) → subjunctive." },
+      { "id": "tcg-003-ex-03", "sentence": "No creo que ___ (ser) buena idea.", "answer": "sea", "explanation": "Negation of belief → subjunctive." },
+      { "id": "tcg-003-ex-04", "sentence": "Creo que ___ (ser) buena idea.", "answer": "es", "explanation": "Affirmative creer que → indicative." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-004",
+    "topic": "Creer que / Me parece que vs Negative Forms",
+    "explanation": "Affirmative opinion verbs take indicative; negative opinion verbs take subjunctive.",
+    "rules": ["Creer que + indicativo","No creer que + subjuntivo","Me parece que + indicativo","No me parece que + subjuntivo","(No) me parece + adjetivo + que + subjuntivo"],
+    "exercises": [
+      { "id": "tcg-004-ex-01", "sentence": "Me parece que el proyecto ___ (estar) bien organizado.", "answer": "está", "explanation": "Affirmative me parece que → indicative." },
+      { "id": "tcg-004-ex-02", "sentence": "No me parece que ___ (ser) una buena solución.", "answer": "sea", "explanation": "Negative no me parece que → subjunctive." },
+      { "id": "tcg-004-ex-03", "sentence": "No creo que ella ___ (poder) venir mañana.", "answer": "pueda", "explanation": "Negative belief → subjunctive." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-005",
+    "topic": "Emotion Verbs + Subjunctive",
+    "explanation": "Verbs expressing emotions followed by que require the subjunctive in the subordinate clause.",
+    "rules": ["sentir + sustantivo","sentirse + adjetivo","alegrarse de que + subjuntivo","estar harto de que + subjuntivo","temer que + subjuntivo","apasionar, horrorizar, sentar bien/mal, hacer ilusión, dar pereza → gustar-type verbs"],
+    "exercises": [
+      { "id": "tcg-005-ex-01", "sentence": "Me alegra que ___ el examen.", "answer": "hayas aprobado", "explanation": "Emotion + different subject → subjunctive (perfect subjunctive for completed action)." },
+      { "id": "tcg-005-ex-02", "sentence": "Temo que no ___ a tiempo.", "answer": "llegue", "explanation": "Temer que + subjunctive." },
+      { "id": "tcg-005-ex-03", "sentence": "Me ___ mucha ilusión el viaje a España.", "answer": "hace", "explanation": "Hacer ilusión is gustar-type: conjugates to agree with subject (el viaje)." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-006",
+    "topic": "Si Clauses — Hypothetical (Imperfecto Subjuntivo + Condicional)",
+    "explanation": "For hypothetical or contrary-to-fact conditions, use: Si + imperfecto de subjuntivo + condicional.",
+    "rules": ["Si + imperfecto de subjuntivo + condicional simple","Example: Si tuviera más dinero, viajaría más.","Condicional of tener: tendría, tendrías, tendría, tendríamos, tendríais, tendrían","Condicional of poder: podría, podrías, podría, podríamos, podríais, podrían"],
+    "exercises": [
+      { "id": "tcg-006-ex-01", "sentence": "Si ___ (tener) tiempo, ___ (aprender) a cocinar.", "answer": "tuviera / aprendería", "explanation": "Hypothetical: si + imperfecto subjuntivo + condicional." },
+      { "id": "tcg-006-ex-02", "sentence": "Si ___ (poder) elegir, ___ (vivir) en Barcelona.", "answer": "pudiera / viviría", "explanation": "Pudiera is the imperfecto subjuntivo of poder." },
+      { "id": "tcg-006-ex-03", "sentence": "¿Qué ___ (hacer) tú si ___ (ganar) la lotería?", "answer": "harías / ganaras", "explanation": "Irregular conditional: hacer → haría." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-007",
+    "topic": "Irregular Future and Conditional Stems",
+    "explanation": "These verbs use modified stems for both future and conditional tenses.",
+    "rules": ["Hacer → har-","Tener → tendr-","Salir → saldr-","Poner → pondr-","Poder → podr-","Venir → vendr-","Decir → dir-","Querer → querr-","Saber → sabr-","Valer → valdr-","Haber → habr-"],
+    "exercises": [
+      { "id": "tcg-007-ex-01", "sentence": "Mañana ___ (salir, yo) temprano para el aeropuerto.", "answer": "saldré", "explanation": "Salir → saldr- + é = saldré." },
+      { "id": "tcg-007-ex-02", "sentence": "Si pudiera, ___ (venir, yo) a tu fiesta.", "answer": "vendría", "explanation": "Conditional of venir: vendr- + ía = vendría." },
+      { "id": "tcg-007-ex-03", "sentence": "¿Cuándo ___ (poder, tú) reunirte con nosotros?", "answer": "podrás", "explanation": "Future of poder: podr- + ás = podrás." },
+      { "id": "tcg-007-ex-04", "sentence": "No ___ (saber, yo) qué decirte.", "answer": "sabré", "explanation": "Future of saber: sabr- + é = sabré." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-008",
+    "topic": "Imperativo — Ver and Ser (Regular and Irregular)",
+    "explanation": "The imperative has affirmative and negative forms. Negative imperative for tú uses present subjunctive.",
+    "rules": ["Ver affirmative: ve (tú), ved (vosotros), vea (usted), vean (ustedes)","Ver negative: no veas, no veáis, no vea, no vean","Ser affirmative: sé (tú), sed (vosotros), sea (usted), sean (ustedes)","Ser negative: no seas, no seáis, no sea, no sean"],
+    "exercises": [
+      { "id": "tcg-008-ex-01", "sentence": "No ___ (ver, tú) tanta televisión.", "answer": "veas", "explanation": "Negative imperative tú uses subjunctive: ver → veas." },
+      { "id": "tcg-008-ex-02", "sentence": "___ (ser, tú) amable con los demás.", "answer": "sé", "explanation": "Affirmative imperative of ser for tú is sé (irregular)." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-009",
+    "topic": "Llevar + Time + Sin + Infinitivo",
+    "explanation": "Use this structure to express how long you have gone without doing something.",
+    "rules": ["llevar + cantidad de tiempo + sin + verbo en infinitivo","Example: Llevo tres meses sin ver a mi familia.","Compare: desde hace + tiempo = how long you HAVE been doing something"],
+    "exercises": [
+      { "id": "tcg-009-ex-01", "sentence": "___ dos semanas sin salir de casa.", "answer": "Llevo", "explanation": "Llevar + time + sin + infinitivo." },
+      { "id": "tcg-009-ex-02", "sentence": "Estudio español ___ hace dos años.", "answer": "desde", "explanation": "Desde hace + time = for [duration] up to now." }
+    ],
+    "source": "teacher-chat"
+  },
+  {
+    "id": "tcg-010",
+    "topic": "Expressing Duration — Hace / Desde hace / Llevo",
+    "explanation": "Three structures for expressing how long something has been happening.",
+    "rules": ["Hace + tiempo + que + verbo conjugado → It has been X time since...","Desde hace + tiempo → for X time (ongoing from past to now)","¿Cuánto tiempo hace que...? / ¿Desde cuándo...? → question forms","Hace 2 años que estudio español = Estudio español desde hace 2 años"],
+    "exercises": [
+      { "id": "tcg-010-ex-01", "sentence": "___ tres años ___ vivo en Mumbai.", "answer": "Hace / que", "explanation": "Hace + time + que + conjugated verb." },
+      { "id": "tcg-010-ex-02", "sentence": "Vivo en Mumbai ___ ___ tres años.", "answer": "desde hace", "explanation": "Desde hace + time = for [duration]." },
+      { "id": "tcg-010-ex-03", "sentence": "¿___ tiempo ___ que estudias español?", "answer": "Cuánto / hace", "explanation": "Question form: ¿Cuánto tiempo hace que...?" }
+    ],
+    "source": "teacher-chat"
+  }
+]
